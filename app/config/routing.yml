@@ -1,3 +1,8 @@
+enymind_health_welcome:
+    resource: "@EnymindHealthWelcomeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 enymind_health_secure:
     resource: "@EnymindHealthSecureBundle/Controller/"
     type:     annotation
@@ -9,10 +14,10 @@ login_check:
 logout:
     pattern:   /secure/logout
 
-enymind_health_welcome:
-    resource: "@EnymindHealthWelcomeBundle/Controller/"
+enymind_health_secure_user:
+    resource: "@EnymindHealthSecureBundle/Controller/UserController.php"
     type:     annotation
-    prefix:   /
+    prefix:   /secure/user
 
 # Internal routing configuration to handle ESI
 _internal:

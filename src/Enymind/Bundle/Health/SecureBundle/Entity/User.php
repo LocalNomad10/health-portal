@@ -4,6 +4,7 @@ namespace Enymind\Bundle\Health\SecureBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder;
 
 /**
  * Enymind\Bundle\Health\SecureBundle\Entity\User
@@ -21,7 +22,7 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=25, unique=true)
+     * @ORM\Column(type="string", length=16, unique=true)
      */
     private $username;
 
@@ -31,12 +32,12 @@ class User implements UserInterface
     private $salt;
 
     /**
-     * @ORM\Column(type="string", length=40)
+     * @ORM\Column(type="string", length=128)
      */
     private $password;
 
     /**
-     * @ORM\Column(type="string", length=60, unique=true)
+     * @ORM\Column(type="string", length=128, unique=true)
      */
     private $email;
 
@@ -51,6 +52,14 @@ class User implements UserInterface
         $this->salt = md5(uniqid(null, true));
     }
 
+    /**
+     * @inheritDoc
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+    
     /**
      * @inheritDoc
      */
@@ -75,6 +84,55 @@ class User implements UserInterface
         return $this->password;
     }
 
+    /**
+     * @inheritDoc
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getIsActive()
+    {
+        return $this->isActive;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setPassword($password)
+    {
+        $encoder = new MessageDigestPasswordEncoder();
+        $this->password = $encoder->encodePassword($password, $this->salt);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function setIsActive($isActive)
+    {
+        $this->isActive = isActive;
+    }
+    
     /**
      * @inheritDoc
      */
