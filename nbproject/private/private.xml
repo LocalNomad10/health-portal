@@ -5,5 +5,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
         <file>file:/home/enyone/NetBeansProjects/health/src/Enymind/Bundle/Health/WelcomeBundle/Controller/DefaultController.php</file>
         <file>file:/home/enyone/NetBeansProjects/health/src/Enymind/Bundle/Health/WelcomeBundle/Resources/views/Default/index.html.twig</file>
+        <file>file:/home/enyone/NetBeansProjects/health/src/Enymind/Bundle/Health/SecureBundle/Entity/User.php</file>
+        <file>file:/home/enyone/NetBeansProjects/health/app/config/security.yml</file>
+        <file>file:/home/enyone/NetBeansProjects/health/app/config/routing.yml</file>
     </open-files>
 </project-private>

@@ -9,7 +9,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * Enymind\Bundle\Health\SecureBundle\Entity\User
  *
  * @ORM\Table(name="users")
- * @ORM\Entity(repositoryClass="Enymind\Bundle\Health\SecureBundle\Entity\UserRepository")
+ * @ORM\Entity()
  */
 class User implements UserInterface
 {
