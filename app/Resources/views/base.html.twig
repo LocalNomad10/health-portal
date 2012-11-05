@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block title %}Health Portal{% endblock %}</title>
+        {% stylesheets '@EnymindHealthWelcomeBundle/Resources/public/css/*' filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {% javascripts '@EnymindHealthWelcomeBundle/Resources/public/js/*' %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    </head>
+    <body>
+    <div data-role="page" id="main-page">
+        <div data-theme="a" data-role="header" data-position="fixed">
+            {% block header %}{% endblock %}
+        </div>
+        <div data-role="content">
+            {% block body %}{% endblock %}
+        </div>
+        <div data-theme="c" data-role="footer" data-position="fixed">
+            <h4>Enymind Oy 2012</h4>
+        </div>
+    </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block header %}
+  <a href="/secure/logout" data-icon="delete" data-theme="d">{% trans %}Log Out{% endtrans %}</a>
+  <h1>{% trans %}Dashboard{% endtrans %}</h1>
+  <a href="/secure/search" data-icon="search" data-theme="b" data-iconpos="right">{% trans %}Search{% endtrans %}</a>
+{% endblock %}
+
+{% block body %}
+<div class="ui-grid-a">
+	<div class="ui-block-a"><a href="/secure/enter" data-role="button" data-theme="c">{% trans %}Enter values{% endtrans %}</a></div>
+	<div class="ui-block-b"><a href="/secure/many" data-role="button" data-theme="c">{% trans %}Enter many{% endtrans %}</a></div>
+	<div class="ui-block-c"><a href="/secure/stats" data-role="button" data-theme="c">{% trans %}Statistics{% endtrans %}</a></div>
+	<div class="ui-block-d"><a href="/secure/report" data-role="button" data-theme="c">{% trans %}Reporting{% endtrans %}</a></div>
+</div>
+{% endblock %}

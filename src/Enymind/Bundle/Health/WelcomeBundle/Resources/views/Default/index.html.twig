@@ -1,0 +1,49 @@
+{% extends '::base.html.twig' %}
+
+{% block header %}
+  <a href="/help" data-icon="search" data-theme="d">{% trans %}Help{% endtrans %}</a>
+  <h1>{% trans %}Health Portal Home{% endtrans %}</h1>
+  <a href="/login" data-icon="arrow-r" data-theme="b" data-iconpos="right">{% trans %}Log In{% endtrans %}</a>
+{% endblock %}
+
+{% block body %}
+  <p>{% trans %}<strong>Welcome</strong> to use personal health portal application.{% endtrans %}</p>
+  <div data-role="collapsible-set">
+
+    <div data-role="collapsible" data-theme="b" data-content-theme="d" data-collapsed="false">
+      <h3>{% trans %}So, whats next?{% endtrans %}</h3>
+      <img src="{{ asset("/bundles/enymindhealthwelcome/images/bacteria.png") }}" align="right" style="padding-top: 10px" />
+      <p>{% trans %}<strong>The very next</strong> thing you need to do is to get yourself an account.{% endtrans %}</p>
+      <p><strong>Please choose</strong> one of choices bellow...</p>
+    </div>
+
+    <div data-role="collapsible" data-theme="c" data-content-theme="d" id="new-user-coll">
+      <h3>{% trans %}I am a new user{% endtrans %}</h3>
+      <p><strong>{% trans %}No personal information, like your name or your location, is stored in this system.{% endtrans %}</strong></p>
+      <p>{% trans %}Here is your personal code:{% endtrans %} <strong><span id="p-code">...</span></strong></p>
+      <form action="/register" method="post">
+        <div data-role="fieldcontain" class="ui-hide-label">
+          <label for="password">{% trans %}Password:{% endtrans %}</label>
+          <input type="password" name="password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}"/>
+        </div>
+        <p>{% trans %}Save and remember your personal code and password well!{% endtrans %}</p>
+        <button type="submit" name="submit" value="submit" data-theme="a">{% trans %}Register{% endtrans %}</button>
+      </form>
+    </div>
+
+    <div data-role="collapsible" data-theme="c" data-content-theme="d">
+      <h3>{% trans %}I already have an account{% endtrans %}</h3>
+      <a href="/login" data-role="button" data-inline="true" data-icon="arrow-r" data-mini="true" data-theme="b">{% trans %}Log In{% endtrans %}</a></p>
+      <p>{% trans %}Just as well you can find the same icon at the <strong>top right</strong> corner of this page.
+          Next time, use icon at top right corner to speed up your log in process.{% endtrans %}</p>
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script type="text/javascript">
+    $("#new-user-coll").bind("expand", function(){
+      $("#p-code").load('/genid');
+    });
+  </script>
+{% endblock %}

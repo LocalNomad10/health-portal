@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+
+{% block header %}
+  <a href="/" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
+  <h1>{% trans %}Health Portal Log In{% endtrans %}</h1>
+  <a onclick="$('#login-form').submit();" data-icon="check" data-theme="b" data-iconpos="right">{% trans %}OK{% endtrans %}</a>
+{% endblock %}
+
+{% block body %}
+  {% if error %}
+    <p class="error-message">{{ error.message }}</p>
+  {% endif %}
+  <form action="/secure/login" method="post" id="login-form">
+    <div data-role="fieldcontain" class="ui-hide-label">
+      <label for="username">{% trans %}Personal code:{% endtrans %}</label>
+      <input type="text" name="_username" id="username" value="{{ last_username }}" placeholder="{% trans %}Personal code{% endtrans %}"/>
+    </div>
+    <div data-role="fieldcontain" class="ui-hide-label">
+      <label for="password">{% trans %}Password:{% endtrans %}</label>
+      <input type="password" name="_password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}"/>
+    </div>
+    <button type="submit" name="login" value="submit" data-icon="check" data-theme="b">{% trans %}Log In{% endtrans %}</button>
+  </form>
+{% endblock %}

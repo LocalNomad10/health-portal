@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1">
+        <source>Help</source>
+        <target>Help</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Health Portal Home</source>
+        <target>Health Portal Home</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Log In</source>
+        <target>Log In</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>&lt;strong&gt;Welcome&lt;/strong&gt; to use personal health portal application.</source>
+        <target>&lt;strong&gt;Welcome&lt;/strong&gt; to use personal health portal application.</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>So, whats next?</source>
+        <target>So, whats next?</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>&lt;strong&gt;The very next&lt;/strong&gt; thing you need to do is to get yourself an account.</source>
+        <target>&lt;strong&gt;The very next&lt;/strong&gt; thing you need to do is to get yourself an account.</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>I am a new user</source>
+        <target>I am a new user</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>No personal information, like your name or your location, is stored in this system.</source>
+        <target>No personal information, like your name or your location, is stored in this system.</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Here is your personal code:</source>
+        <target>Here is your personal code:</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>Password:</source>
+        <target>Password:</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>Save and remember your personal code and password well!</source>
+        <target>Save and remember your personal code and password well!</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Register</source>
+        <target>Register</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>I already have an account</source>
+        <target>I already have an account</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>Just as well you can find the same icon at the &lt;strong&gt;top right&lt;/strong&gt; corner of this page.
+          Next time, use icon at top right corner to speed up your log in process.</source>
+        <target>Just as well you can find the same icon at the &lt;strong&gt;top right&lt;/strong&gt; corner of this page.
+          Next time, use icon at top right corner to speed up your log in process.</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Back</source>
+        <target>Back</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>Health Portal Log In</source>
+        <target>Health Portal Log In</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>OK</source>
+        <target>OK</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>Personal code:</source>
+        <target>Personal code:</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>Personal code</source>
+        <target>Personal code</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>&lt;strong&gt;Welcome&lt;/strong&gt; to use &lt;strong&gt;Your&lt;/strong&gt; personal health portal application.</source>
+        <target>&lt;strong&gt;Welcome&lt;/strong&gt; to use &lt;strong&gt;Your&lt;/strong&gt; personal health portal application.</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>Please click</source>
+        <target>Please click</target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>The very next thing you need to do is to get yourself an account.</source>
+        <target>The very next thing you need to do is to get yourself an account.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
