@@ -19,6 +19,16 @@
             {% block header %}{% endblock %}
         </div>
         <div data-role="content">
+            {% if app.session.hasFlash('notice') %}
+                <p>{{ app.session.flash('notice') }}</p>
+            {% endif %}
+            {% if app.session.hasFlash('warning') %}
+                <p>{{ app.session.flash('warning') }}</p>
+            {% endif %}
+            {% if app.session.hasFlash('error') %}
+                <p>{{ app.session.flash('error') }}</p>
+            {% endif %}
+            
             {% block body %}{% endblock %}
         </div>
         <div data-theme="c" data-role="footer" data-tap-toggle="false" data-position="fixed">

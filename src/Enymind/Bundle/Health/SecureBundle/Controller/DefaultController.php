@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use JMS\SecurityExtraBundle\Annotation\Secure;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Enymind\Bundle\Health\SecureBundle\Entity\Entry;
+use Enymind\Bundle\Health\SecureBundle\Entity\EntryType;
 
 class DefaultController extends Controller
 {
@@ -30,5 +32,54 @@ class DefaultController extends Controller
         $entryTypes = $em->getRepository('EnymindHealthSecureBundle:EntryType')->findAll();
       
         return array('entryTypes' => $entryTypes);
+    }
+    
+    /**
+     * @Route("/enter/{entryTypeId}")
+     * @Secure(roles="ROLE_USER")
+     * @Template()
+     */
+    public function enterFormAction($entryTypeId)
+    {
+        $value = $request->request->get('value');
+        
+        if ( empty( $value ) ) {
+            throw $this->createNotFoundException('value not set.');
+        }
+      
+        $em = $this->getDoctrine()->getManager();
+        $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
+        
+        $defaultValue = ceil( ceil( $entryType->getMax() / 2 ) + intval( $entryType->getMin() ) );
+        
+        return array('entryType' => $entryType,
+                     'defaultValue' => $defaultValue
+            );
+    }
+    
+    /**
+     * @Route("/enter/{entryTypeId}/save")
+     * @Secure(roles="ROLE_USER")
+     */
+    public function enterFormSaveAction($entryTypeId)
+    {
+        $value = $request->request->get('value');
+        
+        if ( empty( $value ) ) {
+            throw $this->createNotFoundException('value not set.');
+        }
+      
+        $em = $this->getDoctrine()->getManager();
+        $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
+        
+        $entry = new Entry();
+        $entry->setTypeId( $entryType );
+        $entry->setValue( $value );
+        
+        $em->persist($entry);
+        $em->flush();
+      
+        $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry were added!') );
+        return $this->redirect($this->generateUrl('index'));
     }
 }
