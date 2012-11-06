@@ -1,4 +1,4 @@
-html { background-color: #333; }
+.ui-mobile-viewport { background-color: #333; }
 @media only screen and (min-width: 480px) {
     .ui-page {
         width: 480px !important;
