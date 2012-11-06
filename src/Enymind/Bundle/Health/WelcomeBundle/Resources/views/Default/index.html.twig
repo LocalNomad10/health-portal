@@ -19,7 +19,7 @@
 
     <div data-role="collapsible" data-theme="c" data-content-theme="d" id="new-user-coll">
       <h3>{% trans %}I am a new user{% endtrans %}</h3>
-      <p><strong>{% trans %}No personal information, like your name or your location, is stored in this system.{% endtrans %}</strong></p>
+      <p><strong>{% trans %}No personal information, like your name, or your location, is stored in this system.{% endtrans %}</strong></p>
       <p>{% trans %}Here is your personal code:{% endtrans %} <strong><span id="p-code">...</span></strong></p>
       <form action="/secure/user/register" method="post">
         <input type="hidden" name="username" id="p-code-input" value="" />
@@ -34,7 +34,7 @@
 
     <div data-role="collapsible" data-theme="c" data-content-theme="d">
       <h3>{% trans %}I already have an account{% endtrans %}</h3>
-      <a href="/login" data-role="button" data-inline="true" data-icon="arrow-r" data-mini="true" data-theme="b">{% trans %}Log In{% endtrans %}</a></p>
+      <p><a href="/login" data-role="button" data-inline="true" data-icon="arrow-r" data-mini="true" data-theme="b">{% trans %}Log In{% endtrans %}</a></p>
       <p>{% trans %}Just as well you can find the same icon at the <strong>top right</strong> corner of this page.
           Next time, use icon at top right corner to speed up your log in process.{% endtrans %}</p>
     </div>
@@ -43,9 +43,11 @@
 
 {% block javascripts %}
   <script type="text/javascript">
-    $("#new-user-coll").bind("expand", function(){
-      $("#p-code").load('/genid', function(){
-        $("#p-code-input").val( $("#p-code").text() );
+    $(document).bind('pageinit', function(){
+      $("#new-user-coll").bind("expand", function(){
+        $("#p-code").load('/genid', function(){
+          $("#p-code-input").val( $("#p-code").text() );
+        });
       });
     });
   </script>

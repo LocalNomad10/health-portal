@@ -8,6 +8,7 @@
 
 {% block body %}
   {% if error %}
+    <p>{% trans %}Error occured during log in process:{% trans %}</p>
     <p class="error-message">{{ error.message }}</p>
   {% endif %}
   <form action="/secure/login" method="post" id="login-form">
@@ -21,4 +22,54 @@
     </div>
     <button type="submit" name="login" value="submit" data-icon="check" data-theme="b">{% trans %}Log In{% endtrans %}</button>
   </form>
+  
+  <div data-role="collapsible-set">
+    <div data-role="collapsible" data-theme="c" data-content-theme="d" data-collapsed="false">
+      <h3>{% trans %}Hint{% endtrans %}</h3>
+      <p>{% trans %}<strong>Set this page</strong> to your browser's <strong>bookmark list</strong> to speed up log in process next time.{% endtrans %}</p>
+      <p><a href="/login" data-role="button" data-inline="true" data-icon="arrow-r" data-mini="true" data-theme="b" id="add-bookmark">{% trans %}Add bookmark{% endtrans %}</a></p>
+    </div>
+    {% if last_username %}
+      <div data-role="collapsible" data-theme="b" data-content-theme="d">
+        <h3>{% trans %}Send credentials by email{% endtrans %}</h3>
+        <p><strong>{% trans %}No personal information, like your name, email, or your location, is stored in this system without your knowledge.{% endtrans %}</strong></p>
+        <form action="/secure/user/send/{{ last_username }}" method="post">
+          <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="email">{% trans %}Email:{% endtrans %}</label>
+            <input type="text" name="email" id="email" value="" placeholder="{% trans %}your@email.com{% endtrans %}" />
+          </div>
+          <label><input type="checkbox" name="save-email" /> Save my email address</label>
+        </form>
+      </div>
+    {% endif %}
+  </div>
+  
+  <div id="bookmark-not-supported" data-role="popup" data-theme="e" data-overlay-theme="a" class="ui-content">
+    {% trans %}Adding bookmarks is not supported on your browser!{% endtrans %}
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script type="text/javascript">
+    $(document).bind('pageinit', function(){
+      $("#add-bookmark").click(function(e){
+        e.preventDefault();
+        var bookmarkUrl = this.href;
+        var bookmarkTitle = this.title;
+
+        if (window.sidebar) {
+            window.sidebar.addPanel(bookmarkTitle, bookmarkUrl,"");
+        } else if( window.external || document.all) {
+            window.external.AddFavorite( bookmarkUrl, bookmarkTitle);
+        } else if(window.opera) {
+            $("#add-bookmark").attr("href",bookmarkUrl);
+            $("#add-bookmark").attr("title",bookmarkTitle);
+            $("#add-bookmark").attr("rel","sidebar");
+        } else {
+            $("#bookmark-not-supported").popup("open");
+            return false;
+        }
+      });
+    });
+  </script>
 {% endblock %}
