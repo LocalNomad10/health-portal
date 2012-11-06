@@ -92,13 +92,13 @@ class UserController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('secure_user_show', array('id' => $entity->getId())));
+            return array(
+                'entity' => $entity
+            );
         }
-
-        return array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        );
+        else {
+          throw $this->createNotFoundException('Unable to create User entity.');
+        }
     }
     
     /**
