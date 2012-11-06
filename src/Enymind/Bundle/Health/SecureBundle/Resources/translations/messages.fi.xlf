@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fi" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1">
+        <source>Message sent succesfully!</source>
+        <target>__Message sent succesfully!</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Email saved succesfully!</source>
+        <target>__Email saved succesfully!</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Back</source>
+        <target>__Back</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>New user</source>
+        <target>__New user</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Log In</source>
+        <target>__Log In</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>&lt;strong&gt;New user&lt;/strong&gt; (you) has been created with following credentials:</source>
+        <target>__&lt;strong&gt;New user&lt;/strong&gt; (you) has been created with following credentials:</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Personal code:</source>
+        <target>__Personal code:</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Hint</source>
+        <target>__Hint</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Remember to save your credentials in a safe place!</source>
+        <target>__Remember to save your credentials in a safe place!</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>You can send your credentials by email at a login page.</source>
+        <target>__You can send your credentials by email at a login page.</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Enter entry value</source>
+        <target>__Enter entry value</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>Value in</source>
+        <target>__Value in</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Add entry</source>
+        <target>__Add entry</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Enter entry</source>
+        <target>__Enter entry</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>Log Out</source>
+        <target>__Log Out</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Dashboard</source>
+        <target>__Dashboard</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>Search</source>
+        <target>__Search</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>Enter value</source>
+        <target>__Enter value</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>Enter group</source>
+        <target>__Enter group</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>Statistics</source>
+        <target>__Statistics</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>Reporting</source>
+        <target>__Reporting</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>Report</source>
+        <target>__Report</target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>Number of entries:</source>
+        <target>__Number of entries:</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
