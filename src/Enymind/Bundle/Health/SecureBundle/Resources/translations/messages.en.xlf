@@ -60,7 +60,7 @@
       </trans-unit>
       <trans-unit id="15">
         <source>Search entry type...</source>
-        <target>__Search entry type...</target>
+        <target>Search entry type...</target>
       </trans-unit>
       <trans-unit id="16">
         <source>Log Out</source>

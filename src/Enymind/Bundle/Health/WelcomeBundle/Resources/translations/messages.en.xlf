@@ -44,7 +44,7 @@
       </trans-unit>
       <trans-unit id="11">
         <source>&lt;strong&gt;Please choose&lt;/strong&gt; one of choices bellow...</source>
-        <target>__&lt;strong&gt;Please choose&lt;/strong&gt; one of choices bellow...</target>
+        <target>&lt;strong&gt;Please choose&lt;/strong&gt; one of choices bellow...</target>
       </trans-unit>
       <trans-unit id="12">
         <source>I am a new user</source>
