@@ -52,6 +52,4 @@ $(document).delegate('#page-login', 'pageshow', function(){
       $(this).focus();
       focused = true;
   });
-
-  alert("jeesus");
 });
