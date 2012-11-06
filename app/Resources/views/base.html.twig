@@ -15,13 +15,13 @@
     </head>
     <body>
     <div data-role="page" id="page-{% block pagename %}{% endblock %}">
-        <div data-theme="a" data-role="header" data-position="fixed">
+        <div data-theme="a" data-role="header" data-tap-toggle="false" data-position="fixed">
             {% block header %}{% endblock %}
         </div>
         <div data-role="content">
             {% block body %}{% endblock %}
         </div>
-        <div data-theme="c" data-role="footer" data-position="fixed">
+        <div data-theme="c" data-role="footer" data-tap-toggle="false" data-position="fixed">
             <h4>Enymind Oy 2012</h4>
         </div>
     </div>
