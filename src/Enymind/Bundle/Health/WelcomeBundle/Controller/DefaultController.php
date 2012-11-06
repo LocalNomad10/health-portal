@@ -15,7 +15,10 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        $this->getRequest()->get('session')->set('_locale', $request->getPreferredLanguage(array('fi', 'en')));
+        $request = $this->getRequest();
+        $session = $this->get('session');
+
+        $session->set('_locale', $request->getPreferredLanguage(array('fi', 'en')));
       
         return array();
     }
