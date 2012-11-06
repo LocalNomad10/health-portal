@@ -12,11 +12,6 @@
         {% javascripts '@EnymindHealthWelcomeBundle/Resources/public/js/*' %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
-        <script type="text/javascript">
-          $(document).bind("mobileinit", function(){
-            $.mobile.pageLoadErrorMessage = '{% trans %}Requested page not found!{% endtrans %}';
-          });
-        </script>
     </head>
     <body>
     <div data-role="page" id="page-{% block pagename %}{% endblock %}">
