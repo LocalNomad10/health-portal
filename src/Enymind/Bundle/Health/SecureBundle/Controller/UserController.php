@@ -75,6 +75,33 @@ class UserController extends Controller
     }
 
     /**
+     * Registers (creates) a new User entity.
+     *
+     * @Route("/register", name="secure_user_register")
+     * @Method("POST")
+     * @Template("EnymindHealthSecureBundle:User:register.html.twig")
+     */
+    public function registerAction(Request $request)
+    {
+        $entity  = new User();
+        $form = $this->createForm(new UserType(), $entity);
+        $form->bind($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($entity);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('secure_user_show', array('id' => $entity->getId())));
+        }
+
+        return array(
+            'entity' => $entity,
+            'form'   => $form->createView(),
+        );
+    }
+    
+    /**
      * Creates a new User entity.
      *
      * @Route("/create", name="secure_user_create")

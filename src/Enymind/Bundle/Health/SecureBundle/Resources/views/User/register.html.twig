@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+
+{% block header %}
+  <a href="/" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
+  <h1>{% trans %}New user{% endtrans %}</h1>
+  <a href="/login" data-icon="arrow-r" data-theme="b" data-iconpos="right">{% trans %}Log In{% endtrans %}</a>
+{% endblock %}
+
+{% block body %}
+<p>{% trans %}<strong>New user</strong> (you) has been created with following credentials:{% endtrans %}</p>
+<p><strong>{% trans %}Personal code:{% endtrans %}</strong> {{ entity.username }}</p>
+{% endblock %}

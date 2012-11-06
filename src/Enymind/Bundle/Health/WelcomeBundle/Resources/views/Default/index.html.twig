@@ -21,10 +21,12 @@
       <h3>{% trans %}I am a new user{% endtrans %}</h3>
       <p><strong>{% trans %}No personal information, like your name or your location, is stored in this system.{% endtrans %}</strong></p>
       <p>{% trans %}Here is your personal code:{% endtrans %} <strong><span id="p-code">...</span></strong></p>
-      <form action="/register" method="post">
+      <form action="/secure/user/register" method="post">
+        <input type="hidden" name="isActive" value="1" />
+        <input type="hidden" name="username" id="p-code-input" value="" />
         <div data-role="fieldcontain" class="ui-hide-label">
           <label for="password">{% trans %}Password:{% endtrans %}</label>
-          <input type="password" name="password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}"/>
+          <input type="password" name="password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}" />
         </div>
         <p>{% trans %}Save and remember your personal code and password well!{% endtrans %}</p>
         <button type="submit" name="submit" value="submit" data-theme="a">{% trans %}Register{% endtrans %}</button>
@@ -43,7 +45,9 @@
 {% block javascripts %}
   <script type="text/javascript">
     $("#new-user-coll").bind("expand", function(){
-      $("#p-code").load('/genid');
+      $("#p-code").load('/genid', function(){
+        $("#p-code-input").val( $("#p-code").text() );
+      });
     });
   </script>
 {% endblock %}

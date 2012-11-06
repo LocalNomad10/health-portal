@@ -20,6 +20,11 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
+        registration:
+            pattern: ^/secure/user/register$
+            security: false
+            anonymous: ~
+
         login:
             pattern: ^/login$
             security: false
