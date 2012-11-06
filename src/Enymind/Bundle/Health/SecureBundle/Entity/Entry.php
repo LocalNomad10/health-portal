@@ -47,7 +47,7 @@ class Entry
 
     public function __construct()
     {
-        $this->added = date("Y-m-d H:i:s");
+        $this->added = new \DateTime("now");
     }
     
     /**
