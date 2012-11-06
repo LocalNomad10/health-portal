@@ -25,6 +25,11 @@ security:
             security: false
             anonymous: ~
 
+        cred_sent:
+            pattern: ^/secure/user/sent$
+            security: false
+            anonymous: ~
+
         login:
             pattern: ^/login$
             security: false
