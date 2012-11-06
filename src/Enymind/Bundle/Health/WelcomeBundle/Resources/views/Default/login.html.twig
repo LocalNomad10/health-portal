@@ -31,7 +31,7 @@
       <p>{% trans %}<strong>Set this page</strong> to your browser's <strong>bookmark list</strong> to speed up log in process next time.{% endtrans %}</p>
       <p><a href="/login" data-role="button" data-inline="true" data-icon="arrow-r" data-mini="true" data-theme="b" id="add-bookmark">{% trans %}Add bookmark{% endtrans %}</a></p>
     </div>
-    {% if not error && last_username %}
+    {% if not error and last_username %}
       <div data-role="collapsible" data-theme="b" data-content-theme="d" data-icon="star">
         <h3>{% trans %}Send credentials by email{% endtrans %}</h3>
         <p><strong>{% trans %}No personal information, like your name, email, or your location, is stored in this system without your knowledge.{% endtrans %}</strong></p>
