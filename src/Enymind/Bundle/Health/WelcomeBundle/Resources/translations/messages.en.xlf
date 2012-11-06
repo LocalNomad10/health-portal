@@ -152,6 +152,14 @@
         <source>The very next thing you need to do is to get yourself an account.</source>
         <target>The very next thing you need to do is to get yourself an account.</target>
       </trans-unit>
+      <trans-unit id="38">
+        <source>Error occured during log in process:</source>
+        <target>Error occured during log in process:</target>
+      </trans-unit>
+      <trans-unit id="39">
+        <source>Requested page not found!</source>
+        <target>Requested page not found!</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

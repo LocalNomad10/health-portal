@@ -136,6 +136,14 @@
         <source>Adding bookmarks is not supported on your browser!</source>
         <target>Selaimesi ei tue kirjanmerkkien lisäämistä!</target>
       </trans-unit>
+      <trans-unit id="34">
+        <source>Error occured during log in process:</source>
+        <target>Tapahtui virhe kirjauduttaessa sisään:</target>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>Requested page not found!</source>
+        <target>Pyydettyä sivua ei löydy!</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
