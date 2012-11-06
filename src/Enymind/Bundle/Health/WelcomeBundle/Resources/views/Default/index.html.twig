@@ -43,16 +43,15 @@
 
 {% block javascripts %}
   <script type="text/javascript">
-    var alreadyBind = false;
-    if( !alreadyBind ) {
-      $(document).bind('pageinit', function(){
-        $("#new-user-coll").bind("expand", function(){
-          $("#p-code").load('/genid', function(){
-            $("#p-code-input").val( $("#p-code").text() );
-          });
-        });
-        alreadyBind = true;
+    var genid_callback = function(){
+      $("#p-code").load('/genid', function(){
+        $("#p-code-input").val( $("#p-code").text() );
       });
-    }
+    };
+    
+    $(document).bind('pageinit', function(){
+      $("#new-user-coll").unbind("expand", genid_callback);
+      $("#new-user-coll").bind("expand", genid_callback);
+    });
   </script>
 {% endblock %}
