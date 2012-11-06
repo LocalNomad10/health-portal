@@ -18,4 +18,17 @@ class DefaultController extends Controller
     {
         return array();
     }
+    
+    /**
+     * @Route("/enter")
+     * @Secure(roles="ROLE_USER")
+     * @Template()
+     */
+    public function enterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $entryTypes = $em->getRepository('EnymindHealthSecureBundle:EntryType')->findAll();
+      
+        return array('entryTypes' => $entryTypes);
+    }
 }

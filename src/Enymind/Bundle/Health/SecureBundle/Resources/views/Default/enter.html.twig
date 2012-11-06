@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+
+{% block pagename %}secure-enter{% endblock %}
+
+{% block header %}
+  <a href="/secure" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
+  <h1>{% trans %}Enter entry{% endtrans %}</h1>
+{% endblock %}
+
+{% block body %}
+  <p>{% trans %}Select entry type from list bellow:{% endtrans %}</p>
+
+  <ul data-role="listview">
+  {% for entryType in entryTypes %}
+    <li><a href="/secure/enter/{{ entryType.id }}">{{ entryType.name }}</a></li>
+  {% endfor %}
+  </ul>
+
+{% endblock %}
