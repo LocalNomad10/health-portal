@@ -39,7 +39,7 @@
             <input type="text" name="email" id="email" value="" placeholder="{% trans %}your@email.com{% endtrans %}" />
           </div>
           <label><input type="checkbox" name="save-email" /> Save my email address</label>
-          <button type="submit" name="submit" value="submit" id="email-submit" data-theme="a" data-icon="star">{% trans %}Send{% endtrans %}</button>
+          <a href="/login" data-role="button" name="submit" value="submit" id="email-submit" data-theme="a" data-icon="star">{% trans %}Send{% endtrans %}</a>
         </form>
       </div>
     {% endif %}
