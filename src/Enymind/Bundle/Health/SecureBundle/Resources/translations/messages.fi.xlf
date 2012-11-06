@@ -12,15 +12,15 @@
       </trans-unit>
       <trans-unit id="3">
         <source>Dear</source>
-        <target>__Dear</target>
+        <target>Hei</target>
       </trans-unit>
       <trans-unit id="4">
         <source>Here is your personal code:</source>
-        <target>__Here is your personal code:</target>
+        <target>Tässä henkilökohtainen koodisi:</target>
       </trans-unit>
       <trans-unit id="5">
         <source>Best Regards</source>
-        <target>__Best Regards</target>
+        <target>Terveisin</target>
       </trans-unit>
       <trans-unit id="6">
         <source>Back</source>
