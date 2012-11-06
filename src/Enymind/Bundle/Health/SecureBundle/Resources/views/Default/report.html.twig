@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block pagename %}secure-report{% endblock %}
+
+{% block header %}
+  <a href="/secure" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
+  <h1>{% trans %}Report{% endtrans %}</h1>
+{% endblock %}
+
+{% block body %}
+  <p>Number of entries: </p>
+  
+  {% for entry in entries %}
+    <p>{{ entry.typeId.name }}: {{ entry.value }} {{ entry.typeId.quantity }}</p>
+  {% endfor %}
+{% endblock %}

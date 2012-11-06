@@ -5,6 +5,7 @@ namespace Enymind\Bundle\Health\SecureBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Enymind\Bundle\Health\SecureBundle\Entity\User
@@ -21,6 +22,11 @@ class User implements UserInterface
      */
     private $id;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Entry", mappedBy="owner_id")
+     */
+    protected $entries;
+    
     /**
      * @ORM\Column(type="string", length=16, unique=true)
      */
@@ -48,6 +54,7 @@ class User implements UserInterface
 
     public function __construct()
     {
+        $this->entries = new ArrayCollection();
         $this->isActive = true;
         $this->salt = md5(uniqid(null, true));
         $this->email = "";
@@ -59,6 +66,14 @@ class User implements UserInterface
     public function getId()
     {
         return $this->id;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function getEntries()
+    {
+        return $this->entries;
     }
     
     /**

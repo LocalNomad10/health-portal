@@ -82,4 +82,14 @@ class DefaultController extends Controller
         $response = $this->forward('EnymindHealthSecureBundle:Default:index');
         return $response;
     }
+    
+    /**
+     * @Route("/report")
+     * @Secure(roles="ROLE_USER")
+     * @Template()
+     */
+    public function reportAction()
+    {
+        return array('entries' => $this->getUser()->getEntries());
+    }
 }
