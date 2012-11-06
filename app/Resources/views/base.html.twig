@@ -10,7 +10,7 @@
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         {% javascripts '@EnymindHealthWelcomeBundle/Resources/public/js/*' %}
-            <script type="text/javascript" src="{{ asset_url }}">
+            <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
         <script type="text/javascript">
           $(document).bind("mobileinit", function(){
