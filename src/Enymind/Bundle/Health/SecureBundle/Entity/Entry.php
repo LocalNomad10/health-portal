@@ -24,7 +24,6 @@ class Entry
     /**
      * @var integer $type_id
      *
-     * @ORM\Column(name="type_id", type="integer")
      * @ORM\ManyToOne(targetEntity="EntryType", inversedBy="entry_types")
      * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
      */

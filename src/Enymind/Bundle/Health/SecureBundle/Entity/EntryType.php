@@ -24,7 +24,6 @@ class EntryType
     /**
      * @var integer $owner_id
      *
-     * @ORM\Column(name="owner_id", type="integer")
      * @ORM\ManyToOne(targetEntity="User", inversedBy="users")
      * @ORM\JoinColumn(name="owner_id", referencedColumnName="id")
      */
