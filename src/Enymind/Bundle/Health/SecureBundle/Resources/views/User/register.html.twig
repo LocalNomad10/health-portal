@@ -9,7 +9,15 @@
 {% endblock %}
 
 {% block body %}
-<p>{% trans %}<strong>New user</strong> (you) has been created with following credentials:{% endtrans %}</p>
-<p><strong>{% trans %}Personal code:{% endtrans %}</strong> {{ entity.username }}</p>
-<p>{% trans %}<strong>New user</strong> (you) has been created with following credentials:{% endtrans %}</p>
+  <p>{% trans %}<strong>New user</strong> (you) has been created with following credentials:{% endtrans %}</p>
+  <p><strong>{% trans %}Personal code:{% endtrans %}</strong> {{ entity.username }}</p>
+
+  <div data-role="collapsible-set">
+    <div data-role="collapsible" data-theme="c" data-content-theme="d" data-collapsed="false" data-icon="info">
+      <h3>{% trans %}Hint{% endtrans %}</h3>
+      <p>{% trans %}Remember to save your credentials in a safe place!{% endtrans %}</p>
+      <p>{% trans %}You can send your credentials by email at a login page.{% endtrans %}</p>
+      <p><a href="/login/{{ entity.username }}" data-icon="arrow-r" data-theme="b" data-iconpos="right">{% trans %}Log In{% endtrans %}</a></p>
+    </div>
+  </div>
 {% endblock %}
