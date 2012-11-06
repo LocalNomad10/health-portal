@@ -51,7 +51,7 @@
       });
     };
     
-    $(document).bind('pageshow', function(){
+    $(document).delegate('#page-index', 'pageshow', function(){
       $("#new-user-coll").unbind("expand", genid_callback);
       $("#new-user-coll").bind("expand", genid_callback);
     });

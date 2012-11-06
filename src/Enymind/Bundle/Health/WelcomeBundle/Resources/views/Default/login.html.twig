@@ -85,7 +85,7 @@
       return false;
     };
 
-    $(document).bind('pageshow', function(){
+    $(document).delegate('#page-login', 'pageshow', function(){
       $("#bookmark-not-supported-popup").popup();      
       $("#add-bookmark").unbind("click", bookmark_callback);
       $("#add-bookmark").bind("click", bookmark_callback);
