@@ -21,17 +21,17 @@ security:
             security: false
 
         registration:
-            pattern: ^/secure/user/register$
+            pattern: ^/secure/user/register
             security: false
             anonymous: ~
 
         cred_sent:
-            pattern: ^/secure/user/send$
+            pattern: ^/secure/user/send
             security: false
             anonymous: ~
 
         login:
-            pattern: ^/login$
+            pattern: ^/login
             security: false
             anonymous: ~
 
