@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block pagename %}error{% endblock %}
+
+{% block header %}
+  <a href="/" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
+  <h1>{% trans %}Health Portal Error{% endtrans %}</h1>
+{% endblock %}
+
+{% block body %}
+  <h3>{% trans %}Oops! An Error Occurred...{% endtrans %}</h3>
+  <p>The server returned a status: "{{ status_code }}</p>
+  <p>{{ status_text }}".</p>
+{% endblock %}
