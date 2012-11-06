@@ -45,9 +45,11 @@ class DefaultController extends Controller
         if( !empty( $username ) )
           $lastUsername = $username;
         
-        $message = $error->getMessage();
-        if( !empty( $message ) )
-          $this->get('session')->setFlash('warning', $this->get('translator')->trans('Error occured during log in process:') . " " . $message );
+        if( $error ) {
+          $message = $error->getMessage();
+          if( !empty( $message ) )
+            $this->get('session')->setFlash('warning', $this->get('translator')->trans('Error occured during log in process:') . " " . $message );
+        }
         
         return array(
           'last_username' => $lastUsername,
