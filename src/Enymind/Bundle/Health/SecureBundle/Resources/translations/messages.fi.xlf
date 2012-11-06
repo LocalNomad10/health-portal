@@ -59,38 +59,42 @@
         <target>Syötä mittaus</target>
       </trans-unit>
       <trans-unit id="15">
+        <source>Search entry type...</source>
+        <target>__Search entry type...</target>
+      </trans-unit>
+      <trans-unit id="16">
         <source>Log Out</source>
         <target>Kirjaudu ulos</target>
       </trans-unit>
-      <trans-unit id="16">
+      <trans-unit id="17">
         <source>Dashboard</source>
         <target>Etusivu</target>
       </trans-unit>
-      <trans-unit id="17">
+      <trans-unit id="18">
         <source>Search</source>
         <target>Haku</target>
       </trans-unit>
-      <trans-unit id="18">
+      <trans-unit id="19">
         <source>Enter value</source>
         <target>Syötä arvo</target>
       </trans-unit>
-      <trans-unit id="19">
+      <trans-unit id="20">
         <source>Enter group</source>
         <target>Syötä sarja</target>
       </trans-unit>
-      <trans-unit id="20">
+      <trans-unit id="21">
         <source>Statistics</source>
         <target>Tilastot</target>
       </trans-unit>
-      <trans-unit id="21">
+      <trans-unit id="22">
         <source>Reporting</source>
         <target>Raportointi</target>
       </trans-unit>
-      <trans-unit id="22">
+      <trans-unit id="23">
         <source>Report</source>
         <target>Raportti</target>
       </trans-unit>
-      <trans-unit id="23">
+      <trans-unit id="24">
         <source>Number of entries:</source>
         <target>Mittausten määrä:</target>
       </trans-unit>

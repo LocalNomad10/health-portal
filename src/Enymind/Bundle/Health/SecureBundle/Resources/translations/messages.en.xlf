@@ -59,46 +59,50 @@
         <target>Enter entry</target>
       </trans-unit>
       <trans-unit id="15">
+        <source>Search entry type...</source>
+        <target>__Search entry type...</target>
+      </trans-unit>
+      <trans-unit id="16">
         <source>Log Out</source>
         <target>Log Out</target>
       </trans-unit>
-      <trans-unit id="16">
+      <trans-unit id="17">
         <source>Dashboard</source>
         <target>Dashboard</target>
       </trans-unit>
-      <trans-unit id="17">
+      <trans-unit id="18">
         <source>Search</source>
         <target>Search</target>
       </trans-unit>
-      <trans-unit id="18">
+      <trans-unit id="19">
         <source>Enter value</source>
         <target>Enter value</target>
       </trans-unit>
-      <trans-unit id="19">
+      <trans-unit id="20">
         <source>Enter group</source>
         <target>Enter group</target>
       </trans-unit>
-      <trans-unit id="20">
+      <trans-unit id="21">
         <source>Statistics</source>
         <target>Statistics</target>
       </trans-unit>
-      <trans-unit id="21">
+      <trans-unit id="22">
         <source>Reporting</source>
         <target>Reporting</target>
       </trans-unit>
-      <trans-unit id="22">
+      <trans-unit id="23">
         <source>Report</source>
         <target>Report</target>
       </trans-unit>
-      <trans-unit id="23">
+      <trans-unit id="24">
         <source>Number of entries:</source>
         <target>Number of entries:</target>
       </trans-unit>
-      <trans-unit id="24">
+      <trans-unit id="25">
         <source>Enter values</source>
         <target>Enter values</target>
       </trans-unit>
-      <trans-unit id="25">
+      <trans-unit id="26">
         <source>Enter many</source>
         <target>Enter many</target>
       </trans-unit>

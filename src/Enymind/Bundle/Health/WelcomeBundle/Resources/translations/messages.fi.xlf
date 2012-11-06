@@ -43,92 +43,96 @@
         <target>&lt;strong&gt;Seuraava asia&lt;/strong&gt;, jota tarvitset, on oma tunnus palveluun.</target>
       </trans-unit>
       <trans-unit id="11">
+        <source>&lt;strong&gt;Please choose&lt;/strong&gt; one of choices bellow...</source>
+        <target>__&lt;strong&gt;Please choose&lt;/strong&gt; one of choices bellow...</target>
+      </trans-unit>
+      <trans-unit id="12">
         <source>I am a new user</source>
         <target>Olen uusi käyttäjä</target>
       </trans-unit>
-      <trans-unit id="12">
+      <trans-unit id="13">
         <source>No personal information, like your name, or your location, is stored in this system.</source>
         <target>Järjestelmään ei tallenneta henkilökohtaisia tietojasi, kuten nimeäsi tai sijaintiasi.</target>
       </trans-unit>
-      <trans-unit id="13">
+      <trans-unit id="14">
         <source>Here is your personal code:</source>
         <target>Tässä henkilökohtainen koodisi:</target>
       </trans-unit>
-      <trans-unit id="14">
+      <trans-unit id="15">
         <source>Password:</source>
         <target>Salasana:</target>
       </trans-unit>
-      <trans-unit id="15">
+      <trans-unit id="16">
         <source>Password</source>
         <target>Salasana</target>
       </trans-unit>
-      <trans-unit id="16">
+      <trans-unit id="17">
         <source>Save and remember your personal code and password well!</source>
         <target>Tallenna tai muista henkilökohtainen koodisi ja salasanasi!</target>
       </trans-unit>
-      <trans-unit id="17">
+      <trans-unit id="18">
         <source>Register</source>
         <target>Rekisteröidy</target>
       </trans-unit>
-      <trans-unit id="18">
+      <trans-unit id="19">
         <source>I already have an account</source>
         <target>Minulla on jo tunnus</target>
       </trans-unit>
-      <trans-unit id="19">
+      <trans-unit id="20">
         <source>Just as well you can find the same icon at the &lt;strong&gt;top right&lt;/strong&gt; corner of this page.
           Next time, use icon at top right corner to speed up your log in process.</source>
         <target>Voit yhtä hyvin käyttää tämän sivun &lt;strong&gt;oikealla yläkulmassa&lt;/strong&gt; sijaitsevaa kirjautumispainiketta.
           Seuraavalla kerralla käytä yläkulman painiketta nopeuttaaksesi kirjautumistasi.</target>
       </trans-unit>
-      <trans-unit id="20">
+      <trans-unit id="21">
         <source>Health Portal Log In</source>
         <target>Portaalin kirjautuminen</target>
       </trans-unit>
-      <trans-unit id="21">
+      <trans-unit id="22">
         <source>OK</source>
         <target>OK</target>
       </trans-unit>
-      <trans-unit id="22">
+      <trans-unit id="23">
         <source>Personal code:</source>
         <target>Henkilökohtainen koodi:</target>
       </trans-unit>
-      <trans-unit id="23">
+      <trans-unit id="24">
         <source>Personal code</source>
         <target>Henkilökohtainen koodi</target>
       </trans-unit>
-      <trans-unit id="24">
+      <trans-unit id="25">
         <source>Hint</source>
         <target>Vihje</target>
       </trans-unit>
-      <trans-unit id="25">
+      <trans-unit id="26">
         <source>&lt;strong&gt;Set this page&lt;/strong&gt; to your browser's &lt;strong&gt;bookmark list&lt;/strong&gt; to speed up log in process next time.</source>
         <target>&lt;strong&gt;Lisää&lt;/strong&gt; tämä sivu selaimesi &lt;strong&gt;kirjanmerkkeihin&lt;/strong&gt; nopeuttaaksesi kirjautumista seuraavalla kerralla.</target>
       </trans-unit>
-      <trans-unit id="26">
+      <trans-unit id="27">
         <source>Add bookmark</source>
         <target>Lisää kirjanmerkki</target>
       </trans-unit>
-      <trans-unit id="27">
+      <trans-unit id="28">
         <source>Send credentials by email</source>
         <target>Lähetä tunnukset sähköpostilla</target>
       </trans-unit>
-      <trans-unit id="28">
+      <trans-unit id="29">
         <source>No personal information, like your name, email, or your location, is stored in this system without your knowledge.</source>
         <target>Järjestelmään ei tallenneta henkilökohtaisia tietojasi, kuten nimeäsi tai sijaintiasi tietämättäsi.</target>
       </trans-unit>
-      <trans-unit id="29">
+      <trans-unit id="30">
         <source>Email:</source>
         <target>Sähköposti:</target>
       </trans-unit>
-      <trans-unit id="30">
+      <trans-unit id="31">
         <source>your@email.com</source>
         <target>nimi@osoite.fi</target>
       </trans-unit>
-      <trans-unit id="31">
+      <trans-unit id="32">
         <source>Send</source>
         <target>Lähetä</target>
       </trans-unit>
-      <trans-unit id="32">
+      <trans-unit id="33">
         <source>Adding bookmarks is not supported on your browser!</source>
         <target>Selaimesi ei tue kirjanmerkkien lisäämistä!</target>
       </trans-unit>
