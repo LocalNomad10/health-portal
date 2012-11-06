@@ -15,18 +15,12 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+        $request = $this->getRequest();
+        $session = $this->get('session');
+
+        $session->setLocale($request->getPreferredLanguage(array('fi', 'en')));
+      
         return array();
-    }
-  
-    /**
-     * @Route("/locale/{locale}")
-     */
-    public function localeAction($locale)
-    {
-        $this->get('session')->set('_locale', $locale);
-        
-        $response = $this->forward('EnymindHealthWelcomeBundle:Default:index');
-        return $response;
     }
     
     /**
