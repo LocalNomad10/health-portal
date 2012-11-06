@@ -44,6 +44,7 @@
 {% block javascripts %}
   <script type="text/javascript">
     $(document).bind('pageinit', function(){
+      $('#new-user-coll').unbind('expand');
       $("#new-user-coll").bind("expand", function(){
         $("#p-code").load('/genid', function(){
           $("#p-code-input").val( $("#p-code").text() );
