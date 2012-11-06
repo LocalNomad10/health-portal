@@ -9,6 +9,9 @@
         {% endstylesheets %}
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <script type="text/javascript">
+          var plem = '{% trans %}Requested page not found!{% endtrans %}';
+        </script>
         {% javascripts '@EnymindHealthWelcomeBundle/Resources/public/js/*' %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
