@@ -4,10 +4,12 @@ namespace Enymind\Bundle\Health\SecureBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use JMS\SecurityExtraBundle\Annotation\Secure;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Enymind\Bundle\Health\SecureBundle\Entity\Entry;
 use Enymind\Bundle\Health\SecureBundle\Entity\EntryType;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -41,12 +43,6 @@ class DefaultController extends Controller
      */
     public function enterFormAction($entryTypeId)
     {
-        $value = $request->request->get('value');
-        
-        if ( empty( $value ) ) {
-            throw $this->createNotFoundException('value not set.');
-        }
-      
         $em = $this->getDoctrine()->getManager();
         $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
         
@@ -59,9 +55,10 @@ class DefaultController extends Controller
     
     /**
      * @Route("/enter/{entryTypeId}/save")
+     * @Method("POST")
      * @Secure(roles="ROLE_USER")
      */
-    public function enterFormSaveAction($entryTypeId)
+    public function enterFormSaveAction(Request $request, $entryTypeId)
     {
         $value = $request->request->get('value');
         
