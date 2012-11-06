@@ -42,18 +42,3 @@
     </div>
   </div>
 {% endblock %}
-
-{% block javascripts %}
-  <script type="text/javascript">
-    var genid_callback = function(){
-      $("#p-code").load('/genid', function(){
-        $("#p-code-input").val( $("#p-code").text() );
-      });
-    };
-    
-    $(document).delegate('#page-index', 'pageshow', function(){
-      $("#new-user-coll").unbind("expand", genid_callback);
-      $("#new-user-coll").bind("expand", genid_callback);
-    });
-  </script>
-{% endblock %}
