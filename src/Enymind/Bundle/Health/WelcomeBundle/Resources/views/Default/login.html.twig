@@ -55,39 +55,41 @@
 
 {% block javascripts %}
   <script type="text/javascript">
-    $(document).bind('pageinit', function(){
-      $("#bookmark-not-supported-popup").popup();      
-      $('#add-bookmark').unbind('click');
-      $("#add-bookmark").click(function(e){
-        e.preventDefault();
-        var bookmarkUrl = this.href;
-        var bookmarkTitle = this.title;
+    var alreadyBind = false;
+    if( !alreadyBind ) {
+      $(document).bind('pageinit', function(){
+        $("#bookmark-not-supported-popup").popup();      
+        $("#add-bookmark").click(function(e){
+          e.preventDefault();
+          var bookmarkUrl = this.href;
+          var bookmarkTitle = this.title;
 
-        if (window.sidebar) {
-            window.sidebar.addPanel(bookmarkTitle, bookmarkUrl,"");
-        } else if( window.external || document.all) {
-            window.external.AddFavorite( bookmarkUrl, bookmarkTitle);
-        } else if(window.opera) {
-            $("#add-bookmark").attr("href",bookmarkUrl);
-            $("#add-bookmark").attr("title",bookmarkTitle);
-            $("#add-bookmark").attr("rel","sidebar");
-        } else {
-            $("#bookmark-not-supported-popup").popup("open");
-        }
-        return false;
-      });
-      
-      $("#email-sent-popup").popup();
-      $('#email-submit').unbind('click');
-      $("#email-submit").click(function(e){
-        e.preventDefault();
-        $.post( $("#email-form").attr("action"), $("#email-form").serialize(),
-        function( data ) {
-          $("#email-sent-popup").text( data );
-          $("#email-sent-popup").popup("open");
+          if (window.sidebar) {
+              window.sidebar.addPanel(bookmarkTitle, bookmarkUrl,"");
+          } else if( window.external || document.all) {
+              window.external.AddFavorite( bookmarkUrl, bookmarkTitle);
+          } else if(window.opera) {
+              $("#add-bookmark").attr("href",bookmarkUrl);
+              $("#add-bookmark").attr("title",bookmarkTitle);
+              $("#add-bookmark").attr("rel","sidebar");
+          } else {
+              $("#bookmark-not-supported-popup").popup("open");
+          }
+          return false;
         });
-        return false;
+
+        $("#email-sent-popup").popup();
+        $("#email-submit").click(function(e){
+          e.preventDefault();
+          $.post( $("#email-form").attr("action"), $("#email-form").serialize(),
+          function( data ) {
+            $("#email-sent-popup").html( data );
+            $("#email-sent-popup").popup("open");
+          });
+          return false;
+        });
       });
-    });
+      alreadyBind = true;
+    }
   </script>
 {% endblock %}
