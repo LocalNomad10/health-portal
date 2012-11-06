@@ -88,7 +88,7 @@ class UserController extends Controller
       
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('EnymindHealthSecureBundle:User')->find(array('username' => $username));
+        $entity = $em->getRepository('EnymindHealthSecureBundle:User')->findOneBy(array('username' => $username));
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find User entity.');
