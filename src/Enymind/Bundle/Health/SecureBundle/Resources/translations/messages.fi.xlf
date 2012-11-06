@@ -11,90 +11,102 @@
         <target>Sähköposti tallennettu onnistuneesti!</target>
       </trans-unit>
       <trans-unit id="3">
+        <source>Dear</source>
+        <target>__Dear</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Here is your personal code:</source>
+        <target>__Here is your personal code:</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Best Regards</source>
+        <target>__Best Regards</target>
+      </trans-unit>
+      <trans-unit id="6">
         <source>Back</source>
         <target>Takaisin</target>
       </trans-unit>
-      <trans-unit id="4">
+      <trans-unit id="7">
         <source>New user</source>
         <target>Uusi käyttäjä</target>
       </trans-unit>
-      <trans-unit id="5">
+      <trans-unit id="8">
         <source>Log In</source>
         <target>Kirjaudu</target>
       </trans-unit>
-      <trans-unit id="6">
+      <trans-unit id="9">
         <source>&lt;strong&gt;New user&lt;/strong&gt; (you) has been created with following credentials:</source>
         <target>&lt;strong&gt;Uusi käyttäjä&lt;/strong&gt; (sinä) on luotu järjestelmään seuraavilla tiedoilla:</target>
       </trans-unit>
-      <trans-unit id="7">
+      <trans-unit id="10">
         <source>Personal code:</source>
         <target>Henkilökohtainen koodi:</target>
       </trans-unit>
-      <trans-unit id="8">
+      <trans-unit id="11">
         <source>Hint</source>
         <target>Vihje</target>
       </trans-unit>
-      <trans-unit id="9">
+      <trans-unit id="12">
         <source>Remember to save your credentials in a safe place!</source>
         <target>Muista tallentaa tunnuksesi talteen varmaan paikkaan!</target>
       </trans-unit>
-      <trans-unit id="10">
+      <trans-unit id="13">
         <source>You can send your credentials by email at a login page.</source>
         <target>Voit lähettää tunnuksesi itsellesi sähköpostilla kirjautumissivulla.</target>
       </trans-unit>
-      <trans-unit id="11">
+      <trans-unit id="14">
         <source>Enter entry value</source>
         <target>Syötä mittauksen arvo</target>
       </trans-unit>
-      <trans-unit id="12">
+      <trans-unit id="15">
         <source>Value in</source>
         <target>Suure</target>
       </trans-unit>
-      <trans-unit id="13">
+      <trans-unit id="16">
         <source>Add entry</source>
         <target>Lisää mittaus</target>
       </trans-unit>
-      <trans-unit id="14">
+      <trans-unit id="17">
         <source>Enter entry</source>
         <target>Syötä mittaus</target>
       </trans-unit>
-      <trans-unit id="15">
+      <trans-unit id="18">
         <source>Search entry type...</source>
         <target>Etsi mittaustyyppi...</target>
       </trans-unit>
-      <trans-unit id="16">
+      <trans-unit id="19">
         <source>Log Out</source>
         <target>Kirjaudu ulos</target>
       </trans-unit>
-      <trans-unit id="17">
+      <trans-unit id="20">
         <source>Dashboard</source>
         <target>Etusivu</target>
       </trans-unit>
-      <trans-unit id="18">
+      <trans-unit id="21">
         <source>Search</source>
         <target>Haku</target>
       </trans-unit>
-      <trans-unit id="19">
+      <trans-unit id="22">
         <source>Enter value</source>
         <target>Syötä arvo</target>
       </trans-unit>
-      <trans-unit id="20">
+      <trans-unit id="23">
         <source>Enter group</source>
         <target>Syötä sarja</target>
       </trans-unit>
-      <trans-unit id="21">
+      <trans-unit id="24">
         <source>Statistics</source>
         <target>Tilastot</target>
       </trans-unit>
-      <trans-unit id="22">
+      <trans-unit id="25">
         <source>Reporting</source>
         <target>Raportointi</target>
       </trans-unit>
-      <trans-unit id="23">
+      <trans-unit id="26">
         <source>Report</source>
         <target>Raportti</target>
       </trans-unit>
-      <trans-unit id="24">
+      <trans-unit id="27">
         <source>Number of entries:</source>
         <target>Mittausten määrä:</target>
       </trans-unit>

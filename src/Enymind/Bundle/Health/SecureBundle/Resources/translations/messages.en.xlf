@@ -11,98 +11,110 @@
         <target>Email saved succesfully!</target>
       </trans-unit>
       <trans-unit id="3">
+        <source>Dear</source>
+        <target>__Dear</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Here is your personal code:</source>
+        <target>__Here is your personal code:</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Best Regards</source>
+        <target>__Best Regards</target>
+      </trans-unit>
+      <trans-unit id="6">
         <source>Back</source>
         <target>Back</target>
       </trans-unit>
-      <trans-unit id="4">
+      <trans-unit id="7">
         <source>New user</source>
         <target>New user</target>
       </trans-unit>
-      <trans-unit id="5">
+      <trans-unit id="8">
         <source>Log In</source>
         <target>Log In</target>
       </trans-unit>
-      <trans-unit id="6">
+      <trans-unit id="9">
         <source>&lt;strong&gt;New user&lt;/strong&gt; (you) has been created with following credentials:</source>
         <target>&lt;strong&gt;New user&lt;/strong&gt; (you) has been created with following credentials:</target>
       </trans-unit>
-      <trans-unit id="7">
+      <trans-unit id="10">
         <source>Personal code:</source>
         <target>Personal code:</target>
       </trans-unit>
-      <trans-unit id="8">
+      <trans-unit id="11">
         <source>Hint</source>
         <target>Hint</target>
       </trans-unit>
-      <trans-unit id="9">
+      <trans-unit id="12">
         <source>Remember to save your credentials in a safe place!</source>
         <target>Remember to save your credentials in a safe place!</target>
       </trans-unit>
-      <trans-unit id="10">
+      <trans-unit id="13">
         <source>You can send your credentials by email at a login page.</source>
         <target>You can send your credentials by email at a login page.</target>
       </trans-unit>
-      <trans-unit id="11">
+      <trans-unit id="14">
         <source>Enter entry value</source>
         <target>Enter entry value</target>
       </trans-unit>
-      <trans-unit id="12">
+      <trans-unit id="15">
         <source>Value in</source>
         <target>Value in</target>
       </trans-unit>
-      <trans-unit id="13">
+      <trans-unit id="16">
         <source>Add entry</source>
         <target>Add entry</target>
       </trans-unit>
-      <trans-unit id="14">
+      <trans-unit id="17">
         <source>Enter entry</source>
         <target>Enter entry</target>
       </trans-unit>
-      <trans-unit id="15">
+      <trans-unit id="18">
         <source>Search entry type...</source>
         <target>Search entry type...</target>
       </trans-unit>
-      <trans-unit id="16">
+      <trans-unit id="19">
         <source>Log Out</source>
         <target>Log Out</target>
       </trans-unit>
-      <trans-unit id="17">
+      <trans-unit id="20">
         <source>Dashboard</source>
         <target>Dashboard</target>
       </trans-unit>
-      <trans-unit id="18">
+      <trans-unit id="21">
         <source>Search</source>
         <target>Search</target>
       </trans-unit>
-      <trans-unit id="19">
+      <trans-unit id="22">
         <source>Enter value</source>
         <target>Enter value</target>
       </trans-unit>
-      <trans-unit id="20">
+      <trans-unit id="23">
         <source>Enter group</source>
         <target>Enter group</target>
       </trans-unit>
-      <trans-unit id="21">
+      <trans-unit id="24">
         <source>Statistics</source>
         <target>Statistics</target>
       </trans-unit>
-      <trans-unit id="22">
+      <trans-unit id="25">
         <source>Reporting</source>
         <target>Reporting</target>
       </trans-unit>
-      <trans-unit id="23">
+      <trans-unit id="26">
         <source>Report</source>
         <target>Report</target>
       </trans-unit>
-      <trans-unit id="24">
+      <trans-unit id="27">
         <source>Number of entries:</source>
         <target>Number of entries:</target>
       </trans-unit>
-      <trans-unit id="25">
+      <trans-unit id="28">
         <source>Enter values</source>
         <target>Enter values</target>
       </trans-unit>
-      <trans-unit id="26">
+      <trans-unit id="29">
         <source>Enter many</source>
         <target>Enter many</target>
       </trans-unit>
