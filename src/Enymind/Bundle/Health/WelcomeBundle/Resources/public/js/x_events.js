@@ -49,7 +49,9 @@ $(document).delegate('#page-login', 'pageshow', function(){
   var focused = false;
   $("#login-form input").each(function(){
     if( !focused && $(this).val() == "" )
+    {
       $(this).focus();
       focused = true;
+    }
   });
 });
