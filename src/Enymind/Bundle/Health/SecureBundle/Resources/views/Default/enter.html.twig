@@ -8,8 +8,6 @@
 {% endblock %}
 
 {% block body %}
-  <p>{% trans %}Select entry type from list bellow:{% endtrans %}</p>
-
   <ul data-role="listview" data-filter="true" data-filter-placeholder="Search entry..." data-filter-theme="d" data-theme="d" data-divider-theme="d">
   {% for entryType in entryTypes %}
     <li><a href="/secure/enter/{{ entryType.id }}">{{ entryType.name }}</a></li>
