@@ -22,7 +22,6 @@
       <p><strong>{% trans %}No personal information, like your name or your location, is stored in this system.{% endtrans %}</strong></p>
       <p>{% trans %}Here is your personal code:{% endtrans %} <strong><span id="p-code">...</span></strong></p>
       <form action="/secure/user/register" method="post">
-        <input type="hidden" name="isActive" value="1" />
         <input type="hidden" name="username" id="p-code-input" value="" />
         <div data-role="fieldcontain" class="ui-hide-label">
           <label for="password">{% trans %}Password:{% endtrans %}</label>

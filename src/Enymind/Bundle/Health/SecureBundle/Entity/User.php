@@ -50,6 +50,7 @@ class User implements UserInterface
     {
         $this->isActive = true;
         $this->salt = md5(uniqid(null, true));
+        $this->email = "";
     }
 
     /**
