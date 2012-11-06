@@ -75,6 +75,56 @@ class UserController extends Controller
     }
 
     /**
+     * Sends user credentials by email
+     *
+     * @Route("/send/{username}", name="secure_user_send")
+     * @Method("POST")
+     * @Template("EnymindHealthSecureBundle:User:send.html.twig")
+     */
+    public function sendAction(Request $request, $username)
+    {
+        $isSent = false;
+        $isSaved = false;
+      
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = $em->getRepository('EnymindHealthSecureBundle:User')->find(array('username' => $username));
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find User entity.');
+        }
+
+        if( $request->request->get('save-email') )
+        {
+          $entity->setEmail( $request->request->get('email') );
+          $em->persist($entity);
+          $em->flush();
+          
+          $isSaved = true;
+        }
+        
+        try
+        {
+          $message = \Swift_Message::newInstance()
+              ->setSubject('Health Portal Credentials, do not reply')
+              ->setFrom('no-reply@enymind.fi')
+              ->setTo( $entity->getEmail() )
+              ->setBody($this->renderView('EnymindHealthSecureBundle:User:message.txt.twig', array('entity' => $entity)))
+          ;
+          $this->get('mailer')->send($message);
+          $isSent = true;
+        }
+        catch (Exception $e) {
+          //
+        }
+        
+        return array(
+            'sent' => $isSent,
+            'saved' => $isSaved
+        );
+    }
+    
+    /**
      * Registers (creates) a new User entity.
      *
      * @Route("/register", name="secure_user_register")

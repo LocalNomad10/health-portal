@@ -24,13 +24,13 @@
   </form>
   
   <div data-role="collapsible-set">
-    <div data-role="collapsible" data-theme="c" data-content-theme="d" data-collapsed="false">
+    <div data-role="collapsible" data-theme="c" data-content-theme="d" data-collapsed="false" data-icon="info">
       <h3>{% trans %}Hint{% endtrans %}</h3>
       <p>{% trans %}<strong>Set this page</strong> to your browser's <strong>bookmark list</strong> to speed up log in process next time.{% endtrans %}</p>
       <p><a href="/login" data-role="button" data-inline="true" data-icon="arrow-r" data-mini="true" data-theme="b" id="add-bookmark">{% trans %}Add bookmark{% endtrans %}</a></p>
     </div>
     {% if last_username %}
-      <div data-role="collapsible" data-theme="b" data-content-theme="d">
+      <div data-role="collapsible" data-theme="b" data-content-theme="d" data-icon="star">
         <h3>{% trans %}Send credentials by email{% endtrans %}</h3>
         <p><strong>{% trans %}No personal information, like your name, email, or your location, is stored in this system without your knowledge.{% endtrans %}</strong></p>
         <form action="/secure/user/send/{{ last_username }}" method="post">
@@ -39,6 +39,7 @@
             <input type="text" name="email" id="email" value="" placeholder="{% trans %}your@email.com{% endtrans %}" />
           </div>
           <label><input type="checkbox" name="save-email" /> Save my email address</label>
+          <button type="submit" name="submit" value="submit" data-theme="a" data-icon="star">{% trans %}Send{% endtrans %}</button>
         </form>
       </div>
     {% endif %}
