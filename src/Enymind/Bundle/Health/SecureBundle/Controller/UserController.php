@@ -133,16 +133,19 @@ class UserController extends Controller
      */
     public function registerAction(Request $request)
     {
-        if ( empty( $request->request->get('username') ) ) {
+        $username = $request->request->get('username');
+        $password = $request->request->get('password');
+        
+        if ( empty( $username ) ) {
             throw $this->createNotFoundException('username not set.');
         }
-        else if ( empty( $request->request->get('password') ) ) {
+        else if ( empty( $password ) ) {
             throw $this->createNotFoundException('password not set.');
         }
       
         $entity = new User();
-        $entity->setUsername( $request->request->get('username') );
-        $entity->setPassword( $request->request->get('password') );
+        $entity->setUsername( $username );
+        $entity->setPassword( $password );
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($entity);
