@@ -9,10 +9,6 @@
 {% endblock %}
 
 {% block body %}
-  {% if error %}
-  <p><strong>{% trans %}Error occured during log in process:{% endtrans %}</strong></p>
-    <p class="error-message">{{ error.message }}</p>
-  {% endif %}
   <form action="/secure/login" method="post" id="login-form">
     <div data-role="fieldcontain" class="ui-hide-label">
       <label for="username">{% trans %}Personal code:{% endtrans %}</label>

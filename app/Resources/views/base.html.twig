@@ -20,17 +20,17 @@
         </div>
         <div data-role="content">
             {% if app.session.hasFlash('notice') %}
-                <div id="notice-popup" data-role="popup" data-theme="e" data-overlay-theme="a" class="flash-popup ui-content">
+                <div id="notice-popup" data-role="popup" data-theme="e" data-overlay-theme="a" class="flash-popup ui-content notice-message">
                   {{ app.session.flash('notice') }}
                 </div>
             {% endif %}
             {% if app.session.hasFlash('warning') %}
-                <div id="warning-popup" data-role="popup" data-theme="e" data-overlay-theme="a" class="flash-popup ui-content">
+                <div id="warning-popup" data-role="popup" data-theme="e" data-overlay-theme="a" class="flash-popup ui-content warning-message">
                   {{ app.session.flash('warning') }}
                 </div>
             {% endif %}
             {% if app.session.hasFlash('error') %}
-                <div id="error-popup" data-role="popup" data-theme="e" data-overlay-theme="a" class="flash-popup ui-content">
+                <div id="error-popup" data-role="popup" data-theme="e" data-overlay-theme="a" class="flash-popup ui-content error-message">
                   {{ app.session.flash('error') }}
                 </div>
             {% endif %}

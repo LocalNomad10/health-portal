@@ -9,6 +9,15 @@
     }
 }
 
-p.error-message {
+div.notice-message {
+  color: black;
+}
+
+div.warning-message {
   color: red;
+}
+
+div.error-message {
+  color: red;
+  font-weight: bold;
 }
