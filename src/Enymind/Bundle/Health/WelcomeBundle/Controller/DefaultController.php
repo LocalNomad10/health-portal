@@ -27,6 +27,7 @@ class DefaultController extends Controller
     {
         $request = $this->getRequest();
         $session = $request->getSession();
+        $lastUsername = "";
 
         if( $request->attributes->has( SecurityContext::AUTHENTICATION_ERROR ) )
         {
@@ -38,7 +39,8 @@ class DefaultController extends Controller
           $session->remove( SecurityContext::AUTHENTICATION_ERROR );
         }
       
-        $lastUsername = $session->get( SecurityContext::LAST_USERNAME );
+        if( $error )
+          $lastUsername = $session->get( SecurityContext::LAST_USERNAME );
         
         if( !empty( $username ) )
           $lastUsername = $username;
