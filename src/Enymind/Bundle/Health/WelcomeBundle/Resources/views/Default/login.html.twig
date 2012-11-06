@@ -8,7 +8,7 @@
 
 {% block body %}
   {% if error %}
-    <p>{% trans %}Error occured during log in process:{% trans %}</p>
+    <p>{% trans %}Error occured during log in process:{% endtrans %}</p>
     <p class="error-message">{{ error.message }}</p>
   {% endif %}
   <form action="/secure/login" method="post" id="login-form">
