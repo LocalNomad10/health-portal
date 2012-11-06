@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block body %}
-  <p>Number of entries: </p>
+  <p><strong>{% trans %}Number of entries:{% endtrans %}</strong> {{ entries|length }}</p>
   
   {% for entry in entries %}
     <p>{{ entry.typeId.name }}: {{ entry.value }} {{ entry.typeId.quantity }}</p>
