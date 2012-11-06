@@ -77,6 +77,8 @@ class DefaultController extends Controller
         $em->flush();
       
         $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry were added!') );
-        return $this->redirect($this->generateUrl('index'));
+        
+        $response = $this->forward('EnymindHealthSecureBundle:Default:index');
+        return $response;
     }
 }
