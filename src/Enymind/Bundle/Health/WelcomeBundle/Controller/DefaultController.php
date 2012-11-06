@@ -15,14 +15,9 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        $request = $this->getRequest();
-        $session = $this->get('session');
-
-        $session->set('_locale', $request->getPreferredLanguage(array('fi', 'en')));
-      
         return array();
     }
-    
+  
     /**
      * @Route("/login", defaults={"username" = ""})
      * @Route("/login/{username}")

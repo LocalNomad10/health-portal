@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block body %}
-  <ul data-role="listview" data-filter="true" data-filter-placeholder="Search entry..." data-filter-theme="d" data-theme="d" data-divider-theme="d">
+  <ul data-role="listview" data-filter="true" data-filter-placeholder="{% trans %}Search entry type...{% endtrans %}" data-filter-theme="d" data-theme="d" data-divider-theme="d">
   {% for entryType in entryTypes %}
     <li><a href="/secure/enter/{{ entryType.id }}">{{ entryType.name }}</a></li>
   {% endfor %}
