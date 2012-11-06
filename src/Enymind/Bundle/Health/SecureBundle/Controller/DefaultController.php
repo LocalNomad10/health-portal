@@ -71,6 +71,7 @@ class DefaultController extends Controller
         
         $entry = new Entry();
         $entry->setTypeId( $entryType );
+        $entry->setOwnerId( $this->getUser() );
         $entry->setValue( $value );
         
         $em->persist($entry);
