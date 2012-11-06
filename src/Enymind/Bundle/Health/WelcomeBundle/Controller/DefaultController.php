@@ -19,10 +19,11 @@ class DefaultController extends Controller
     }
   
     /**
-     * @Route("/login")
+     * @Route("/login", defaults={"username" = ""})
+     * @Route("/login/{username}")
      * @Template()
      */
-    public function loginAction()
+    public function loginAction($username)
     {
         $request = $this->getRequest();
         $session = $request->getSession();
@@ -37,8 +38,13 @@ class DefaultController extends Controller
           $session->remove( SecurityContext::AUTHENTICATION_ERROR );
         }
       
+        $lastUsername = $session->get( SecurityContext::LAST_USERNAME );
+        
+        if( !empty( $username ) )
+          $lastUsername = $username;
+        
         return array(
-          'last_username' => $session->get( SecurityContext::LAST_USERNAME ),
+          'last_username' => $lastUsername,
           'error'         => $error
         );
     }

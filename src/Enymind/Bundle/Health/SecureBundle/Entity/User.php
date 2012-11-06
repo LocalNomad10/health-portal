@@ -48,7 +48,7 @@ class User implements UserInterface
 
     public function __construct()
     {
-        $this->isActive = true;
+        $this->isActive = 1;
         $this->salt = md5(uniqid(null, true));
         $this->email = "";
     }

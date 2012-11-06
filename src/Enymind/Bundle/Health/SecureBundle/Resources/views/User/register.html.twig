@@ -3,7 +3,7 @@
 {% block header %}
   <a href="/" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
   <h1>{% trans %}New user{% endtrans %}</h1>
-  <a href="/login" data-icon="arrow-r" data-theme="b" data-iconpos="right">{% trans %}Log In{% endtrans %}</a>
+  <a href="/login/{{ entity.username }}" data-icon="arrow-r" data-theme="b" data-iconpos="right">{% trans %}Log In{% endtrans %}</a>
 {% endblock %}
 
 {% block body %}
