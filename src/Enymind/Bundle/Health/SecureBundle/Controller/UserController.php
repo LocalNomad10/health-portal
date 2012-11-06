@@ -83,22 +83,18 @@ class UserController extends Controller
      */
     public function registerAction(Request $request)
     {
-        $entity  = new User();
-        $form = $this->createForm(new UserType(), $entity);
-        $form->bind($request);
+        $entity = new User();
+        $entity->setUsername( $request->request->get('username') );
+        $entity->setPassword( $request->request->get('password') );
+        $entity->setIsActive( $request->request->get('isActive') );
 
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($entity);
-            $em->flush();
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($entity);
+        $em->flush();
 
-            return array(
-                'entity' => $entity
-            );
-        }
-        else {
-          throw $this->createNotFoundException('Unable to create User entity.');
-        }
+        return array(
+            'entity' => $entity
+        );
     }
     
     /**
