@@ -8,15 +8,15 @@
       </trans-unit>
       <trans-unit id="2">
         <source>Health Portal Help</source>
-        <target>__Health Portal Help</target>
+        <target>Health Portal Help</target>
       </trans-unit>
       <trans-unit id="3">
         <source>Search</source>
-        <target>__Search</target>
+        <target>Search</target>
       </trans-unit>
       <trans-unit id="4">
         <source>Nothing here yet...</source>
-        <target>__Nothing here yet...</target>
+        <target>Nothing here yet...</target>
       </trans-unit>
       <trans-unit id="5">
         <source>Help</source>
@@ -48,7 +48,7 @@
       </trans-unit>
       <trans-unit id="12">
         <source>No personal information, like your name, or your location, is stored in this system.</source>
-        <target>__No personal information, like your name, or your location, is stored in this system.</target>
+        <target>No personal information, like your name, or your location, is stored in this system.</target>
       </trans-unit>
       <trans-unit id="13">
         <source>Here is your personal code:</source>
@@ -98,39 +98,39 @@
       </trans-unit>
       <trans-unit id="24">
         <source>Hint</source>
-        <target>__Hint</target>
+        <target>Hint</target>
       </trans-unit>
       <trans-unit id="25">
         <source>&lt;strong&gt;Set this page&lt;/strong&gt; to your browser's &lt;strong&gt;bookmark list&lt;/strong&gt; to speed up log in process next time.</source>
-        <target>__&lt;strong&gt;Set this page&lt;/strong&gt; to your browser's &lt;strong&gt;bookmark list&lt;/strong&gt; to speed up log in process next time.</target>
+        <target>&lt;strong&gt;Set this page&lt;/strong&gt; to your browser's &lt;strong&gt;bookmark list&lt;/strong&gt; to speed up log in process next time.</target>
       </trans-unit>
       <trans-unit id="26">
         <source>Add bookmark</source>
-        <target>__Add bookmark</target>
+        <target>Add bookmark</target>
       </trans-unit>
       <trans-unit id="27">
         <source>Send credentials by email</source>
-        <target>__Send credentials by email</target>
+        <target>Send credentials by email</target>
       </trans-unit>
       <trans-unit id="28">
         <source>No personal information, like your name, email, or your location, is stored in this system without your knowledge.</source>
-        <target>__No personal information, like your name, email, or your location, is stored in this system without your knowledge.</target>
+        <target>No personal information, like your name, email, or your location, is stored in this system without your knowledge.</target>
       </trans-unit>
       <trans-unit id="29">
         <source>Email:</source>
-        <target>__Email:</target>
+        <target>Email:</target>
       </trans-unit>
       <trans-unit id="30">
         <source>your@email.com</source>
-        <target>__your@email.com</target>
+        <target>your@email.com</target>
       </trans-unit>
       <trans-unit id="31">
         <source>Send</source>
-        <target>__Send</target>
+        <target>Send</target>
       </trans-unit>
       <trans-unit id="32">
         <source>Adding bookmarks is not supported on your browser!</source>
-        <target>__Adding bookmarks is not supported on your browser!</target>
+        <target>Adding bookmarks is not supported on your browser!</target>
       </trans-unit>
       <trans-unit id="33">
         <source>No personal information, like your name or your location, is stored in this system.</source>
