@@ -49,7 +49,7 @@
       });
     };
     
-    $(document).bind('pageinit', function(){
+    $(document).bind('pageshow', function(){
       $("#new-user-coll").unbind("expand", genid_callback);
       $("#new-user-coll").bind("expand", genid_callback);
     });
