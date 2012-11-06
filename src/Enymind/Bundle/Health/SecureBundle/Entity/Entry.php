@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Enymind\Bundle\Health\SecureBundle\Entity\Entry
  *
- * @ORM\Table()
+ * @ORM\Table(name="entries")
  * @ORM\Entity
  */
 class Entry
@@ -25,6 +25,8 @@ class Entry
      * @var integer $type_id
      *
      * @ORM\Column(name="type_id", type="integer")
+     * @ORM\ManyToOne(targetEntity="EntryType", inversedBy="entry_types")
+     * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
      */
     private $type_id;
 
@@ -43,6 +45,11 @@ class Entry
     private $added;
 
 
+    public function __construct()
+    {
+        $this->added = date("Y-m-d H:i:s");
+    }
+    
     /**
      * Get id
      *

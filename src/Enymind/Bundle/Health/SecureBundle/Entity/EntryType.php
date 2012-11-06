@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Enymind\Bundle\Health\SecureBundle\Entity\EntryType
  *
- * @ORM\Table()
+ * @ORM\Table(name="entry_types")
  * @ORM\Entity
  */
 class EntryType
@@ -21,6 +21,15 @@ class EntryType
      */
     private $id;
 
+    /**
+     * @var integer $owner_id
+     *
+     * @ORM\Column(name="owner_id", type="integer")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="users")
+     * @ORM\JoinColumn(name="owner_id", referencedColumnName="id")
+     */
+    private $owner_id;
+    
     /**
      * @var string $name
      *
@@ -67,6 +76,29 @@ class EntryType
         return $this->id;
     }
 
+    /**
+     * Set owner_id
+     *
+     * @param integer $ownerId
+     * @return EntryType
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->owner_id = $ownerId;
+    
+        return $this;
+    }
+
+    /**
+     * Get owner_id
+     *
+     * @return integer 
+     */
+    public function getOwnerId()
+    {
+        return $this->owner_id;
+    }
+    
     /**
      * Set name
      *
