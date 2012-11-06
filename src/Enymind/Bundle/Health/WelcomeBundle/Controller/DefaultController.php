@@ -19,6 +19,17 @@ class DefaultController extends Controller
     }
   
     /**
+     * @Route("/locale/{locale}")
+     */
+    public function localeAction($locale)
+    {
+        $this->get('session')->set('_locale', $locale);
+        
+        $response = $this->forward('EnymindHealthWelcomeBundle:Default:index');
+        return $response;
+    }
+    
+    /**
      * @Route("/login", defaults={"username" = ""})
      * @Route("/login/{username}")
      * @Template()
