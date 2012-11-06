@@ -4,95 +4,95 @@
     <body>
       <trans-unit id="1">
         <source>Message sent succesfully!</source>
-        <target>__Message sent succesfully!</target>
+        <target>Sähköposti lähetetty onnistuneesti!</target>
       </trans-unit>
       <trans-unit id="2">
         <source>Email saved succesfully!</source>
-        <target>__Email saved succesfully!</target>
+        <target>Sähköposti tallennettu onnistuneesti!</target>
       </trans-unit>
       <trans-unit id="3">
         <source>Back</source>
-        <target>__Back</target>
+        <target>Takaisin</target>
       </trans-unit>
       <trans-unit id="4">
         <source>New user</source>
-        <target>__New user</target>
+        <target>Uusi käyttäjä</target>
       </trans-unit>
       <trans-unit id="5">
         <source>Log In</source>
-        <target>__Log In</target>
+        <target>Kirjaudu</target>
       </trans-unit>
       <trans-unit id="6">
         <source>&lt;strong&gt;New user&lt;/strong&gt; (you) has been created with following credentials:</source>
-        <target>__&lt;strong&gt;New user&lt;/strong&gt; (you) has been created with following credentials:</target>
+        <target>&lt;strong&gt;Uusi käyttäjä&lt;/strong&gt; (sinä) on luotu järjestelmään seuraavilla tiedoilla:</target>
       </trans-unit>
       <trans-unit id="7">
         <source>Personal code:</source>
-        <target>__Personal code:</target>
+        <target>Henkilökohtainen koodi:</target>
       </trans-unit>
       <trans-unit id="8">
         <source>Hint</source>
-        <target>__Hint</target>
+        <target>Vihje</target>
       </trans-unit>
       <trans-unit id="9">
         <source>Remember to save your credentials in a safe place!</source>
-        <target>__Remember to save your credentials in a safe place!</target>
+        <target>Muista tallentaa tunnuksesi talteen varmaan paikkaan!</target>
       </trans-unit>
       <trans-unit id="10">
         <source>You can send your credentials by email at a login page.</source>
-        <target>__You can send your credentials by email at a login page.</target>
+        <target>Voit lähettää tunnuksesi itsellesi sähköpostilla kirjautumissivulla.</target>
       </trans-unit>
       <trans-unit id="11">
         <source>Enter entry value</source>
-        <target>__Enter entry value</target>
+        <target>Syötä mittauksen arvo</target>
       </trans-unit>
       <trans-unit id="12">
         <source>Value in</source>
-        <target>__Value in</target>
+        <target>Suure</target>
       </trans-unit>
       <trans-unit id="13">
         <source>Add entry</source>
-        <target>__Add entry</target>
+        <target>Lisää mittaus</target>
       </trans-unit>
       <trans-unit id="14">
         <source>Enter entry</source>
-        <target>__Enter entry</target>
+        <target>Syötä mittaus</target>
       </trans-unit>
       <trans-unit id="15">
         <source>Log Out</source>
-        <target>__Log Out</target>
+        <target>Kirjaudu ulos</target>
       </trans-unit>
       <trans-unit id="16">
         <source>Dashboard</source>
-        <target>__Dashboard</target>
+        <target>Etusivu</target>
       </trans-unit>
       <trans-unit id="17">
         <source>Search</source>
-        <target>__Search</target>
+        <target>Haku</target>
       </trans-unit>
       <trans-unit id="18">
         <source>Enter value</source>
-        <target>__Enter value</target>
+        <target>Syötä arvo</target>
       </trans-unit>
       <trans-unit id="19">
         <source>Enter group</source>
-        <target>__Enter group</target>
+        <target>Syötä sarja</target>
       </trans-unit>
       <trans-unit id="20">
         <source>Statistics</source>
-        <target>__Statistics</target>
+        <target>Tilastot</target>
       </trans-unit>
       <trans-unit id="21">
         <source>Reporting</source>
-        <target>__Reporting</target>
+        <target>Raportointi</target>
       </trans-unit>
       <trans-unit id="22">
         <source>Report</source>
-        <target>__Report</target>
+        <target>Raportti</target>
       </trans-unit>
       <trans-unit id="23">
         <source>Number of entries:</source>
-        <target>__Number of entries:</target>
+        <target>Mittausten määrä:</target>
       </trans-unit>
     </body>
   </file>
