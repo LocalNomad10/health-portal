@@ -24,6 +24,7 @@ class User implements UserInterface
 
     /**
      * @ORM\OneToMany(targetEntity="Entry", mappedBy="owner_id")
+     * @ORM\OrderBy({"added" = "DESC"})
      */
     protected $entries;
     
