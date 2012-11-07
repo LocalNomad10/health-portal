@@ -164,6 +164,15 @@ class DefaultController extends Controller
      */
     public function statsAction()
     {
+        return array();
+    }
+    
+    /**
+     * @Route("/stats/data")
+     * @Secure(roles="ROLE_USER")
+     */
+    public function statsDataAction()
+    {
         $entries = $this->getUser()->getEntries();
         
         $entriesByType = array();
@@ -171,7 +180,16 @@ class DefaultController extends Controller
           $entriesByType[ $entry->getTypeId()->getName() ][] = $entry;
         }
         
-        return array('entriesByType' => $entriesByType);
+        $results = array();
+        foreach( $entriesByType as $typeName => $entries ) {
+          $result = array('label' => $typeName );
+          foreach( $entries as $entry ) {
+            $result['data'][]=array($entry->getAdded()->getTimestamp(), $entry->getValue());
+          }
+          $results[] = $result;
+        }
+        
+        return new Response( json_encode($results) );
     }
     
     /**

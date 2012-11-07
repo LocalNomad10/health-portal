@@ -10,18 +10,3 @@
 {% block body %}
   <div id="flot-container"></div>
 {% endblock %}
-
-{% block javascripts %}
-  <script type="text/javascript">
-    var page_stats_flot_data =
-      [
-        {% for typeName,entries in entriesByType %}
-          { label: "{{ typeName }}", data: [
-          {% for entry in entries %}
-            [{{ entry.added|date('U') }}, {{ entry.value }}],
-          {% endfor %}
-          ] },
-        {% endfor %}
-      ];
-  </script>
-{% endblock %}

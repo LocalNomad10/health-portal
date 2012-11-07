@@ -10,5 +10,7 @@ var page_stats_flot_options = {
 };
 
 $(document).delegate('#page-secure-stats', 'pageshow', function(){
-  var plot = $.plot($("#flot-container"), page_stats_flot_data, page_stats_flot_options);
+  $.post( "/secure/stats/data", {}, function( data ){
+    var plot = $.plot($("#flot-container"), data, page_stats_flot_options);
+  });
 });
