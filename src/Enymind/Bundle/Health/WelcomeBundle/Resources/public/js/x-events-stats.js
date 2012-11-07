@@ -2,6 +2,10 @@ var page_stats_flot_options = {
     series: {
         lines: { show: true },
         points: { show: true }
+    },
+    xaxis: {
+        mode: "time",
+        timeformat: "%Y-%m-%d %H:%M:%S"
     }
 };
 
