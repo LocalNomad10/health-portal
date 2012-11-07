@@ -220,6 +220,6 @@ class EntryType
      */
     public function getDefaultValue()
     {
-        return ceil( ceil( $this->getMax() / 2 ) + intval( $this->getMin() ) );
+        return $this->getMin() + ceil( ceil( $this->getMax() - $this->getMin() ) / 2 );
     }
 }
