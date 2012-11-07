@@ -9,10 +9,10 @@ $(document).delegate('#page-secure-stats', 'pageshow', function(){
     var choiceContainer = $("#flot-series");
     choiceContainer.html("");
     $.each(data, function(key, val) {
-        choiceContainer.append('<input type="checkbox" name="' + key +
-                               '" checked="checked" class="custom" data-mini="true" id="cbid' + key + '">' +
-                               '<label for="cbid' + key + '">'
-                                + val.label + '</label>');
+        $('<input type="checkbox" name="' + key +
+              '" checked="checked" class="custom" data-mini="true" id="cbid' + key + '">' +
+              '<label for="cbid' + key + '">'
+              + val.label + '</label>').appendTo(choiceContainer).trigger("create");
     });
     
     var options = {
