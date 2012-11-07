@@ -31,7 +31,10 @@ class DefaultController extends Controller
     public function enterAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $entryTypes = $em->getRepository('EnymindHealthSecureBundle:EntryType')->findAll();
+        $entryTypes = $em->getRepository('EnymindHealthSecureBundle:EntryType')->findBy(
+                array("owner_id" => array( 1, $this->getUser()->getId() )), // where
+                array("name" => "ASC") // order by
+                );
       
         return array('entryTypes' => $entryTypes);
     }
@@ -88,7 +91,10 @@ class DefaultController extends Controller
     public function groupAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $entryGroups = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->findAll();
+        $entryGroups = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->findBy(
+                array("owner_id" => array( 1, $this->getUser()->getId() )), // where
+                array("name" => "ASC") // order by
+                );
       
         return array('entryGroups' => $entryGroups);
     }

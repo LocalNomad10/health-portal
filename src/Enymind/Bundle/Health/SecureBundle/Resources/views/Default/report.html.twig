@@ -14,7 +14,7 @@
     {% set lastDate = "1970-01-01" %}
     {% for entry in entries %}
       {% set currDate = entry.added|date('Y-m-d') %}
-      {% if lastDate < currDate %}
+      {% if lastDate > currDate %}
         <li data-role="list-divider">{{ currDate }}</li>
       {% endif %}
       {% set lastDate = currDate %}
