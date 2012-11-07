@@ -23,5 +23,5 @@ div.error-message {
 }
 
 #register-form div div, #login-form div div {
-  margin: 4px;
+  padding: 4px;
 }
