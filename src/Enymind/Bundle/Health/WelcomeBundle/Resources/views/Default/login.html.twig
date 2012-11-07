@@ -11,12 +11,10 @@
 {% block body %}
   <form action="/secure/login" method="post" id="login-form">
     <div class="ui-grid-a">
-      <div data-role="fieldcontain" class="ui-block-a ui-hide-label">
-        <label for="username">{% trans %}Personal code:{% endtrans %}</label>
+      <div class="ui-block-a">
         <input type="text" name="_username" id="username" value="{{ last_username }}" placeholder="{% trans %}Personal code{% endtrans %}"/>
       </div>
-      <div data-role="fieldcontain" class="ui-block-b ui-hide-label">
-        <label for="password">{% trans %}Password:{% endtrans %}</label>
+      <div class="ui-block-b">
         <input type="password" name="_password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}"/>
       </div>
     </div>

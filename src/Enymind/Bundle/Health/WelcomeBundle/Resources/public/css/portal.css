@@ -21,3 +21,7 @@ div.error-message {
   color: red;
   font-weight: bold;
 }
+
+#register-form div div, #login-form div div {
+  margin: 4px;
+}

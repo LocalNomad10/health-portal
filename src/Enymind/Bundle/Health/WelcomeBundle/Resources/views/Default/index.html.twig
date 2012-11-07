@@ -25,8 +25,7 @@
       <p>{% trans %}Here is your personal code:{% endtrans %} <strong><span id="p-code">...</span></strong></p>
       <form action="/secure/user/register" method="post" id="register-form">
         <input type="hidden" name="username" id="p-code-input" value="" />
-        <div data-role="fieldcontain" class="ui-hide-label">
-          <label for="password">{% trans %}Password:{% endtrans %}</label>
+        <div data-role="fieldcontain">
           <div class="ui-grid-a">
             <div class="ui-block-a"><input type="password" name="password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}" /></div>
             <div class="ui-block-b"><input type="password" name="password2" id="password2" value="" placeholder="{% trans %}Password again{% endtrans %}" /></div>
