@@ -18,7 +18,7 @@
         {% for typeName,entries in entriesByType %}
           { label: "{{ typeName }}", data: [
           {% for entry in entries %}
-            ["{{ entry.added|date('Y-m-d H:i:s') }}", {{ entry.value }}],
+            [{{ entry.added|date('U') }}, {{ entry.value }}],
           {% endfor %}
           ] },
         {% endfor %}

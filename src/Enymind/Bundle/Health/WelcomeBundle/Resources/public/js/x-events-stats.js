@@ -5,7 +5,7 @@ var page_stats_flot_options = {
     },
     xaxis: {
         mode: "time",
-        timeformat: "%Y-%m-%d %H:%M:%S"
+        timeformat: "%d"
     }
 };
 
