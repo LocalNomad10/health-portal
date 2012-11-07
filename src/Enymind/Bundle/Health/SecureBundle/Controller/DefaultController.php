@@ -10,6 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Enymind\Bundle\Health\SecureBundle\Entity\Entry;
 use Enymind\Bundle\Health\SecureBundle\Entity\EntryType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
