@@ -10,7 +10,9 @@
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <script type="text/javascript">
-          var plem = '{% trans %}Requested page not found!{% endtrans %}';
+          var translations = new Array();
+          translations["plem"] = '{% trans %}Requested page not found!{% endtrans %}';
+          translations["pama"] = '{% trans %}Password missmatch!{% endtrans %}';
         </script>
         {% javascripts '@EnymindHealthWelcomeBundle/Resources/public/js/*' %}
             <script type="text/javascript" src="{{ asset_url }}"></script>
@@ -37,6 +39,9 @@
                   {{ app.session.flash('error') }}
                 </div>
             {% endif %}
+            <div id="free-popup" data-role="popup" data-theme="e" data-overlay-theme="a" class="ui-content free-message">
+              ...
+            </div>
             
             {% block body %}{% endblock %}
         </div>

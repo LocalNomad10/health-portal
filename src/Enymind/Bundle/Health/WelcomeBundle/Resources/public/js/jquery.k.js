@@ -1,3 +1,3 @@
 $(document).bind("mobileinit", function(){
-  $.mobile.pageLoadErrorMessage = plem;
+  $.mobile.pageLoadErrorMessage = translations["plem"];
 });

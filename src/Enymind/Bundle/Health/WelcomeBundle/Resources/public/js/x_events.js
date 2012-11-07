@@ -1,12 +1,23 @@
 var genid_callback = function(){
   $("#p-code").load('/genid', function(){
     $("#p-code-input").val( $("#p-code").text() );
+    $("#register-button").button('enable');	
   });
+};
+
+var check_password_callback = function(){
+  if( $("#password").val() != $("#password2").val() ) {
+    $("#free-popup").html( translations["pama"] );
+    $("#free-popup").popup("open");
+  }
 };
 
 $(document).delegate('#page-index', 'pageshow', function(){
   $("#new-user-coll").unbind("expand", genid_callback);
   $("#new-user-coll").bind("expand", genid_callback);
+  
+  $("#register-button").unbind("click", check_password_callback);
+  $("#register-button").bind("click", check_password_callback);
 });
 
 var bookmark_callback = function(e){
@@ -31,8 +42,8 @@ var bookmark_callback = function(e){
 var email_callback = function(e){
   e.preventDefault();
   $.post( $("#email-form").attr("action"), $("#email-form").serialize(), function( data ){
-    $("#email-sent-popup").html( data );
-    $("#email-sent-popup").popup("open");
+    $("#free-popup").html( data );
+    $("#free-popup").popup("open");
   });
   return false;
 };
@@ -42,7 +53,6 @@ $(document).delegate('#page-login', 'pageshow', function(){
   $("#add-bookmark").unbind("click", bookmark_callback);
   $("#add-bookmark").bind("click", bookmark_callback);
 
-  $("#email-sent-popup").popup();
   $("#email-submit").unbind("click", email_callback);
   $("#email-submit").bind("click", email_callback);
 
@@ -63,4 +73,5 @@ $(document).bind('pageshow', function(){
       $(this).popup("open");
     }
   });
+  $("#free-popup").popup();
 });
