@@ -48,7 +48,8 @@ class UserController extends Controller
               ->setSubject( $this->get('translator')->trans('Health Portal Credentials, do not reply') )
               ->setFrom('no-reply@enymind.fi')
               ->setTo( $request->request->get('email') )
-              ->setBody($this->renderView('EnymindHealthSecureBundle:User:message.txt.twig', array('entity' => $entity)))
+              ->setBody($this->renderView('EnymindHealthSecureBundle:User:message.txt.twig',
+                      array('email' => $request->request->get('email'), 'entity' => $entity)))
           ;
           $this->get('mailer')->send($message);
           $isSent = true;
