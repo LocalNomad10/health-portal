@@ -16,7 +16,7 @@
         <li data-role="list-divider">{{ currDate }}</li>
       {% endif %}
       {% set lastDate = currDate %}
-      <li data-filtertext="{{ entry.typeId.name }}" data-mini="true">
+      <li data-filtertext="{{ entry.typeId.name }}">
         <div class="ui-grid-c">
           <div class="ui-block-a"><strong>{{ entry.typeId.name }}:</strong></div>
           <div class="ui-block-b">{{ entry.value }}</div>

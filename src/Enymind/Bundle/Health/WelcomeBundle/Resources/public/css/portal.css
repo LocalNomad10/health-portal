@@ -34,4 +34,6 @@ div.error-message {
 #report-ul li div div.ui-block-c,
 #report-ul li div div.ui-block-d {
   width: 10%;
+  font-weight: normal;
+  font-size: 0.8em;
 }
