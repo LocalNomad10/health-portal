@@ -1,29 +1,3 @@
-var genid_callback = function(){
-  $("#p-code").load('/genid', function(){
-    $("#p-code-input").val( $("#p-code").text() );
-    $("#register-button").button('enable');
-  });
-};
-
-var check_password_callback = function(){
-  if( $("#password").val() != $("#password2").val() ) {
-    $("#free-popup").html( translations["pama"] );
-    $("#free-popup").popup("open");
-    return false;
-  }
-  return true;
-};
-
-$(document).delegate('#page-index', 'pageshow', function(){
-  $("#new-user-coll").unbind("expand", genid_callback);
-  $("#new-user-coll").bind("expand", genid_callback);
-  
-  $("#register-form").unbind("submit", check_password_callback);
-  $("#register-form").bind("submit", check_password_callback);
-  
-  $("#register-button").button('disable');
-});
-
 var bookmark_callback = function(e){
   e.preventDefault();
   var bookmarkUrl = this.href;
@@ -68,14 +42,4 @@ $(document).delegate('#page-login', 'pageshow', function(){
       focused = true;
     }
   });
-});
-
-$(document).bind('pageshow', function(){
-  $(".flash-popup").each(function(){
-    if( $(this).length > 0 ) {
-      $(this).popup();
-      $(this).popup("open");
-    }
-  });
-  $("#free-popup").popup();
 });
