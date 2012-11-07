@@ -25,3 +25,11 @@ div.error-message {
 #register-form div div, #login-form div div {
   padding: 4px;
 }
+
+#report-ul li div div.ui-block-a {
+  width: 50%;
+}
+
+#report-ul li div div.ui-block-b, #report-ul li div div.ui-block-c {
+  width: 25%;
+}

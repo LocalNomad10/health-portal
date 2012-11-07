@@ -10,15 +10,15 @@
 {% block body %}
   <p><strong>{% trans %}Number of entries:{% endtrans %}</strong> {{ entries|length }}</p>
   
-  <ul data-role="listview" data-filter-placeholder="{% trans %}Filter by date...{% endtrans %}" data-filter="true">
+  <ul data-role="listview" id="report-ul" data-filter-placeholder="{% trans %}Filter by entry type...{% endtrans %}" data-filter="true">
     {% set lastDate = "1970-01-01" %}
     {% for entry in entries %}
       {% set currDate = entry.added|date('Y-m-d') %}
-      {% if not lastDate == currDate %}
+      {% if lastDate < currDate %}
         <li data-role="list-divider">{{ currDate }}</li>
       {% endif %}
       {% set lastDate = currDate %}
-      <li data-filtertext="{{ currDate }}">
+      <li data-filtertext="{{ entry.typeId.name }}">
         <div class="ui-grid-b">
           <div class="ui-block-a"><strong>{{ entry.typeId.name }}:</strong></div>
           <div class="ui-block-b">{{ entry.value }}</div>
