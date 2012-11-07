@@ -45,9 +45,9 @@ class UserController extends Controller
         try
         {
           $message = \Swift_Message::newInstance()
-              ->setSubject('Health Portal Credentials, do not reply')
+              ->setSubject( $this->get('translator')->trans('Health Portal Credentials, do not reply') )
               ->setFrom('no-reply@enymind.fi')
-              ->setTo( $entity->getEmail() )
+              ->setTo( $request->request->get('email') )
               ->setBody($this->renderView('EnymindHealthSecureBundle:User:message.txt.twig', array('entity' => $entity)))
           ;
           $this->get('mailer')->send($message);
