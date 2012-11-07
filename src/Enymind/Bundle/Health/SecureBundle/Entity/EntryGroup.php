@@ -146,7 +146,7 @@ class EntryGroup
     /**
      * Get entry_types
      *
-     * @return integer 
+     * @return array 
      */
     public function getEntryTypes()
     {
