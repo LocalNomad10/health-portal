@@ -12,7 +12,7 @@
   
   <ul data-role="listview" data-autodividers="true" data-filter="true">
     {% for entry in entries %}
-      <li data-filtertext="{{ entry.added }}">
+      <li data-filtertext="{{ entry.added|date('Y-m-d') }}">
         <div class="ui-grid-b">
           <div class="ui-block-a"><strong>{{ entry.typeId.name }}:</strong></div>
           <div class="ui-block-b">{{ entry.value }}</div>
