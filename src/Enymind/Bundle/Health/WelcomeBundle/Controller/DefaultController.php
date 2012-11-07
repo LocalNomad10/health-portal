@@ -68,7 +68,6 @@ class DefaultController extends Controller
     
     /**
      * @Route("/genid")
-     * @Template()
      */
     public function genidAction()
     {
