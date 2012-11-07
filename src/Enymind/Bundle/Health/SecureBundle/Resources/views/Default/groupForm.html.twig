@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block pagename %}secure-group-form{% endblock %}
+
+{% block header %}
+  <a href="/secure/group" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
+  <h1>{% trans %}Enter entry values{% endtrans %}</h1>
+{% endblock %}
+
+{% block body %}
+  <form action="/secure/group/{{ entryGroup.id }}/save" method="post" id="entry-form">
+  {% for entryType in entryTypes %}
+    <h3>{{ entryType.name }}</h3>
+    <p>{{ entryType.description }}</p>
+
+      <label for="value-slider-fill">{% trans %}Value in{% endtrans %} <strong>{{ entryType.quantity }}</strong>:</label>
+      <input type="range" name="value[]" id="value-slider-fill" value="{{ entryType.defaultValue }}" min="{{ entryType.min }}" max="{{ entryType.max }}" data-highlight="true" />
+  {% endfor %}
+  <button type="submit" name="submit" value="submit" data-icon="check" data-theme="b">{% trans %}Add entry{% endtrans %}</button>
+  </form>
+
+{% endblock %}

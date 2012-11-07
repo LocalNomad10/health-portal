@@ -212,4 +212,14 @@ class EntryType
     {
         return $this->quantity;
     }
+    
+    /**
+     * Get defalut_value
+     *
+     * @return integer 
+     */
+    public function getDefaultValue()
+    {
+        return ceil( ceil( $this->getMax() / 2 ) + intval( $this->getMin() ) );
+    }
 }

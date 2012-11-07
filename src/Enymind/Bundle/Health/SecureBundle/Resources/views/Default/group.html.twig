@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block pagename %}secure-group{% endblock %}
+
+{% block header %}
+  <a href="/secure" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
+  <h1>{% trans %}Enter entry{% endtrans %}</h1>
+{% endblock %}
+
+{% block body %}
+  <ul data-role="listview" data-filter="true" data-filter-placeholder="{% trans %}Search entry group...{% endtrans %}" data-filter-theme="d" data-theme="d" data-divider-theme="d">
+  {% for entryGroup in entryGroups %}
+    <li><a href="/secure/group/{{ entryGroup.id }}">{{ entryGroup.name }}</a></li>
+  {% endfor %}
+  </ul>
+
+{% endblock %}

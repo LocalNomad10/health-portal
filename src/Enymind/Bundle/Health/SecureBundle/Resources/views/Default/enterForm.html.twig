@@ -13,7 +13,7 @@
 
   <form action="/secure/enter/{{ entryType.id }}/save" method="post" id="entry-form">
     <label for="value-slider-fill">{% trans %}Value in{% endtrans %} <strong>{{ entryType.quantity }}</strong>:</label>
-    <input type="range" name="value" id="value-slider-fill" value="{{ defaultValue }}" min="{{ entryType.min }}" max="{{ entryType.max }}" data-highlight="true" />
+    <input type="range" name="value" id="value-slider-fill" value="{{ entryType.defaultValue }}" min="{{ entryType.min }}" max="{{ entryType.max }}" data-highlight="true" />
     <button type="submit" name="submit" value="submit" data-icon="check" data-theme="b">{% trans %}Add entry{% endtrans %}</button>
   </form>
 

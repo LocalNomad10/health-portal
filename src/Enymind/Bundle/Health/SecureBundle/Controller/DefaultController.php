@@ -46,10 +46,7 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
         
-        $defaultValue = ceil( ceil( $entryType->getMax() / 2 ) + intval( $entryType->getMin() ) );
-        
-        return array('entryType' => $entryType,
-                     'defaultValue' => $defaultValue
+        return array('entryType' => $entryType
             );
     }
     
@@ -81,6 +78,42 @@ class DefaultController extends Controller
         
         $response = $this->forward('EnymindHealthSecureBundle:Default:index');
         return $response;
+    }
+    
+    /**
+     * @Route("/group")
+     * @Secure(roles="ROLE_USER")
+     * @Template()
+     */
+    public function groupAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $entryGroups = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->findAll();
+      
+        return array('entryGroups' => $entryGroups);
+    }
+    
+    /**
+     * @Route("/group/{entryGroupId}")
+     * @Secure(roles="ROLE_USER")
+     * @Template()
+     */
+    public function groupFormAction($entryGroupId)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $entryGroup = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->find($entryGroupId);
+        
+        $entryTypes = array();
+        
+        foreach( $entryGroup->getEntryTypes() as $entryTypeId ) {
+          $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
+          
+          $entryTypes[] = $entryType;
+        }
+        
+        return array('entryGroup' => $entryGroup,
+                     'entryTypes' => $entryTypes
+            );
     }
     
     /**
