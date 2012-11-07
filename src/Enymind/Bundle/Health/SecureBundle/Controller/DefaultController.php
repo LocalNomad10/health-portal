@@ -162,7 +162,7 @@ class DefaultController extends Controller
      * @Secure(roles="ROLE_USER")
      * @Template()
      */
-    public function reportAction()
+    public function statsAction()
     {
         $entries = $this->getUser()->getEntries();
         
@@ -179,7 +179,7 @@ class DefaultController extends Controller
      * @Secure(roles="ROLE_USER")
      * @Template()
      */
-    public function statsAction()
+    public function reportAction()
     {
         return array('entries' => $this->getUser()->getEntries());
     }
