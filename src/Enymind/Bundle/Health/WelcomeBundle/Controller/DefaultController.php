@@ -72,6 +72,8 @@ class DefaultController extends Controller
      */
     public function genidAction()
     {
-        return array('genid' => rand(10000, 99999));
+        $response = new Response();
+        $response->setContent( rand(10000, 99999) );
+        return $response;
     }
 }
