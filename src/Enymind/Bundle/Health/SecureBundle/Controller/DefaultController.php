@@ -162,9 +162,16 @@ class DefaultController extends Controller
      * @Secure(roles="ROLE_USER")
      * @Template()
      */
-    public function statsAction()
+    public function reportAction()
     {
-        return array('entries' => $this->getUser()->getEntries());
+        $entries = $this->getUser()->getEntries();
+        
+        $entriesByType = array();
+        foreach( $entries as $entry ) {
+          $entriesByType[ $entry->getTypeId()->getName() ][] = $entry;
+        }
+        
+        return array('entriesByType' => $entriesByType);
     }
     
     /**
@@ -172,15 +179,8 @@ class DefaultController extends Controller
      * @Secure(roles="ROLE_USER")
      * @Template()
      */
-    public function reportAction()
+    public function statsAction()
     {
-        $entries = $this->getUser()->getEntries();
-        
-        $entryGroups = array();
-        foreach( $entries as $entry ) {
-          $entryGroups[ $entry->getTypeId()->getId() ][] = $entry;
-        }
-        
-        return array('entryGroups' => $entryGroups);
+        return array('entries' => $this->getUser()->getEntries());
     }
 }

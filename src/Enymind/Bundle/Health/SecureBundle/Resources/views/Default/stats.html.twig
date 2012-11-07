@@ -15,10 +15,10 @@
   <script type="text/javascript">
     var page_stats_flot_data =
       [
-        {% for entries in entryGroups %}
-          { label: "Foo", data: [
+        {% for typeName,entries in entriesByType %}
+          { label: "{{ typeName }}", data: [
           {% for entry in entries %}
-            [{{ entry.value }}, "{{ entry.added|date('Y-m-d') }}"],
+            [{{ entry.value }}, "{{ entry.added|date('Y-m-d H:i:s') }}"],
           {% endfor %}
           ] },
         {% endfor %}
