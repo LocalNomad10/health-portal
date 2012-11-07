@@ -30,6 +30,8 @@ div.error-message {
   width: 70%;
 }
 
-#report-ul li div div.ui-block-b, #report-ul li div div.ui-block-c {
-  width: 15%;
+#report-ul li div div.ui-block-b,
+#report-ul li div div.ui-block-c,
+#report-ul li div div.ui-block-d {
+  width: 10%;
 }
