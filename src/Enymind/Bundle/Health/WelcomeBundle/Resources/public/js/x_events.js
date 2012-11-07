@@ -10,7 +10,9 @@ var check_password_callback = function(){
   if( $("#password").val() != $("#password2").val() ) {
     $("#free-popup").html( translations["pama"] );
     $("#free-popup").popup("open");
+    return false;
   }
+  return true;
 };
 
 $(document).delegate('#page-index', 'pageshow', function(){
