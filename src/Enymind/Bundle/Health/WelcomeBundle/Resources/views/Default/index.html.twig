@@ -27,8 +27,10 @@
         <input type="hidden" name="username" id="p-code-input" value="" />
         <div data-role="fieldcontain" class="ui-hide-label">
           <label for="password">{% trans %}Password:{% endtrans %}</label>
-          <input type="password" name="password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}" />
-          <input type="password" name="password2" id="password2" value="" placeholder="{% trans %}Password again{% endtrans %}" />
+          <div class="ui-grid-a">
+            <div class="ui-block-a"><input type="password" name="password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}" /></div>
+            <div class="ui-block-b"><input type="password" name="password2" id="password2" value="" placeholder="{% trans %}Password again{% endtrans %}" /></div>
+          </div>
         </div>
         <p>{% trans %}Save and remember your personal code and password well!{% endtrans %}</p>
         <input type="submit" name="submit" id="register-button" data-theme="a" data-icon="star" value="{% trans %}Register{% endtrans %}" />
