@@ -1,6 +1,7 @@
 var genid_callback = function(){
   $("#p-code").load('/genid', function(){
     $("#p-code-input").val( $("#p-code").text() );
+    $("#register-button").button('enable');
     $("#register-button").removeAttr('disabled');
   });
 };
