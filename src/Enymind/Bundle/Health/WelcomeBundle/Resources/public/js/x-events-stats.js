@@ -1,14 +1,3 @@
-var page_stats_flot_options = {
-    series: {
-        lines: { show: true },
-        points: { show: true }
-    },
-    xaxis: {
-        mode: "time",
-        timeformat: "%d"
-    }
-};
-
 $(document).delegate('#page-secure-stats', 'pageshow', function(){
   $.post( "/secure/stats/data", {}, function( data ){
     var i = 0;
@@ -18,12 +7,24 @@ $(document).delegate('#page-secure-stats', 'pageshow', function(){
     });
     
     var choiceContainer = $("#flot-series");
+    choiceContainer.html("");
     $.each(data, function(key, val) {
         choiceContainer.append('<input type="checkbox" name="' + key +
                                '" checked="checked" class="custom" data-mini="true" id="cbid' + key + '">' +
                                '<label for="cbid' + key + '">'
                                 + val.label + '</label>');
     });
+    
+    var options = {
+        series: {
+            lines: { show: true },
+            points: { show: true }
+        },
+        xaxis: {
+            mode: "time",
+            timeformat: "%d"
+        }
+    };
     
     function plotAccordingToChoices() {
         var dataFiltered = [];
@@ -34,11 +35,12 @@ $(document).delegate('#page-secure-stats', 'pageshow', function(){
                 dataFiltered.push(data[key]);
         });
 
-        if (data.length > 0)
-            var plot = $.plot($("#flot-container"), dataFiltered, page_stats_flot_options);
+        if( dataFiltered.length > 0 )
+            var plot = $.plot($("#flot-container"), dataFiltered, options);
     }
     
-    choiceContainer.find("input").click( plotAccordingToChoices );
+    choiceContainer.find("input").unbind( "click", plotAccordingToChoices );
+    choiceContainer.find("input").bind( "click", plotAccordingToChoices );
     plotAccordingToChoices();
   });
 });
