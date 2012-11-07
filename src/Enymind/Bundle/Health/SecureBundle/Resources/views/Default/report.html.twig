@@ -11,7 +11,7 @@
   <p><strong>{% trans %}Number of entries:{% endtrans %}</strong> {{ entries|length }}</p>
   
   <ul data-role="listview" id="report-ul" data-filter-placeholder="{% trans %}Filter by entry type...{% endtrans %}" data-filter="true">
-    {% set lastDate = "1970-01-01" %}
+    {% set lastDate = "2170-01-01" %}
     {% for entry in entries %}
       {% set currDate = entry.added|date('Y-m-d') %}
       {% if lastDate > currDate %}
