@@ -1,0 +1,27 @@
+{% extends '::base.html.twig' %}
+
+{% block pagename %}secure-stats{% endblock %}
+
+{% block header %}
+  <a href="/secure" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
+  <h1>{% trans %}Statistics{% endtrans %}</h1>
+{% endblock %}
+
+{% block body %}
+  <div id="flot-container"></div>
+{% endblock %}
+
+{% block javascripts %}
+  <script type="text/javascript">
+    var page_stats_flot_data =
+      [
+        {% for entries in entryGroups %}
+          { label: "Foo", data: [
+          {% for entry in entries %}
+            [{{ entry.value }}, "{{ entry.added|date('Y-m-d') }}"],
+          {% endfor %}
+          ] },
+        {% endfor %}
+      ];
+  </script>
+{% endblock %}

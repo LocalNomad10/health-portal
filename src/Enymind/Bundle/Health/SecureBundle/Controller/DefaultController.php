@@ -158,12 +158,29 @@ class DefaultController extends Controller
     }
     
     /**
+     * @Route("/stats")
+     * @Secure(roles="ROLE_USER")
+     * @Template()
+     */
+    public function statsAction()
+    {
+        return array('entries' => $this->getUser()->getEntries());
+    }
+    
+    /**
      * @Route("/report")
      * @Secure(roles="ROLE_USER")
      * @Template()
      */
     public function reportAction()
     {
-        return array('entries' => $this->getUser()->getEntries());
+        $entries = $this->getUser()->getEntries();
+        
+        $entryGroups = array();
+        foreach( $entries as $entry ) {
+          $entryGroups[ $entry->getTypeId()->getId() ][] = $entry;
+        }
+        
+        return array('entryGroups' => $entryGroups);
     }
 }

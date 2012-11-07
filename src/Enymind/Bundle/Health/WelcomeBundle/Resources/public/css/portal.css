@@ -44,3 +44,7 @@ div.error-message {
   padding-right: 3px;
   font-weight: bold;
 }
+
+#flot-container {
+  height: 400px;
+}
