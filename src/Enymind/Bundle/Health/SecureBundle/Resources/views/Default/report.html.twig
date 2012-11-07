@@ -10,10 +10,14 @@
 {% block body %}
   <p><strong>{% trans %}Number of entries:{% endtrans %}</strong> {{ entries|length }}</p>
   
-  <ul data-role="listview" data-autodividers="true" data-filter-placeholder="{% trans %}Filter by date...{% endtrans %}" data-filter="true">
+  <ul data-role="listview" data-filter-placeholder="{% trans %}Filter by date...{% endtrans %}" data-filter="true">
+    {% set lastDate = "1970-01-01" %}
     {% for entry in entries %}
+      {% if not lastDate == entry.added|date('Y-m-d') %}
+        <li data-role="list-divider">{{ entry.added|date('Y-m-d') }}</li>
+      {% endif %}
+      {% set lastDate = entry.added|date('Y-m-d') %}
       <li data-filtertext="{{ entry.added|date('Y-m-d') }}">
-        <span style="display: none">{{ entry.added|date('Y-m-d') }}</span>
         <div class="ui-grid-b">
           <div class="ui-block-a"><strong>{{ entry.typeId.name }}:</strong></div>
           <div class="ui-block-b">{{ entry.value }}</div>
