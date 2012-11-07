@@ -19,8 +19,8 @@ $(document).delegate('#page-index', 'pageshow', function(){
   $("#new-user-coll").unbind("expand", genid_callback);
   $("#new-user-coll").bind("expand", genid_callback);
   
-  $("#register-button").unbind("click", check_password_callback);
-  $("#register-button").bind("click", check_password_callback);
+  $("#register-form").unbind("submit", check_password_callback);
+  $("#register-form").bind("submit", check_password_callback);
 });
 
 var bookmark_callback = function(e){
