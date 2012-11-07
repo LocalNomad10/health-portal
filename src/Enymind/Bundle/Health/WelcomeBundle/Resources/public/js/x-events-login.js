@@ -19,9 +19,18 @@ var bookmark_callback = function(e){
 
 var email_callback = function(e){
   e.preventDefault();
-  $.post( $("#email-form").attr("action"), $("#email-form").serialize(), function( data ){
-    $("#free-popup").html( data );
-    $("#free-popup").popup("open");
+  $.ajax({
+    type: "POST",
+    url: $("#email-form").attr("action"),
+    data: $("#email-form").serialize(),
+    success: function( data ){
+      $("#free-popup").html( data );
+      $("#free-popup").popup("open");
+    },
+    error: function(XMLHttpRequest, textStatus, errorThrown) {
+      $("#free-popup").html( translations["cnpa"] );
+      $("#free-popup").popup("open");
+    }
   });
   return false;
 };
