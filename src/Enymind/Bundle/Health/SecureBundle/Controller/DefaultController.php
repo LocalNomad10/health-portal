@@ -117,6 +117,41 @@ class DefaultController extends Controller
     }
     
     /**
+     * @Route("/group/{entryGroupId}/save")
+     * @Method("POST")
+     * @Secure(roles="ROLE_USER")
+     */
+    public function groupFormSaveAction(Request $request, $entryGroupId)
+    {
+        $values = $request->request->get('value');
+        
+        if ( count( $values ) == 0 ) {
+            throw $this->createNotFoundException('values not set.');
+        }
+      
+        $em = $this->getDoctrine()->getManager();
+        $entryGroup = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->find($entryGroupId);
+        
+        foreach( $entryGroup->getEntryTypes() as $index => $entryTypeId ) {
+          $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
+
+          $entry = new Entry();
+          $entry->setTypeId( $entryType );
+          $entry->setOwnerId( $this->getUser() );
+          $entry->setValue( $values[$index] );
+
+          $em->persist($entry);
+        }
+        
+        $em->flush();
+      
+        $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your group were added!') );
+        
+        $response = $this->forward('EnymindHealthSecureBundle:Default:index');
+        return $response;
+    }
+    
+    /**
      * @Route("/report")
      * @Secure(roles="ROLE_USER")
      * @Template()
