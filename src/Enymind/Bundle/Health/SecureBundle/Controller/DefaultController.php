@@ -193,7 +193,7 @@ class DefaultController extends Controller
         $response = new Response();
         $response->setContent( json_encode($results) );
         $response->headers->set('Content-Type', 'application/json');
-        $response->send();
+        return $response;
     }
     
     /**
