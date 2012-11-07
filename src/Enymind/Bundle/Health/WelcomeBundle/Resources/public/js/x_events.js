@@ -20,6 +20,8 @@ $(document).delegate('#page-index', 'pageshow', function(){
   
   $("#register-form").unbind("submit", check_password_callback);
   $("#register-form").bind("submit", check_password_callback);
+  
+  $("#register-button").button('disable');
 });
 
 var bookmark_callback = function(e){
