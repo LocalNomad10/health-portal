@@ -6,7 +6,7 @@ var genid_callback = function(){
 };
 
 var check_password_callback = function(){
-  if( $("#password").val() != $("#password2").val() ) {
+  if( ( $("#password").val() != $("#password2").val() ) || $("#password").val() == "" ) {
     $("#free-popup").html( translations["pama"] );
     $("#free-popup").popup("open");
     return false;
