@@ -11,6 +11,34 @@ var page_stats_flot_options = {
 
 $(document).delegate('#page-secure-stats', 'pageshow', function(){
   $.post( "/secure/stats/data", {}, function( data ){
-    var plot = $.plot($("#flot-container"), data, page_stats_flot_options);
+    var i = 0;
+    $.each(data, function(key, val) {
+        val.color = i;
+        ++i;
+    });
+    
+    var choiceContainer = $("#flot-series");
+    $.each(data, function(key, val) {
+        choiceContainer.append('<input type="checkbox" name="' + key +
+                               '" checked="checked" class="custom" data-mini="true" id="cbid' + key + '">' +
+                               '<label for="cbid' + key + '">'
+                                + val.label + '</label>');
+    });
+    
+    function plotAccordingToChoices() {
+        var dataFiltered = [];
+
+        choiceContainer.find("input:checked").each(function(){
+            var key = $(this).attr("name");
+            if( key && data[key] )
+                dataFiltered.push(data[key]);
+        });
+
+        if (data.length > 0)
+            var plot = $.plot($("#flot-container"), dataFiltered, page_stats_flot_options);
+    }
+    
+    choiceContainer.find("input").click( plotAccordingToChoices );
+    plotAccordingToChoices();
   });
 });

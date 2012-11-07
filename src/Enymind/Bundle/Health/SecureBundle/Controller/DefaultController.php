@@ -187,7 +187,7 @@ class DefaultController extends Controller
           foreach( $entries as $entry ) {
             $result['data'][]=array($entry->getAdded()->getTimestamp(), $entry->getValue());
           }
-          $results[] = $result;
+          $results[ $typeName ] = $result;
         }
         
         $response = new Response();
