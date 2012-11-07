@@ -34,6 +34,7 @@ div.error-message {
 #report-ul li div div.ui-block-d{
   text-align: right;
   padding-right: 3px;
+  font-weight: bold;
 }
 
 #report-ul li div div.ui-block-b,
