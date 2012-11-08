@@ -8,35 +8,37 @@
 {% endblock %}
 
 {% block body %}
-  <ul data-role="listview">
-    <li>
-        <p>{% trans %}Name{% endtrans %}</p>
-        <p>{{ entity.name }}</p>
-    </li>
-    <li>
-        <p>{% trans %}Description{% endtrans %}</p>
-        <p>{{ entity.description }}</p>
-    </li>
-    <li>
-        <p>{% trans %}Min{% endtrans %}</p>
-        <p>{{ entity.min }}</p>
-    </li>
-    <li>
-        <p>{% trans %}Max{% endtrans %}</p>
-        <p>{{ entity.max }}</p>
-    </li>
-    <li>
-        <p>{% trans %}Quantity{% endtrans %}</p>
-        <p>{{ entity.quantity }}</p>
-    </li>
-  </ul>
+  <div>
+    <ul data-role="listview">
+      <li>
+          <p>{% trans %}Name{% endtrans %}</p>
+          <p>{{ entity.name }}</p>
+      </li>
+      <li>
+          <p>{% trans %}Description{% endtrans %}</p>
+          <p>{{ entity.description }}</p>
+      </li>
+      <li>
+          <p>{% trans %}Min{% endtrans %}</p>
+          <p>{{ entity.min }}</p>
+      </li>
+      <li>
+          <p>{% trans %}Max{% endtrans %}</p>
+          <p>{{ entity.max }}</p>
+      </li>
+      <li>
+          <p>{% trans %}Quantity{% endtrans %}</p>
+          <p>{{ entity.quantity }}</p>
+      </li>
+    </ul>
+  </div>
 
   <div>
     <a href="{{ path('secure_manage_types_edit', { 'id': entity.id }) }}" data-icon="gear" data-role="button" data-theme="b">{% trans %}Edit{% endtrans %}</a>
 
     <form action="{{ path('secure_manage_types_delete', { 'id': entity.id }) }}" method="post">
       {{ form_widget(delete_form) }}
-      <button type="submit" data-icon="delete" data-theme="b">{% trans %}Delete{% endtrans %}</button>
+      <button type="submit" data-icon="delete" data-theme="a">{% trans %}Delete{% endtrans %}</button>
     </form>
   </div>
 {% endblock %}

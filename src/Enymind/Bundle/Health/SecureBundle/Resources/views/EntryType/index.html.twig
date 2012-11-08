@@ -8,17 +8,19 @@
 {% endblock %}
 
 {% block body %}
-  <ul data-role="listview" data-inset="true" data-split-icon="gear" data-split-theme="d" data-theme="d" data-divider-theme="d" id="report-ul" data-filter-placeholder="{% trans %}Filter by entry type...{% endtrans %}" data-filter="true">
-
-    {% for entity in entities %}
-      <li data-filtertext="{{ entity.name }}">
-        <a href="{{ path('secure_manage_types_show', { 'id': entity.id }) }}">{{ entity.name }}</a>
-        <a href="{{ path('secure_manage_types_edit', { 'id': entity.id }) }}">{% trans %}Edit{% endtrans %}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
   <div>
     <a href="{{ path('secure_manage_types_new') }}" data-icon="plus" data-role="button" data-theme="b">{% trans %}Create a new entry type{% endtrans %}</a>
+  </div>
+
+  <div>
+    <ul data-role="listview" data-inset="true" data-split-icon="gear" data-split-theme="d" data-theme="d" data-divider-theme="d" id="report-ul" data-filter-placeholder="{% trans %}Filter by entry type...{% endtrans %}" data-filter="true">
+
+      {% for entity in entities %}
+        <li data-filtertext="{{ entity.name }}">
+          <a href="{{ path('secure_manage_types_show', { 'id': entity.id }) }}">{{ entity.name }}</a>
+          <a href="{{ path('secure_manage_types_edit', { 'id': entity.id }) }}">{% trans %}Edit{% endtrans %}</a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 {% endblock %}
