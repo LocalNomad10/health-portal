@@ -47,6 +47,10 @@ class EntryTypeController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find EntryType entity.');
         }
+        
+        if( $entity->getOwnerId->getId() != $this->getUser()->getId() ) {
+            throw $this->createNotFoundException('EntryType entity not belognin to user.');
+        }
 
         $deleteForm = $this->createDeleteForm($id);
 
@@ -118,6 +122,10 @@ class EntryTypeController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find EntryType entity.');
         }
+        
+        if( $entity->getOwnerId->getId() != $this->getUser()->getId() ) {
+            throw $this->createNotFoundException('EntryType entity not belognin to user.');
+        }
 
         $editForm = $this->createForm(new EntryTypeType(), $entity);
         $deleteForm = $this->createDeleteForm($id);
@@ -143,6 +151,10 @@ class EntryTypeController extends Controller
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find EntryType entity.');
+        }
+        
+        if( $entity->getOwnerId->getId() != $this->getUser()->getId() ) {
+            throw $this->createNotFoundException('EntryType entity not belognin to user.');
         }
 
         $deleteForm = $this->createDeleteForm($id);
@@ -182,6 +194,10 @@ class EntryTypeController extends Controller
 
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find EntryType entity.');
+            }
+            
+            if( $entity->getOwnerId->getId() != $this->getUser()->getId() ) {
+                throw $this->createNotFoundException('EntryType entity not belognin to user.');
             }
 
             $em->remove($entity);
