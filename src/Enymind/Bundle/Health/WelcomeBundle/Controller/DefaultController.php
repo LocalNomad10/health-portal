@@ -16,6 +16,11 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+        if( $this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY') ) {
+          $response = $this->forward('EnymindHealthSecureBundle:Default:index');
+          return $response;
+        }
+      
         return array();
     }
   
@@ -26,6 +31,11 @@ class DefaultController extends Controller
      */
     public function loginAction($username)
     {
+        if( $this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY') ) {
+          $response = $this->forward('EnymindHealthSecureBundle:Default:index');
+          return $response;
+        }
+      
         $request = $this->getRequest();
         $session = $request->getSession();
         $lastUsername = "";
