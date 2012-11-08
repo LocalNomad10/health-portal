@@ -95,10 +95,10 @@ class EntryTypeController extends Controller
             return $this->redirect($this->generateUrl('secure_manage_types_show', array('id' => $entity->getId())));
         }
 
-        return array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        );
+        $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were added!') );
+        
+        $response = $this->forward('secure_manage_types');
+        return $response;
     }
 
     /**
@@ -155,11 +155,10 @@ class EntryTypeController extends Controller
             return $this->redirect($this->generateUrl('secure_manage_types_edit', array('id' => $id)));
         }
 
-        return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        );
+        $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were saved!') );
+        
+        $response = $this->forward('secure_manage_types');
+        return $response;
     }
 
     /**
@@ -185,7 +184,10 @@ class EntryTypeController extends Controller
             $em->flush();
         }
 
-        return $this->redirect($this->generateUrl('secure_manage_types'));
+        $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were deleted!') );
+        
+        $response = $this->forward('secure_manage_types');
+        return $response;
     }
 
     private function createDeleteForm($id)
