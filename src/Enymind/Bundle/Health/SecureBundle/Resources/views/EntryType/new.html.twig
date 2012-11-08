@@ -1,3 +1,5 @@
+{% extends '::base.html.twig' %}
+
 <h1>EntryType creation</h1>
 
 <form action="{{ path('secure_manage_types_create') }}" method="post" {{ form_enctype(form) }}>
