@@ -18,5 +18,7 @@
     {% endfor %}
   </ul>
 
-  <a href="{{ path('secure_manage_types_new') }}" data-icon="plus" data-role="button" data-theme="b">{% trans %}Create a new entry type{% endtrans %}</a>
+  <div>
+    <a href="{{ path('secure_manage_types_new') }}" data-icon="plus" data-role="button" data-theme="b">{% trans %}Create a new entry type{% endtrans %}</a>
+  </div>
 {% endblock %}
