@@ -1,5 +1,4 @@
 {% block number_widget %}
   {% set type = type|default('range') %}
-  <label for="{{ name }}">{{ name }}</label>
-  <input type="{{ type }}" {{ block('widget_attributes') }} value="{{ value }}" data-highlight="true" />
+  <input type="{{ type }}" min="0" max="1000" {{ block('widget_attributes') }} value="{{ value }}" data-highlight="true" />
 {% endblock %}
