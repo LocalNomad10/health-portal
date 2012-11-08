@@ -93,7 +93,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $entryGroups = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->findBy(
-                array("owner_id" => array( 1, $this->getUser()->getId() )), // where
+                array("owner_id" => array( 1, $this->getUser()->getId() ),"visible" => "1"), // where
                 array("name" => "ASC") // order by
                 );
       

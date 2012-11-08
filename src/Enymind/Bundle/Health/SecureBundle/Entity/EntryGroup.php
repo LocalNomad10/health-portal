@@ -44,6 +44,13 @@ class EntryGroup
     private $description;
 
     /**
+     * @var boolean $visible
+     *
+     * @ORM\Column(name="visible", type="boolean")
+     */
+    private $visible;
+    
+    /**
      * @var array $entry_types
      *
      * @ORM\Column(name="entry_types", type="array")
@@ -130,6 +137,29 @@ class EntryGroup
         return $this->description;
     }
 
+    /**
+     * Set visible
+     *
+     * @param boolean $visible
+     * @return EntryGroup
+     */
+    public function setVisible($visible)
+    {
+        $this->visible = $visible;
+    
+        return $this;
+    }
+
+    /**
+     * Get visible
+     *
+     * @return boolean 
+     */
+    public function getVisible()
+    {
+        return $this->visible;
+    }
+    
     /**
      * Set entry_types
      *

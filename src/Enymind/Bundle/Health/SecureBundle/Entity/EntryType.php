@@ -30,6 +30,12 @@ class EntryType
     private $owner_id;
     
     /**
+     * @ORM\OneToMany(targetEntity="EntryGroup", mappedBy="entry_types")
+     * @ORM\OrderBy({"name" = "ASC"})
+     */
+    protected $groups;
+    
+    /**
      * @var string $name
      *
      * @ORM\Column(name="name", type="string", length=32)
