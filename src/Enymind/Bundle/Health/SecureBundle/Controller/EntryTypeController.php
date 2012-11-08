@@ -78,7 +78,6 @@ class EntryTypeController extends Controller
      *
      * @Route("/create", name="secure_manage_types_create")
      * @Method("POST")
-     * @Template("EnymindHealthSecureBundle:EntryType:new.html.twig")
      */
     public function createAction(Request $request)
     {
@@ -92,10 +91,13 @@ class EntryTypeController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('secure_manage_types_show', array('id' => $entity->getId())));
+            $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were added!') );
+
+            $response = $this->forward('secure_manage_types');
+            return $response;
         }
 
-        $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were added!') );
+        $this->get('session')->setFlash('error', $this->get('translator')->trans('Error adding entry type!') );
         
         $response = $this->forward('secure_manage_types');
         return $response;
@@ -132,7 +134,6 @@ class EntryTypeController extends Controller
      *
      * @Route("/{id}/update", name="secure_manage_types_update")
      * @Method("POST")
-     * @Template("EnymindHealthSecureBundle:EntryType:edit.html.twig")
      */
     public function updateAction(Request $request, $id)
     {
@@ -152,10 +153,13 @@ class EntryTypeController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('secure_manage_types_edit', array('id' => $id)));
+            $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were saved!') );
+
+            $response = $this->forward('secure_manage_types');
+            return $response;
         }
 
-        $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were saved!') );
+        $this->get('session')->setFlash('error', $this->get('translator')->trans('Error saving entry type!') );
         
         $response = $this->forward('secure_manage_types');
         return $response;
@@ -182,9 +186,14 @@ class EntryTypeController extends Controller
 
             $em->remove($entity);
             $em->flush();
+            
+            $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were deleted!') );
+
+            $response = $this->forward('secure_manage_types');
+            return $response;
         }
 
-        $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were deleted!') );
+        $this->get('session')->setFlash('error', $this->get('translator')->trans('Error deleting entry type!') );
         
         $response = $this->forward('secure_manage_types');
         return $response;
