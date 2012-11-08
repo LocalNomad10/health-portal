@@ -9,9 +9,7 @@
 
 {% block body %}
   <form action="{{ path('secure_manage_types_create') }}" method="post" {{ form_enctype(form) }}>
-      {{ form_widget(form) }}
-      <p>
-          <button type="submit">Create</button>
-      </p>
+    {{ form_widget(form) }}
+    <p><button type="submit" data-icon="check" data-theme="b">Create</button></p>
   </form>
 {% endblock %}

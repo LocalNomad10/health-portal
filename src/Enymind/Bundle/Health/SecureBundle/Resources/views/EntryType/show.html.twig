@@ -11,24 +11,24 @@
   <div>
     <ul data-role="listview">
       <li>
-          <p>{% trans %}Name{% endtrans %}</p>
-          <p>{{ entity.name }}</p>
+        <p><strong>{% trans %}Name{% endtrans %}</strong></p>
+        <p>{{ entity.name }}</p>
       </li>
       <li>
-          <p>{% trans %}Description{% endtrans %}</p>
-          <p>{{ entity.description }}</p>
+        <p><strong>{% trans %}Description{% endtrans %}</strong></p>
+        <p>{{ entity.description }}</p>
       </li>
       <li>
-          <p>{% trans %}Min{% endtrans %}</p>
-          <p>{{ entity.min }}</p>
+        <p><strong>{% trans %}Min{% endtrans %}</strong></p>
+        <p>{{ entity.min }}</p>
       </li>
       <li>
-          <p>{% trans %}Max{% endtrans %}</p>
-          <p>{{ entity.max }}</p>
+        <p><strong>{% trans %}Max{% endtrans %}</strong></p>
+        <p><strong>{{ entity.max }}</p>
       </li>
       <li>
-          <p>{% trans %}Quantity{% endtrans %}</p>
-          <p>{{ entity.quantity }}</p>
+        <p><strong>{% trans %}Quantity{% endtrans %}</strong></p>
+        <p>{{ entity.quantity }}</p>
       </li>
     </ul>
   </div>
@@ -38,7 +38,7 @@
 
     <form action="{{ path('secure_manage_types_delete', { 'id': entity.id }) }}" method="post">
       {{ form_widget(delete_form) }}
-      <button type="submit" data-icon="delete" data-theme="a">{% trans %}Delete{% endtrans %}</button>
+      <p><button type="submit" data-icon="delete" data-theme="a">{% trans %}Delete{% endtrans %}</button></p>
     </form>
   </div>
 {% endblock %}

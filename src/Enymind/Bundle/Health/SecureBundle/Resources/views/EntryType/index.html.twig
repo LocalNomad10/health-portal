@@ -9,7 +9,7 @@
 
 {% block body %}
   <div>
-    <a href="{{ path('secure_manage_types_new') }}" data-icon="plus" data-role="button" data-theme="b">{% trans %}Create a new entry type{% endtrans %}</a>
+    <p><a href="{{ path('secure_manage_types_new') }}" data-icon="plus" data-role="button" data-theme="b">{% trans %}Create a new entry type{% endtrans %}</a></p>
   </div>
 
   <div>
@@ -17,8 +17,8 @@
 
       {% for entity in entities %}
         <li data-filtertext="{{ entity.name }}">
-          <a href="{{ path('secure_manage_types_show', { 'id': entity.id }) }}">{{ entity.name }}</a>
-          <a href="{{ path('secure_manage_types_edit', { 'id': entity.id }) }}">{% trans %}Edit{% endtrans %}</a>
+          <p><a href="{{ path('secure_manage_types_show', { 'id': entity.id }) }}">{{ entity.name }}</a></p>
+          <p><a href="{{ path('secure_manage_types_edit', { 'id': entity.id }) }}">{% trans %}Edit{% endtrans %}</a></p>
         </li>
       {% endfor %}
     </ul>
