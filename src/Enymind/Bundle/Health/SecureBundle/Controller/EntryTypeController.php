@@ -48,7 +48,7 @@ class EntryTypeController extends Controller
             throw $this->createNotFoundException('Unable to find EntryType entity.');
         }
         
-        if( $entity->getOwnerId->getId() != $this->getUser()->getId() ) {
+        if( $entity->getOwnerId()->getId() != $this->getUser()->getId() ) {
             throw $this->createNotFoundException('EntryType entity not belognin to user.');
         }
 
@@ -123,7 +123,7 @@ class EntryTypeController extends Controller
             throw $this->createNotFoundException('Unable to find EntryType entity.');
         }
         
-        if( $entity->getOwnerId->getId() != $this->getUser()->getId() ) {
+        if( $entity->getOwnerId()->getId() != $this->getUser()->getId() ) {
             throw $this->createNotFoundException('EntryType entity not belognin to user.');
         }
 
@@ -153,7 +153,7 @@ class EntryTypeController extends Controller
             throw $this->createNotFoundException('Unable to find EntryType entity.');
         }
         
-        if( $entity->getOwnerId->getId() != $this->getUser()->getId() ) {
+        if( $entity->getOwnerId()->getId() != $this->getUser()->getId() ) {
             throw $this->createNotFoundException('EntryType entity not belognin to user.');
         }
 
@@ -196,7 +196,7 @@ class EntryTypeController extends Controller
                 throw $this->createNotFoundException('Unable to find EntryType entity.');
             }
             
-            if( $entity->getOwnerId->getId() != $this->getUser()->getId() ) {
+            if( $entity->getOwnerId()->getId() != $this->getUser()->getId() ) {
                 throw $this->createNotFoundException('EntryType entity not belognin to user.');
             }
 
