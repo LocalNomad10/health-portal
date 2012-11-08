@@ -5,9 +5,28 @@
 {% block header %}
   <a href="/" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
   <h1>{% trans %}Health Portal About{% endtrans %}</h1>
-  <a href="/search" data-icon="search" data-theme="b" data-iconpos="right">{% trans %}Search{% endtrans %}</a>
 {% endblock %}
 
 {% block body %}
-  <p>{% trans %}Nothing here yet...{% endtrans %}</p>
+  <div data-role="collapsible-set">
+    <div data-role="collapsible" data-theme="c" data-collapsed="false">
+      <h3>Introduction</h3>
+      <p></p>
+    </div>
+
+    <div data-role="collapsible" data-theme="c">
+      <h3>Features</h3>
+      <p></p>
+    </div>
+    
+    <div data-role="collapsible" data-theme="c">
+      <h3>In the future</h3>
+      <p></p>
+    </div>
+    
+    <div data-role="collapsible" data-theme="c">
+      <h3>Credits</h3>
+      <p></p>
+    </div>
+  </div>
 {% endblock %}
