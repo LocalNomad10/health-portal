@@ -5,20 +5,23 @@
 {% block header %}
   <a href="/secure/logout" data-icon="delete" data-theme="d">{% trans %}Log Out{% endtrans %}</a>
   <h1>{% trans %}Dashboard{% endtrans %}</h1>
-  <a href="/secure/search" data-icon="search" data-theme="b" data-iconpos="right">{% trans %}Help{% endtrans %}</a>
+  <a href="/secure/search" data-icon="search" class="ui-disabled" data-theme="b" data-iconpos="right">{% trans %}Help{% endtrans %}</a>
 {% endblock %}
 
 {% block body %}
-<div class="ui-grid-a">
-	<div class="ui-block-a"><a href="/secure/enter" data-iconpos="top" data-icon="plus" data-role="button" data-theme="b">{% trans %}Enter value{% endtrans %}</a></div>
-	<div class="ui-block-b"><a href="/secure/group" data-iconpos="top" data-icon="plus" data-role="button" data-theme="b">{% trans %}Enter group{% endtrans %}</a></div>
-	<div class="ui-block-a"><a href="/secure/stats" data-iconpos="top" data-icon="grid" data-role="button" data-theme="c">{% trans %}Statistics{% endtrans %}</a></div>
-	<div class="ui-block-b"><a href="/secure/report" data-iconpos="top" data-icon="check" data-role="button" data-theme="c">{% trans %}Reporting{% endtrans %}</a></div>
-</div>
-<div class="ui-grid-a">
-	<div class="ui-block-a"><a href="/secure/manage/types" data-iconpos="top" data-icon="gear" data-role="button" data-theme="a">{% trans %}Manage Types{% endtrans %}</a></div>
-	<div class="ui-block-b"><a href="/secure/manage/group" data-iconpos="top" data-icon="gear" data-role="button" data-theme="a">{% trans %}Manage groups{% endtrans %}</a></div>
-	<div class="ui-block-a"><a href="/secure/manage/user" data-iconpos="top" data-icon="gear" data-role="button" data-theme="c">{% trans %}User settings{% endtrans %}</a></div>
-	<div class="ui-block-b"><a href="/secure/manage" data-iconpos="top" data-icon="gear" data-role="button" data-theme="c">{% trans %}System settings{% endtrans %}</a></div>
-</div>
+  <div class="ui-grid-a">
+    <div class="ui-block-a"><a href="/secure/enter" data-iconpos="top" data-icon="plus" data-role="button" data-theme="b">{% trans %}Enter value{% endtrans %}</a></div>
+    <div class="ui-block-b"><a href="/secure/group" data-iconpos="top" data-icon="plus" data-role="button" data-theme="b">{% trans %}Enter group{% endtrans %}</a></div>
+    <div class="ui-block-a"><a href="/secure/stats" data-iconpos="top" data-icon="grid" data-role="button" data-theme="c">{% trans %}Statistics{% endtrans %}</a></div>
+    <div class="ui-block-b"><a href="/secure/report" data-iconpos="top" data-icon="check" data-role="button" data-theme="c">{% trans %}Reporting{% endtrans %}</a></div>
+  </div>
+  <div>
+    
+  </div>
+  <div class="ui-grid-a">
+    <div class="ui-block-a"><a href="/secure/manage/types" data-iconpos="top" data-icon="gear" data-role="button" data-theme="a">{% trans %}Manage Types{% endtrans %}</a></div>
+    <div class="ui-block-b"><a href="/secure/manage/group" class="ui-disabled" data-iconpos="top" data-icon="gear" data-role="button" data-theme="a">{% trans %}Manage groups{% endtrans %}</a></div>
+    <div class="ui-block-a"><a href="/secure/manage/user" class="ui-disabled" data-iconpos="top" data-icon="gear" data-role="button" data-theme="c">{% trans %}User settings{% endtrans %}</a></div>
+    <div class="ui-block-b"><a href="/secure/manage" class="ui-disabled" data-iconpos="top" data-icon="gear" data-role="button" data-theme="c">{% trans %}System settings{% endtrans %}</a></div>
+  </div>
 {% endblock %}
