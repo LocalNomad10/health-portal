@@ -59,10 +59,10 @@ class DefaultController extends Controller
     }
     
     /**
-     * @Route("/help")
+     * @Route("/about")
      * @Template()
      */
-    public function helpAction()
+    public function aboutAction()
     {
         return array();
     }
