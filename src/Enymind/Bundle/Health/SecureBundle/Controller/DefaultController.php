@@ -50,6 +50,14 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
         
+        if (!$entryType) {
+            throw $this->createNotFoundException('Unable to find EntryType entity.');
+        }
+        
+        if( $entryType->getOwnerId()->getId() != $this->getUser()->getId() ) {
+            throw $this->createNotFoundException('EntryType entity not belognin to user.');
+        }
+        
         return array('entryType' => $entryType
             );
     }
@@ -69,6 +77,14 @@ class DefaultController extends Controller
       
         $em = $this->getDoctrine()->getManager();
         $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
+        
+        if (!$entryType) {
+            throw $this->createNotFoundException('Unable to find EntryType entity.');
+        }
+        
+        if( $entryType->getOwnerId()->getId() != $this->getUser()->getId() ) {
+            throw $this->createNotFoundException('EntryType entity not belognin to user.');
+        }
         
         $entry = new Entry();
         $entry->setTypeId( $entryType );
@@ -110,10 +126,26 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $entryGroup = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->find($entryGroupId);
         
+        if (!$entryGroup) {
+            throw $this->createNotFoundException('Unable to find EntryGroup entity.');
+        }
+        
+        if( $entryGroup->getOwnerId()->getId() != $this->getUser()->getId() ) {
+            throw $this->createNotFoundException('EntryGroup entity not belognin to user.');
+        }
+        
         $entryTypes = array();
         
         foreach( $entryGroup->getEntryTypes() as $entryTypeId ) {
           $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
+          
+          if (!$entryType) {
+              throw $this->createNotFoundException('Unable to find EntryType entity.');
+          }
+
+          if( $entryType->getOwnerId()->getId() != $this->getUser()->getId() ) {
+              throw $this->createNotFoundException('EntryType entity not belognin to user.');
+          }
           
           $entryTypes[] = $entryType;
         }
@@ -139,9 +171,25 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $entryGroup = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->find($entryGroupId);
         
+        if (!$entryGroup) {
+            throw $this->createNotFoundException('Unable to find EntryGroup entity.');
+        }
+        
+        if( $entryGroup->getOwnerId()->getId() != $this->getUser()->getId() ) {
+            throw $this->createNotFoundException('EntryGroup entity not belognin to user.');
+        }
+        
         foreach( $entryGroup->getEntryTypes() as $index => $entryTypeId ) {
           $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
 
+          if (!$entryType) {
+              throw $this->createNotFoundException('Unable to find EntryType entity.');
+          }
+
+          if( $entryType->getOwnerId()->getId() != $this->getUser()->getId() ) {
+              throw $this->createNotFoundException('EntryType entity not belognin to user.');
+          }
+          
           $entry = new Entry();
           $entry->setTypeId( $entryType );
           $entry->setOwnerId( $this->getUser() );
