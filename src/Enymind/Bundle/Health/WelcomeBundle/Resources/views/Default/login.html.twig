@@ -13,7 +13,7 @@
   <form action="/secure/login" method="post" id="login-form">
     <div class="ui-grid-a">
       <div class="ui-block-a">
-        <input type="text" name="_username" id="username" value="{{ last_username }}" placeholder="{% trans %}Personal code{% endtrans %}"/>
+        <input type="number" name="_username" id="username" value="{{ last_username }}" placeholder="{% trans %}Personal code{% endtrans %}"/>
       </div>
       <div class="ui-block-b">
         <input type="password" name="_password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}"/>
