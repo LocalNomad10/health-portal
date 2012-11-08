@@ -23,7 +23,7 @@ class EntryTypeController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('EnymindHealthSecureBundle:EntryType')->findBy(
-                array("owner_id" => array( 1, $this->getUser()->getId() )), // where
+                array("owner_id" => array( $this->getUser()->getId() )), // where
                 array("name" => "ASC") // order by
                 );
 
@@ -83,6 +83,7 @@ class EntryTypeController extends Controller
     public function createAction(Request $request)
     {
         $entity  = new EntryType();
+        $entity->setOwnerId( $this->getUser() );
         $form = $this->createForm(new EntryTypeType(), $entity);
         $form->bind($request);
 
