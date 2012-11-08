@@ -22,7 +22,10 @@ class EntryTypeController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('EnymindHealthSecureBundle:EntryType')->findAll();
+        $entities = $em->getRepository('EnymindHealthSecureBundle:EntryType')->findBy(
+                array("owner_id" => array( 1, $this->getUser()->getId() )), // where
+                array("name" => "ASC") // order by
+                );
 
         return array(
             'entities' => $entities,

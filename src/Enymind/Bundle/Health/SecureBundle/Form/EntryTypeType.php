@@ -11,11 +11,11 @@ class EntryTypeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('description')
-            ->add('min')
-            ->add('max')
-            ->add('quantity')
+            ->add('name', 'text')
+            ->add('description', 'textarea')
+            ->add('min', 'number')
+            ->add('max', 'number')
+            ->add('quantity', 'text')
         ;
     }
 
