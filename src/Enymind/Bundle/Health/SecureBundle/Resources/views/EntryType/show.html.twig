@@ -31,10 +31,10 @@
     </li>
   </ul>
 
-  <a href="{{ path('secure_manage_types_edit', { 'id': entity.id }) }}" data-icon="check" data-role="button" data-theme="b">{% trans %}Save{% endtrans %}</a>
+  <a href="{{ path('secure_manage_types_edit', { 'id': entity.id }) }}" data-icon="gear" data-role="button" data-theme="b">{% trans %}Edit{% endtrans %}</a>
   
   <form action="{{ path('secure_manage_types_delete', { 'id': entity.id }) }}" method="post">
     {{ form_widget(delete_form) }}
-    <button type="submit" data-icon="check" data-theme="b">{% trans %}Delete{% endtrans %}</button>
+    <button type="submit" data-icon="delete" data-theme="b">{% trans %}Delete{% endtrans %}</button>
   </form>
 {% endblock %}
