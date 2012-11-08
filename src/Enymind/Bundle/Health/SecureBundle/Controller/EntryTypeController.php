@@ -10,11 +10,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Enymind\Bundle\Health\SecureBundle\Entity\EntryType;
 use Enymind\Bundle\Health\SecureBundle\Form\EntryTypeType;
 
-/**
- * EntryType controller.
- *
- * @Route("/secure/manage/types")
- */
 class EntryTypeController extends Controller
 {
     /**

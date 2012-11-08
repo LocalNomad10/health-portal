@@ -16,7 +16,6 @@ class EntryTypeType extends AbstractType
             ->add('min')
             ->add('max')
             ->add('quantity')
-            ->add('owner_id')
         ;
     }
 
