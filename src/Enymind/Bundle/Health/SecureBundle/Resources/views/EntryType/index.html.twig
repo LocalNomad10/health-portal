@@ -1,47 +1,56 @@
 {% extends '::base.html.twig' %}
 
-<h1>EntryType list</h1>
+{% extends '::base.html.twig' %}
 
-<table class="records_list">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Min</th>
-            <th>Max</th>
-            <th>Quantity</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-    {% for entity in entities %}
-        <tr>
-            <td><a href="{{ path('secure_manage_types_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-            <td>{{ entity.name }}</td>
-            <td>{{ entity.description }}</td>
-            <td>{{ entity.min }}</td>
-            <td>{{ entity.max }}</td>
-            <td>{{ entity.quantity }}</td>
-            <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('secure_manage_types_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('secure_manage_types_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
+{% block pagename %}secure-manage-types{% endblock %}
 
-<ul>
-    <li>
-        <a href="{{ path('secure_manage_types_new') }}">
-            Create a new entry
-        </a>
-    </li>
-</ul>
+{% block header %}
+  <a href="/secure" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
+  <h1>{% trans %}Entry types{% endtrans %}</h1>
+{% endblock %}
+
+{% block body %}
+  <table class="records_list">
+      <thead>
+          <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Min</th>
+              <th>Max</th>
+              <th>Quantity</th>
+              <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+      {% for entity in entities %}
+          <tr>
+              <td><a href="{{ path('secure_manage_types_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+              <td>{{ entity.name }}</td>
+              <td>{{ entity.description }}</td>
+              <td>{{ entity.min }}</td>
+              <td>{{ entity.max }}</td>
+              <td>{{ entity.quantity }}</td>
+              <td>
+                  <ul>
+                      <li>
+                          <a href="{{ path('secure_manage_types_show', { 'id': entity.id }) }}">show</a>
+                      </li>
+                      <li>
+                          <a href="{{ path('secure_manage_types_edit', { 'id': entity.id }) }}">edit</a>
+                      </li>
+                  </ul>
+              </td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+
+  <ul>
+      <li>
+          <a href="{{ path('secure_manage_types_new') }}">
+              Create a new entry
+          </a>
+      </li>
+  </ul>
+{% endblock %}

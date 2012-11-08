@@ -1,18 +1,17 @@
 {% extends '::base.html.twig' %}
 
-<h1>EntryType creation</h1>
+{% block pagename %}secure-manage-types-new{% endblock %}
 
-<form action="{{ path('secure_manage_types_create') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
-    <p>
-        <button type="submit">Create</button>
-    </p>
-</form>
+{% block header %}
+  <a href="{{ path('secure_manage_types') }}" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
+  <h1>{% trans %}New entry type{% endtrans %}</h1>
+{% endblock %}
 
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('secure_manage_types') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+{% block body %}
+  <form action="{{ path('secure_manage_types_create') }}" method="post" {{ form_enctype(form) }}>
+      {{ form_widget(form) }}
+      <p>
+          <button type="submit">Create</button>
+      </p>
+  </form>
+{% endblock %}
