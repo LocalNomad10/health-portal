@@ -93,13 +93,13 @@ class EntryTypeController extends Controller
 
             $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were added!') );
 
-            $response = $this->forward('secure_manage_types');
+            $response = $this->forward('EnymindHealthSecureBundle:EntryTypeController:index');
             return $response;
         }
 
         $this->get('session')->setFlash('error', $this->get('translator')->trans('Error adding entry type!') );
         
-        $response = $this->forward('secure_manage_types');
+        $response = $this->forward('EnymindHealthSecureBundle:EntryTypeController:index');
         return $response;
     }
 
@@ -155,13 +155,13 @@ class EntryTypeController extends Controller
 
             $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were saved!') );
 
-            $response = $this->forward('secure_manage_types');
+            $response = $this->forward('EnymindHealthSecureBundle:EntryTypeController:index');
             return $response;
         }
 
         $this->get('session')->setFlash('error', $this->get('translator')->trans('Error saving entry type!') );
         
-        $response = $this->forward('secure_manage_types');
+        $response = $this->forward('EnymindHealthSecureBundle:EntryTypeController:index');
         return $response;
     }
 
@@ -189,13 +189,13 @@ class EntryTypeController extends Controller
             
             $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry type were deleted!') );
 
-            $response = $this->forward('secure_manage_types');
+            $response = $this->forward('EnymindHealthSecureBundle:EntryTypeController:index');
             return $response;
         }
 
         $this->get('session')->setFlash('error', $this->get('translator')->trans('Error deleting entry type!') );
         
-        $response = $this->forward('secure_manage_types');
+        $response = $this->forward('EnymindHealthSecureBundle:EntryTypeController:index');
         return $response;
     }
 
