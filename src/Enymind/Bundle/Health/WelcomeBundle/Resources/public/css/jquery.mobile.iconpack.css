@@ -27,6 +27,10 @@
 	margin-top: 0 !important;
 }
 
+.ui-btn-icon-top .ui-icon {
+    top: 20px;
+}
+
 /* supporting original icons */
 .ui-icon-plus, .ui-icon-minus, .ui-icon-delete, .ui-icon-arrow-r,
 .ui-icon-arrow-l, .ui-icon-arrow-u, .ui-icon-arrow-d, .ui-icon-check,
