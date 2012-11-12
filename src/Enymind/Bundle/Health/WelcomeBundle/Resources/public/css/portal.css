@@ -52,3 +52,31 @@ div.error-message {
 #page-footer h4 {
   font-size: 0.6em;
 }
+
+.input-prepend .add-on, .input-append .add-on {
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    display: inline-block;
+    font-weight: normal;
+    height: 21px;
+    line-height: 21px;
+    min-width: 16px;
+    padding: 4px 5px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    vertical-align: middle;
+    width: auto;
+}
+
+.input-prepend .add-on, .input-append .add-on, .input-prepend .btn, .input-append .btn {
+    border-radius: 0 0 0 0;
+    margin-left: -1px;
+}
+
+.input-prepend .add-on, .input-prepend .btn {
+    margin-right: -1px;
+}
+
+.input-prepend .add-on:first-child, .input-prepend .btn:first-child {
+    border-radius: 3px 0 0 3px;
+}
