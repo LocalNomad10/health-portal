@@ -25,13 +25,17 @@
       <p>{% trans %}Here is your personal code:{% endtrans %} <strong><span id="p-code">...</span></strong></p>
       <form action="/secure/user/register" method="post" id="register-form">
         <input type="hidden" name="username" id="p-code-input" value="" />
-        <div class="ui-grid-a">
+        <div class="ui-grid-c">
           <div class="ui-block-a input-prepend">
-            <span class="add-on"><i class="ui-icon-back">&nbsp;</i></span>
+            <span class="add-on"><i class="ui-icon-back"></i></span>
+          </div>
+          <div class="ui-block-b">
             <input type="password" name="password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}" />
           </div>
-          <div class="ui-block-b input-prepend">
-            <span class="add-on"><i class="ui-icon-back">&nbsp;</i></span>
+          <div class="ui-block-c input-prepend">
+            <span class="add-on"><i class="ui-icon-back"></i></span>
+          </div>
+          <div class="ui-block-d">
             <input type="password" name="password2" id="password2" value="" placeholder="{% trans %}Password again{% endtrans %}" />
           </div>
         </div>
