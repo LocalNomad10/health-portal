@@ -82,11 +82,11 @@ div.error-message {
 }
 
 #register-form div div {
-  
+  width: 40%;
 }
 
 #register-form div div.ui-block-a,
 #register-form div div.ui-block-c{
-  width: 30px;
+  width: 35px;
   padding-top: 15px;
 }
