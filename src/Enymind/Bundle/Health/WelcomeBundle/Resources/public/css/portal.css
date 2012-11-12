@@ -81,8 +81,12 @@ div.error-message {
     border-radius: 3px 0 0 3px;
 }
 
+#register-form div div {
+  width: auto;
+}
+
 #register-form div div.ui-block-a,
 #register-form div div.ui-block-c{
   width: 20px;
-  padding-top: 5px;
+  padding-top: 10px;
 }
