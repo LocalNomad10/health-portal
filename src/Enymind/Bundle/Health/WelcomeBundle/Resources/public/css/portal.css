@@ -74,7 +74,7 @@ div.error-message {
 }
 
 .input-prepend .add-on, .input-prepend .btn {
-  margin-right: -1px;
+  margin: 11px 0px;
 }
 
 .input-prepend .add-on:first-child, .input-prepend .btn:first-child {
@@ -91,5 +91,5 @@ div.error-message {
 #login-form div div.ui-block-a,
 #login-form div div.ui-block-c {
   width: 35px;
-  padding-top: 14px;
+  padding: 4px;
 }
