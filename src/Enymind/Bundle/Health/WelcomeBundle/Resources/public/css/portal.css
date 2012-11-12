@@ -80,3 +80,9 @@ div.error-message {
 .input-prepend .add-on:first-child, .input-prepend .btn:first-child {
     border-radius: 3px 0 0 3px;
 }
+
+#register-form div div.ui-block-a,
+#register-form div div.ui-block-c{
+  width: 20px;
+  padding-top: 5px;
+}
