@@ -91,3 +91,12 @@ div.error-message {
   width: 35px;
   padding: 4px;
 }
+
+form.widget_form div div {
+  border-bottom: 1px solid silver;
+  margin-bottom: 15px;
+}
+
+form.widget_form label {
+  font-weight: bold;
+}
