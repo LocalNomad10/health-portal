@@ -23,6 +23,11 @@ enymind_health_secure_manage_entry_type:
     resource: "@EnymindHealthSecureBundle/Controller/EntryTypeController.php"
     type:     annotation
     prefix:   /secure/manage/types
+    
+enymind_health_secure_manage_entry_group:
+    resource: "@EnymindHealthSecureBundle/Controller/EntryGroupController.php"
+    type:     annotation
+    prefix:   /secure/manage/group
 
 # Internal routing configuration to handle ESI
 _internal:

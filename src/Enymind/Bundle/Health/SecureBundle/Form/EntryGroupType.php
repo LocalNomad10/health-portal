@@ -11,11 +11,15 @@ class EntryGroupType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('description')
-            ->add('visible')
-            ->add('entry_types')
-            ->add('owner_id')
+            ->add('name', 'text')
+            ->add('description', 'textarea')
+            ->add('visible', 'checkbox')
+            ->add('entry_types', 'entity', array(
+                    'class' => 'EnymindHealthSecureBundle:EntryType',
+                    'property' => 'name',
+                    'multiple' => true,
+                    'expanded' => true
+                 ))
         ;
     }
 

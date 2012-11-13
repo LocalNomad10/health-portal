@@ -10,11 +10,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Enymind\Bundle\Health\SecureBundle\Entity\EntryGroup;
 use Enymind\Bundle\Health\SecureBundle\Form\EntryGroupType;
 
-/**
- * EntryGroup controller.
- *
- * @Route("/secure/manage/group")
- */
 class EntryGroupController extends Controller
 {
     /**
@@ -27,34 +22,13 @@ class EntryGroupController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->findAll();
+        $entities = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->findBy(
+                array("owner_id" => array( $this->getUser()->getId() )), // where
+                array("name" => "ASC") // order by
+                );
 
         return array(
             'entities' => $entities,
-        );
-    }
-
-    /**
-     * Finds and displays a EntryGroup entity.
-     *
-     * @Route("/{id}/show", name="secure_manage_group_show")
-     * @Template()
-     */
-    public function showAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find EntryGroup entity.');
-        }
-
-        $deleteForm = $this->createDeleteForm($id);
-
-        return array(
-            'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),
         );
     }
 
@@ -80,11 +54,11 @@ class EntryGroupController extends Controller
      *
      * @Route("/create", name="secure_manage_group_create")
      * @Method("POST")
-     * @Template("EnymindHealthSecureBundle:EntryGroup:new.html.twig")
      */
     public function createAction(Request $request)
     {
         $entity  = new EntryGroup();
+        $entity->setOwnerId( $this->getUser() );
         $form = $this->createForm(new EntryGroupType(), $entity);
         $form->bind($request);
 
@@ -93,13 +67,16 @@ class EntryGroupController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('secure_manage_group_show', array('id' => $entity->getId())));
+            $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry group were added!') );
+
+            $response = $this->forward('EnymindHealthSecureBundle:EntryGroup:index');
+            return $response;
         }
 
-        return array(
-            'entity' => $entity,
-            'form'   => $form->createView(),
-        );
+        $this->get('session')->setFlash('error', $this->get('translator')->trans('Error adding entry group!') );
+        
+        $response = $this->forward('EnymindHealthSecureBundle:EntryGroup:index');
+        return $response;
     }
 
     /**
@@ -117,6 +94,10 @@ class EntryGroupController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find EntryGroup entity.');
         }
+        
+        if( $entity->getOwnerId()->getId() != $this->getUser()->getId() ) {
+            throw $this->createNotFoundException('EntryGroup entity not belognin to user.');
+        }
 
         $editForm = $this->createForm(new EntryGroupType(), $entity);
         $deleteForm = $this->createDeleteForm($id);
@@ -133,7 +114,6 @@ class EntryGroupController extends Controller
      *
      * @Route("/{id}/update", name="secure_manage_group_update")
      * @Method("POST")
-     * @Template("EnymindHealthSecureBundle:EntryGroup:edit.html.twig")
      */
     public function updateAction(Request $request, $id)
     {
@@ -144,6 +124,10 @@ class EntryGroupController extends Controller
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find EntryGroup entity.');
         }
+        
+        if( $entity->getOwnerId()->getId() != $this->getUser()->getId() ) {
+            throw $this->createNotFoundException('EntryGroup entity not belognin to user.');
+        }
 
         $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createForm(new EntryGroupType(), $entity);
@@ -153,14 +137,16 @@ class EntryGroupController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('secure_manage_group_edit', array('id' => $id)));
+            $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry group were saved!') );
+
+            $response = $this->forward('EnymindHealthSecureBundle:EntryGroup:index');
+            return $response;
         }
 
-        return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        );
+        $this->get('session')->setFlash('error', $this->get('translator')->trans('Error saving entry group!') );
+        
+        $response = $this->forward('EnymindHealthSecureBundle:EntryGroup:index');
+        return $response;
     }
 
     /**
@@ -181,12 +167,24 @@ class EntryGroupController extends Controller
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find EntryGroup entity.');
             }
+            
+            if( $entity->getOwnerId()->getId() != $this->getUser()->getId() ) {
+                throw $this->createNotFoundException('EntryGroup entity not belognin to user.');
+            }
 
             $em->remove($entity);
             $em->flush();
+            
+            $this->get('session')->setFlash('notice', $this->get('translator')->trans('Your entry group were deleted!') );
+
+            $response = $this->forward('EnymindHealthSecureBundle:EntryGroup:index');
+            return $response;
         }
 
-        return $this->redirect($this->generateUrl('secure_manage_group'));
+        $this->get('session')->setFlash('error', $this->get('translator')->trans('Error deleting entry group!') );
+        
+        $response = $this->forward('EnymindHealthSecureBundle:EntryGroup:index');
+        return $response;
     }
 
     private function createDeleteForm($id)

@@ -1,16 +1,15 @@
-<h1>EntryGroup creation</h1>
+{% extends '::base.html.twig' %}
 
-<form action="{{ path('secure_manage_group_create') }}" method="post" {{ form_enctype(form) }}>
+{% block pagename %}secure-manage-group-new{% endblock %}
+
+{% block header %}
+  <a href="{{ path('secure_manage_group') }}" data-icon="back" data-theme="c">{% trans %}Back{% endtrans %}</a>
+  <h1>{% trans %}New entry group{% endtrans %}</h1>
+{% endblock %}
+
+{% block body %}
+  <form class="widget_form" action="{{ path('secure_manage_group_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
-    <p>
-        <button type="submit">Create</button>
-    </p>
-</form>
-
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('secure_manage_group') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+    <p><button type="submit" data-icon="check" data-theme="b">Create</button></p>
+  </form>
+{% endblock %}
