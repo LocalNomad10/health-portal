@@ -33,34 +33,6 @@ class EntryTypeController extends Controller
     }
 
     /**
-     * Finds and displays a EntryType entity.
-     *
-     * @Route("/{id}/show", name="secure_manage_types_show")
-     * @Template()
-     */
-    public function showAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find EntryType entity.');
-        }
-        
-        if( $entity->getOwnerId()->getId() != $this->getUser()->getId() ) {
-            throw $this->createNotFoundException('EntryType entity not belognin to user.');
-        }
-
-        $deleteForm = $this->createDeleteForm($id);
-
-        return array(
-            'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),
-        );
-    }
-
-    /**
      * Displays a form to create a new EntryType entity.
      *
      * @Route("/new", name="secure_manage_types_new")

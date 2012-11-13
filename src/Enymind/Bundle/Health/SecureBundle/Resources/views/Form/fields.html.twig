@@ -1,4 +1,12 @@
+{% extends 'form_div_layout.html.twig' %}
+
 {% block number_widget %}
   {% set type = type|default('range') %}
   <input type="{{ type }}" min="0" max="1000" {{ block('widget_attributes') }} value="{{ value }}" data-highlight="true" />
 {% endblock %}
+
+{% block field_label %}
+{% spaceless %}
+<label for="{{ id }}"{% for attrname,attrvalue in attr %} {{attrname}}="{{attrvalue}}"{% endfor %} class="{% if errors|length > 0 %}error_class{% endif %}"><strong>{{ label|trans }}</strong></label>
+{% endspaceless %}
+{% endblock field_label %}

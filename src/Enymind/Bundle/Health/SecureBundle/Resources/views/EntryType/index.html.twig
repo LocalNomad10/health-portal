@@ -17,7 +17,7 @@
 
       {% for entity in entities %}
         <li data-filtertext="{{ entity.name }}">
-          <a href="{{ path('secure_manage_types_show', { 'id': entity.id }) }}">{{ entity.name }}</a>
+          <a href="{{ path('secure_manage_types_edit', { 'id': entity.id }) }}">{{ entity.name }}</a>
           <a href="{{ path('secure_manage_types_edit', { 'id': entity.id }) }}">{% trans %}Edit{% endtrans %}</a>
         </li>
       {% endfor %}
