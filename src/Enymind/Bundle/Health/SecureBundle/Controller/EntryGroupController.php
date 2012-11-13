@@ -90,9 +90,6 @@ class EntryGroupController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->find($id);
-        
-        $entity->setEntryTypesArrayCollection( $em->getRepository('EnymindHealthSecureBundle:EntryType')->findBy(
-                array("id" => $entity->getEntryTypesArray() ) ) );
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find EntryGroup entity.');
@@ -102,6 +99,9 @@ class EntryGroupController extends Controller
             throw $this->createNotFoundException('EntryGroup entity not belognin to user.');
         }
 
+        $entity->setEntryTypesArrayCollection( $em->getRepository('EnymindHealthSecureBundle:EntryType')->findBy(
+                array("id" => $entity->getEntryTypesArray() ) ) );
+        
         $editForm = $this->createForm(new EntryGroupType(), $entity);
         $deleteForm = $this->createDeleteForm($id);
 
@@ -132,7 +132,6 @@ class EntryGroupController extends Controller
             throw $this->createNotFoundException('EntryGroup entity not belognin to user.');
         }
 
-        $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createForm(new EntryGroupType(), $entity);
         $editForm->bind($request);
 

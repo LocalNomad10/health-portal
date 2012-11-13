@@ -12,4 +12,9 @@
       {{ form_widget(edit_form) }}
       <p><button type="submit" data-icon="check" data-theme="b">Save</button></p>
   </form>
+
+  <form action="{{ path('secure_manage_group_delete', { 'id': entity.id }) }}" method="post">
+    {{ form_widget(delete_form) }}
+    <p><button type="submit" data-icon="delete" data-theme="a">{% trans %}Delete{% endtrans %}</button></p>
+  </form>
 {% endblock %}

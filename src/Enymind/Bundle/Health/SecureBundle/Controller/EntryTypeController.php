@@ -129,7 +129,6 @@ class EntryTypeController extends Controller
             throw $this->createNotFoundException('EntryType entity not belognin to user.');
         }
 
-        $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createForm(new EntryTypeType(), $entity);
         $editForm->bind($request);
 
