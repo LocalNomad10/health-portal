@@ -90,6 +90,9 @@ class EntryGroupController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('EnymindHealthSecureBundle:EntryGroup')->find($id);
+        
+        $entity->setEntryTypesArrayCollection( $em->getRepository('EnymindHealthSecureBundle:EntryType')->findBy(
+                array("id" => $entity->getEntryTypesArray() ) ) );
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find EntryGroup entity.');

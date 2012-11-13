@@ -56,6 +56,8 @@ class EntryGroup
      * @ORM\Column(name="entry_types", type="array")
      */
     private $entry_types;
+    
+    private $entry_types_ac;
 
 
     /**
@@ -182,11 +184,34 @@ class EntryGroup
     }
 
     /**
+     * Set entry_types_ac
+     *
+     * @param Doctrine\Common\Collections\ArrayCollection $entryTypesAC
+     * @return EntryGroup
+     */
+    public function setEntryTypesArrayCollection($entryTypesAC)
+    {
+        $this->entry_types_ac = $entryTypesAC;
+    
+        return $this;
+    }
+    
+    /**
      * Get entry_types
+     *
+     * @return Doctrine\Common\Collections\ArrayCollection 
+     */
+    public function getEntryTypes()
+    {
+        return $this->entry_types_ac;
+    }
+    
+    /**
+     * Get entry_types_array
      *
      * @return array 
      */
-    public function getEntryTypes()
+    public function getEntryTypesArray()
     {
         return $this->entry_types;
     }

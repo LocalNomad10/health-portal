@@ -139,7 +139,7 @@ class DefaultController extends Controller
         
         $entryTypes = array();
         
-        foreach( $entryGroup->getEntryTypes() as $entryTypeId ) {
+        foreach( $entryGroup->getEntryTypesArray() as $entryTypeId ) {
           $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
           
           if (!$entryType) {
@@ -184,7 +184,7 @@ class DefaultController extends Controller
             throw $this->createNotFoundException('EntryGroup entity not belognin to user.');
         }
         
-        foreach( $entryGroup->getEntryTypes() as $index => $entryTypeId ) {
+        foreach( $entryGroup->getEntryTypesArray() as $index => $entryTypeId ) {
           $entryType = $em->getRepository('EnymindHealthSecureBundle:EntryType')->find($entryTypeId);
 
           if (!$entryType) {
