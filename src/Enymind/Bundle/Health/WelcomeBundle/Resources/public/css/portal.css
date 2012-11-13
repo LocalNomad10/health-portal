@@ -54,8 +54,6 @@ div.error-message {
 }
 
 .input-prepend .add-on, .input-append .add-on {
-  background-color: #EEEEEE;
-  border: 1px solid #CCCCCC;
   display: inline-block;
   font-weight: normal;
   height: 21px;
