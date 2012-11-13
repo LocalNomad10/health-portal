@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Enymind\Bundle\Health\SecureBundle\Entity\EntryGroup;
 use Enymind\Bundle\Health\SecureBundle\Form\EntryGroupType;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class EntryGroupController extends Controller
 {
@@ -99,8 +100,11 @@ class EntryGroupController extends Controller
             throw $this->createNotFoundException('EntryGroup entity not belognin to user.');
         }
 
-        $entity->setEntryTypesArrayCollection( $em->getRepository('EnymindHealthSecureBundle:EntryType')->findBy(
-                array("id" => $entity->getEntryTypesArray() ) ) );
+        $entity->setEntryTypesArrayCollection( new ArrayCollection(
+                $em->getRepository('EnymindHealthSecureBundle:EntryType')->findBy(
+                  array("id" => $entity->getEntryTypesArray() )
+                )
+        ) );
         
         $editForm = $this->createForm(new EntryGroupType(), $entity);
         $deleteForm = $this->createDeleteForm($id);

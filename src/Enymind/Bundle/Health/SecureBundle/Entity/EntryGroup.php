@@ -3,6 +3,7 @@
 namespace Enymind\Bundle\Health\SecureBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Enymind\Bundle\Health\SecureBundle\Entity\EntryGroup
