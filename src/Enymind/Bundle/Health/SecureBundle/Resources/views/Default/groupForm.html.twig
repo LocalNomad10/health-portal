@@ -12,7 +12,7 @@
     {% for entryType in entryTypes %}
       <div class="multi_part">
         <h3>{{ entryType.name }}</h3>
-        <p>{{ entryType.description }} {% trans %}Value in{% endtrans %} <strong>{{ entryType.quantity }}</strong>.</p>
+        <p>{{ entryType.description }}. {% trans %}Value in{% endtrans %} <strong>{{ entryType.quantity }}</strong>.</p>
         <input type="range" name="value[]" id="value-slider-fill" value="{{ entryType.defaultValue }}" min="{{ entryType.min }}" max="{{ entryType.max }}" data-highlight="true" />
       </div>
     {% endfor %}
