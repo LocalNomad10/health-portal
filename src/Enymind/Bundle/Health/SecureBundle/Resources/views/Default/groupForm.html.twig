@@ -9,14 +9,13 @@
 
 {% block body %}
   <form class="multi_form" action="/secure/group/{{ entryGroup.id }}/save" method="post" id="entry-form">
-  {% for entryType in entryTypes %}
-    <div>
-      <h3>{{ entryType.name }}</h3>
-      <p>{{ entryType.description }} {% trans %}Value in{% endtrans %} <strong>{{ entryType.quantity }}</strong>.</p>
-      <input type="range" name="value[]" id="value-slider-fill" value="{{ entryType.defaultValue }}" min="{{ entryType.min }}" max="{{ entryType.max }}" data-highlight="true" />
-    </div>
-  {% endfor %}
-  <button type="submit" name="submit" value="submit" data-icon="check" data-theme="b">{% trans %}Add entry{% endtrans %}</button>
+    {% for entryType in entryTypes %}
+      <div class="multi_part">
+        <h3>{{ entryType.name }}</h3>
+        <p>{{ entryType.description }} {% trans %}Value in{% endtrans %} <strong>{{ entryType.quantity }}</strong>.</p>
+        <input type="range" name="value[]" id="value-slider-fill" value="{{ entryType.defaultValue }}" min="{{ entryType.min }}" max="{{ entryType.max }}" data-highlight="true" />
+      </div>
+    {% endfor %}
+    <button type="submit" name="submit" value="submit" data-icon="check" data-theme="b">{% trans %}Add entry{% endtrans %}</button>
   </form>
-
 {% endblock %}

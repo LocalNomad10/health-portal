@@ -8,13 +8,13 @@
 {% endblock %}
 
 {% block body %}
-  <h3>{{ entryType.name }}</h3>
-  <p>{{ entryType.description }}</p>
-
-  <form action="/secure/enter/{{ entryType.id }}/save" method="post" id="entry-form">
+<form class="multi_form" action="/secure/enter/{{ entryType.id }}/save" method="post" id="entry-form">
+  <div class="multi_part">
+    <h3>{{ entryType.name }}</h3>
+    <p>{{ entryType.description }}</p>
     <label for="value-slider-fill">{% trans %}Value in{% endtrans %} <strong>{{ entryType.quantity }}</strong>:</label>
     <input type="range" name="value" id="value-slider-fill" value="{{ entryType.defaultValue }}" min="{{ entryType.min }}" max="{{ entryType.max }}" data-highlight="true" />
-    <button type="submit" name="submit" value="submit" data-icon="check" data-theme="b">{% trans %}Add entry{% endtrans %}</button>
-  </form>
-
+  </div>
+  <button type="submit" name="submit" value="submit" data-icon="check" data-theme="b">{% trans %}Add entry{% endtrans %}</button>
+</form>
 {% endblock %}
