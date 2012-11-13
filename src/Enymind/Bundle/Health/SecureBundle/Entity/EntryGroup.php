@@ -168,7 +168,15 @@ class EntryGroup
      */
     public function setEntryTypes(Array $entryTypes)
     {
-        $this->entry_types = $entryTypes;
+        if ( is_a($entryTypes, "Doctrine\Common\Collections\ArrayCollection") ) {
+          $entryTypesArray = array();
+          foreach( $entryTypes as $entryType ) {
+            $entryTypesArray[] = $entryType->getId();
+          }
+          $this->entry_types = $entryTypesArray;
+        }
+        else
+          $this->entry_types = $entryTypes;
     
         return $this;
     }
