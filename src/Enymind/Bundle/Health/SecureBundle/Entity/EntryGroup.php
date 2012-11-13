@@ -166,7 +166,7 @@ class EntryGroup
      * @param array $entryTypes
      * @return EntryGroup
      */
-    public function setEntryTypes($entryTypes)
+    public function setEntryTypes(Array $entryTypes)
     {
         $this->entry_types = $entryTypes;
     
