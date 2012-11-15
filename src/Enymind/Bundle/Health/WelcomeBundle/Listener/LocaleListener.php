@@ -14,8 +14,15 @@ class LocaleListener
 
     public function onKernelRequest(\Symfony\Component\HttpKernel\Event\GetResponseEvent $e) {
         $req = $e->getRequest();
-        $locale = $req->getPreferredLanguage($this->availableLocales);
-        $req->setLocale($locale);
+        $hostParts = explode( ".", $req->getHttpHost() );
+        
+        if( in_array( $hostParts[0], $this->availableLocales ) ) {
+          $req->setLocale( $hostParts[0] );
+        }
+        else {
+          $locale = $req->getPreferredLanguage($this->availableLocales);
+          $req->setLocale($locale);
+        }
     }
 }
 
