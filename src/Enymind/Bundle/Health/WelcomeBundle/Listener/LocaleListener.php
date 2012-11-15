@@ -15,8 +15,7 @@ class LocaleListener
     public function onKernelRequest(\Symfony\Component\HttpKernel\Event\GetResponseEvent $e) {
         $req = $e->getRequest();
         $locale = $req->getPreferredLanguage($this->availableLocales);
-        $request = $this->container->get('request');
-        $request->setLocale($locale);
+        $req->setLocale($locale);
     }
 }
 
