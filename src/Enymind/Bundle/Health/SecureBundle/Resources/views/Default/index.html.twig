@@ -1,6 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block pagename %}secure-index{% endblock %}
+{% block data-dom-cache %}true{% endblock %}
 
 {% block header %}
   <a href="/secure/logout" data-icon="delete" data-theme="d">{% trans %}Log Out{% endtrans %}</a>
@@ -12,8 +13,8 @@
   <div class="ui-grid-a">
     <div class="ui-block-a"><a href="/secure/enter" data-iconpos="top" data-icon="plus" data-role="button" data-theme="b" data-prefetch>{% trans %}Enter value{% endtrans %}</a></div>
     <div class="ui-block-b"><a href="/secure/group" data-iconpos="top" data-icon="plus" data-role="button" data-theme="b" data-prefetch>{% trans %}Enter group{% endtrans %}</a></div>
-    <div class="ui-block-a"><a href="/secure/stats" data-iconpos="top" data-icon="bar-chart" data-role="button" data-theme="c" data-prefetch>{% trans %}Statistics{% endtrans %}</a></div>
-    <div class="ui-block-b"><a href="/secure/report" data-iconpos="top" data-icon="credit-card" data-role="button" data-theme="c" data-prefetch>{% trans %}Reporting{% endtrans %}</a></div>
+    <div class="ui-block-a"><a href="/secure/stats" data-iconpos="top" data-icon="bar-chart" data-role="button" data-theme="c">{% trans %}Statistics{% endtrans %}</a></div>
+    <div class="ui-block-b"><a href="/secure/report" data-iconpos="top" data-icon="credit-card" data-role="button" data-theme="c">{% trans %}Reporting{% endtrans %}</a></div>
   </div>
   <div>
     <p><strong>{% trans %}Entries in system:{% endtrans %}</strong> ?</p>
@@ -21,9 +22,9 @@
     <p><strong>{% trans %}Entries in system:{% endtrans %}</strong> ?</p>
   </div>
   <div class="ui-grid-a">
-    <div class="ui-block-a"><a href="/secure/manage/types" data-iconpos="top" data-icon="gear" data-role="button" data-theme="c" data-prefetch>{% trans %}Manage types{% endtrans %}</a></div>
-    <div class="ui-block-b"><a href="/secure/manage/group" data-iconpos="top" data-icon="gear" data-role="button" data-theme="c" data-prefetch>{% trans %}Manage groups{% endtrans %}</a></div>
-    <div class="ui-block-a"><a href="/secure/manage/pool" class="ui-disabled" data-iconpos="top" data-icon="gear" data-role="button" data-theme="c" data-prefetch>{% trans %}Manage pools{% endtrans %}</a></div>
-    <div class="ui-block-b"><a href="/secure/manage" class="ui-disabled" data-iconpos="top" data-icon="gear" data-role="button" data-theme="a" data-prefetch>{% trans %}Settings{% endtrans %}</a></div>
+    <div class="ui-block-a"><a href="/secure/manage/types" data-iconpos="top" data-icon="gear" data-role="button" data-theme="c">{% trans %}Manage types{% endtrans %}</a></div>
+    <div class="ui-block-b"><a href="/secure/manage/group" data-iconpos="top" data-icon="gear" data-role="button" data-theme="c">{% trans %}Manage groups{% endtrans %}</a></div>
+    <div class="ui-block-a"><a href="/secure/manage/pool" class="ui-disabled" data-iconpos="top" data-icon="gear" data-role="button" data-theme="c">{% trans %}Manage pools{% endtrans %}</a></div>
+    <div class="ui-block-b"><a href="/secure/manage" class="ui-disabled" data-iconpos="top" data-icon="gear" data-role="button" data-theme="a">{% trans %}Settings{% endtrans %}</a></div>
   </div>
 {% endblock %}
