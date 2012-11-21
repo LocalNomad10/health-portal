@@ -24,7 +24,7 @@
     <div id="free-popup" data-role="popup" data-theme="e" data-overlay-theme="a" class="ui-content free-message">
       ...
     </div>
-    <div data-role="page" id="page-{% block pagename %}{% endblock %}" data-dom-cache="{% block data-dom-cache %}false{% endblock %}">
+    <div data-role="page" id="page-{% block pagename %}{% endblock %}" data-dom-cache="{% block datadomcache %}false{% endblock %}">
         {% if app.session.hasFlash('notice') %}
             <div id="notice-popup" data-role="popup" data-theme="e" data-overlay-theme="a" class="flash-popup ui-content notice-message">
               {{ app.session.flash('notice') }}
