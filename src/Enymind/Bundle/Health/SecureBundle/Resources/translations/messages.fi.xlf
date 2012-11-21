@@ -8,51 +8,51 @@
       </trans-unit>
       <trans-unit id="2">
         <source>New entry group</source>
-        <target>__New entry group</target>
+        <target>Uusi sarja</target>
       </trans-unit>
       <trans-unit id="3">
         <source>Manage entry groups</source>
-        <target>__Manage entry groups</target>
+        <target>Hallitse sarjoja</target>
       </trans-unit>
       <trans-unit id="4">
         <source>Create a new entry group</source>
-        <target>__Create a new entry group</target>
+        <target>Lisää uusi sarja</target>
       </trans-unit>
       <trans-unit id="5">
         <source>Filter by entry group...</source>
-        <target>__Filter by entry group...</target>
+        <target>Suodata sarjan nimellä...</target>
       </trans-unit>
       <trans-unit id="6">
         <source>Edit</source>
-        <target>__Edit</target>
+        <target>Muokkaa</target>
       </trans-unit>
       <trans-unit id="7">
         <source>Edit entry group</source>
-        <target>__Edit entry group</target>
+        <target>Muokkaa sarjaa</target>
       </trans-unit>
       <trans-unit id="8">
         <source>Delete</source>
-        <target>__Delete</target>
+        <target>Poista</target>
       </trans-unit>
       <trans-unit id="9">
         <source>New entry type</source>
-        <target>__New entry type</target>
+        <target>Uusi mittaustyyppi</target>
       </trans-unit>
       <trans-unit id="10">
         <source>Manage entry types</source>
-        <target>__Manage entry types</target>
+        <target>Hallitse mittaustyyppejä</target>
       </trans-unit>
       <trans-unit id="11">
         <source>Create a new entry type</source>
-        <target>__Create a new entry type</target>
+        <target>Lisää uusi mittaustyyppi</target>
       </trans-unit>
       <trans-unit id="12">
         <source>Filter by entry type...</source>
-        <target>__Filter by entry type...</target>
+        <target>Suodata mittaustyypin nimellä...</target>
       </trans-unit>
       <trans-unit id="13">
         <source>Edit entry type</source>
-        <target>__Edit entry type</target>
+        <target>Muokkaa mittaustyyppiä</target>
       </trans-unit>
       <trans-unit id="14">
         <source>Message sent succesfully!</source>
@@ -120,7 +120,7 @@
       </trans-unit>
       <trans-unit id="30">
         <source>Search entry group...</source>
-        <target>__Search entry group...</target>
+        <target>Etsi sarjan nimellä...</target>
       </trans-unit>
       <trans-unit id="31">
         <source>Enter entry</source>
@@ -128,7 +128,7 @@
       </trans-unit>
       <trans-unit id="32">
         <source>Search entry type...</source>
-        <target>Etsi mittaustyyppi...</target>
+        <target>Etsi mittaustyyppin nimellä...</target>
       </trans-unit>
       <trans-unit id="33">
         <source>Statistics</source>
@@ -136,7 +136,7 @@
       </trans-unit>
       <trans-unit id="34">
         <source>Enter entry values</source>
-        <target>__Enter entry values</target>
+        <target>Syötä mittauksen arvot</target>
       </trans-unit>
       <trans-unit id="35">
         <source>Log Out</source>
@@ -148,7 +148,7 @@
       </trans-unit>
       <trans-unit id="37">
         <source>Help</source>
-        <target>__Help</target>
+        <target>Ohje</target>
       </trans-unit>
       <trans-unit id="38">
         <source>Enter value</source>
@@ -160,23 +160,23 @@
       </trans-unit>
       <trans-unit id="40">
         <source>Entries in system:</source>
-        <target>__Entries in system:</target>
+        <target>Mittauksia järjestelmässä:</target>
       </trans-unit>
       <trans-unit id="41">
         <source>Manage types</source>
-        <target>__Manage types</target>
+        <target>Hallitse tyyppejä</target>
       </trans-unit>
       <trans-unit id="42">
         <source>Manage groups</source>
-        <target>__Manage groups</target>
+        <target>Hallitse sarjoja</target>
       </trans-unit>
       <trans-unit id="43">
         <source>Manage pools</source>
-        <target>__Manage pools</target>
+        <target>Hallitse altaita</target>
       </trans-unit>
       <trans-unit id="44">
         <source>Settings</source>
-        <target>__Settings</target>
+        <target>Asetukset</target>
       </trans-unit>
       <trans-unit id="45">
         <source>Report</source>

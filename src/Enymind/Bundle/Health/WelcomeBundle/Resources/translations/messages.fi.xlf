@@ -8,11 +8,11 @@
       </trans-unit>
       <trans-unit id="2">
         <source>Health Portal About</source>
-        <target>__Health Portal About</target>
+        <target>Tietoja portaalista</target>
       </trans-unit>
       <trans-unit id="3">
         <source>About</source>
-        <target>__About</target>
+        <target>Tietoja</target>
       </trans-unit>
       <trans-unit id="4">
         <source>Health Portal Home</source>
@@ -56,7 +56,7 @@
       </trans-unit>
       <trans-unit id="14">
         <source>Password again</source>
-        <target>__Password again</target>
+        <target>Salasana uudestaan</target>
       </trans-unit>
       <trans-unit id="15">
         <source>Save and remember your personal code and password well!</source>
@@ -86,11 +86,11 @@
       </trans-unit>
       <trans-unit id="21">
         <source>&lt;strong&gt;Please click and type&lt;/strong&gt; your personal code and a password.</source>
-        <target>__&lt;strong&gt;Please click and type&lt;/strong&gt; your personal code and a password.</target>
+        <target>&lt;strong&gt;Syötä&lt;/strong&gt; henkilökohtainen koodisi, salasanasi ja kirjaudu sisään.</target>
       </trans-unit>
       <trans-unit id="22">
         <source>Personal code</source>
-        <target>Henkilökohtainen koodi</target>
+        <target>Henk. koodi</target>
       </trans-unit>
       <trans-unit id="23">
         <source>Hint</source>
