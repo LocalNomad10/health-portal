@@ -10,7 +10,7 @@
 {% block body %}
   <form class="widget_form" action="{{ path('secure_manage_group_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
       {{ form_widget(edit_form) }}
-      <p><button type="submit" data-icon="check" data-theme="b">Save</button></p>
+      <p><button type="submit" data-icon="check" data-theme="b">{% trans %}Save{% endtrans %}</button></p>
   </form>
 
   <form action="{{ path('secure_manage_group_delete', { 'id': entity.id }) }}" method="post">

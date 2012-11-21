@@ -198,6 +198,10 @@
         <source>Enter many</source>
         <target>Enter many</target>
       </trans-unit>
+      <trans-unit id="50">
+        <source>Save</source>
+        <target>Save</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

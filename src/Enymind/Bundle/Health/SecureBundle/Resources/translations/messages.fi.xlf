@@ -190,6 +190,10 @@
         <source>Number of entries:</source>
         <target>Mittausten määrä:</target>
       </trans-unit>
+      <trans-unit id="48">
+        <source>Save</source>
+        <target>Tallenna</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
