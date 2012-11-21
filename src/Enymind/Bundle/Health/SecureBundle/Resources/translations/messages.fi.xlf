@@ -3,110 +3,190 @@
   <file source-language="fi" datatype="plaintext" original="file.ext">
     <body>
       <trans-unit id="1">
-        <source>Message sent succesfully!</source>
-        <target>Sähköposti lähetetty onnistuneesti!</target>
-      </trans-unit>
-      <trans-unit id="2">
-        <source>Email saved succesfully!</source>
-        <target>Sähköposti tallennettu onnistuneesti!</target>
-      </trans-unit>
-      <trans-unit id="3">
-        <source>Dear</source>
-        <target>Hei</target>
-      </trans-unit>
-      <trans-unit id="4">
-        <source>Here is your personal code:</source>
-        <target>Tässä henkilökohtainen koodisi:</target>
-      </trans-unit>
-      <trans-unit id="5">
-        <source>Best Regards</source>
-        <target>Terveisin</target>
-      </trans-unit>
-      <trans-unit id="6">
         <source>Back</source>
         <target>Takaisin</target>
       </trans-unit>
+      <trans-unit id="2">
+        <source>New entry group</source>
+        <target>__New entry group</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Manage entry groups</source>
+        <target>__Manage entry groups</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Create a new entry group</source>
+        <target>__Create a new entry group</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Filter by entry group...</source>
+        <target>__Filter by entry group...</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Edit</source>
+        <target>__Edit</target>
+      </trans-unit>
       <trans-unit id="7">
+        <source>Edit entry group</source>
+        <target>__Edit entry group</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Delete</source>
+        <target>__Delete</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>New entry type</source>
+        <target>__New entry type</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>Manage entry types</source>
+        <target>__Manage entry types</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Create a new entry type</source>
+        <target>__Create a new entry type</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>Filter by entry type...</source>
+        <target>__Filter by entry type...</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Edit entry type</source>
+        <target>__Edit entry type</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Message sent succesfully!</source>
+        <target>Sähköposti lähetetty onnistuneesti!</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>Email saved succesfully!</source>
+        <target>Sähköposti tallennettu onnistuneesti!</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Dear</source>
+        <target>Hei</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>Here is your personal code:</source>
+        <target>Tässä henkilökohtainen koodisi:</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>Best Regards</source>
+        <target>Terveisin</target>
+      </trans-unit>
+      <trans-unit id="19">
         <source>New user</source>
         <target>Uusi käyttäjä</target>
       </trans-unit>
-      <trans-unit id="8">
+      <trans-unit id="20">
         <source>Log In</source>
         <target>Kirjaudu</target>
       </trans-unit>
-      <trans-unit id="9">
+      <trans-unit id="21">
         <source>&lt;strong&gt;New user&lt;/strong&gt; (you) has been created with following credentials:</source>
         <target>&lt;strong&gt;Uusi käyttäjä&lt;/strong&gt; (sinä) on luotu järjestelmään seuraavilla tiedoilla:</target>
       </trans-unit>
-      <trans-unit id="10">
+      <trans-unit id="22">
         <source>Personal code:</source>
         <target>Henkilökohtainen koodi:</target>
       </trans-unit>
-      <trans-unit id="11">
+      <trans-unit id="23">
         <source>Hint</source>
         <target>Vihje</target>
       </trans-unit>
-      <trans-unit id="12">
+      <trans-unit id="24">
         <source>Remember to save your credentials in a safe place!</source>
         <target>Muista tallentaa tunnuksesi talteen varmaan paikkaan!</target>
       </trans-unit>
-      <trans-unit id="13">
+      <trans-unit id="25">
         <source>You can send your credentials by email at a login page.</source>
         <target>Voit lähettää tunnuksesi itsellesi sähköpostilla kirjautumissivulla.</target>
       </trans-unit>
-      <trans-unit id="14">
+      <trans-unit id="26">
         <source>Enter entry value</source>
         <target>Syötä mittauksen arvo</target>
       </trans-unit>
-      <trans-unit id="15">
+      <trans-unit id="27">
         <source>Value in</source>
         <target>Suure</target>
       </trans-unit>
-      <trans-unit id="16">
+      <trans-unit id="28">
         <source>Add entry</source>
         <target>Lisää mittaus</target>
       </trans-unit>
-      <trans-unit id="17">
-        <source>Enter entry</source>
-        <target>Syötä mittaus</target>
-      </trans-unit>
-      <trans-unit id="18">
-        <source>Search entry type...</source>
-        <target>Etsi mittaustyyppi...</target>
-      </trans-unit>
-      <trans-unit id="19">
-        <source>Log Out</source>
-        <target>Kirjaudu ulos</target>
-      </trans-unit>
-      <trans-unit id="20">
-        <source>Dashboard</source>
-        <target>Etusivu</target>
-      </trans-unit>
-      <trans-unit id="21">
-        <source>Search</source>
-        <target>Haku</target>
-      </trans-unit>
-      <trans-unit id="22">
-        <source>Enter value</source>
-        <target>Syötä arvo</target>
-      </trans-unit>
-      <trans-unit id="23">
+      <trans-unit id="29">
         <source>Enter group</source>
         <target>Syötä sarja</target>
       </trans-unit>
-      <trans-unit id="24">
+      <trans-unit id="30">
+        <source>Search entry group...</source>
+        <target>__Search entry group...</target>
+      </trans-unit>
+      <trans-unit id="31">
+        <source>Enter entry</source>
+        <target>Syötä mittaus</target>
+      </trans-unit>
+      <trans-unit id="32">
+        <source>Search entry type...</source>
+        <target>Etsi mittaustyyppi...</target>
+      </trans-unit>
+      <trans-unit id="33">
         <source>Statistics</source>
         <target>Tilastot</target>
       </trans-unit>
-      <trans-unit id="25">
+      <trans-unit id="34">
+        <source>Enter entry values</source>
+        <target>__Enter entry values</target>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>Log Out</source>
+        <target>Kirjaudu ulos</target>
+      </trans-unit>
+      <trans-unit id="36">
+        <source>Dashboard</source>
+        <target>Etusivu</target>
+      </trans-unit>
+      <trans-unit id="37">
+        <source>Help</source>
+        <target>__Help</target>
+      </trans-unit>
+      <trans-unit id="38">
+        <source>Enter value</source>
+        <target>Syötä arvo</target>
+      </trans-unit>
+      <trans-unit id="39">
         <source>Reporting</source>
         <target>Raportointi</target>
       </trans-unit>
-      <trans-unit id="26">
+      <trans-unit id="40">
+        <source>Entries in system:</source>
+        <target>__Entries in system:</target>
+      </trans-unit>
+      <trans-unit id="41">
+        <source>Manage types</source>
+        <target>__Manage types</target>
+      </trans-unit>
+      <trans-unit id="42">
+        <source>Manage groups</source>
+        <target>__Manage groups</target>
+      </trans-unit>
+      <trans-unit id="43">
+        <source>Manage pools</source>
+        <target>__Manage pools</target>
+      </trans-unit>
+      <trans-unit id="44">
+        <source>Settings</source>
+        <target>__Settings</target>
+      </trans-unit>
+      <trans-unit id="45">
         <source>Report</source>
         <target>Raportti</target>
       </trans-unit>
-      <trans-unit id="27">
+      <trans-unit id="46">
+        <source>Search</source>
+        <target>Haku</target>
+      </trans-unit>
+      <trans-unit id="47">
         <source>Number of entries:</source>
         <target>Mittausten määrä:</target>
       </trans-unit>

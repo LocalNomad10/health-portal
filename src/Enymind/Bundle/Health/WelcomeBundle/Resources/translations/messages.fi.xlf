@@ -7,140 +7,156 @@
         <target>Takaisin</target>
       </trans-unit>
       <trans-unit id="2">
-        <source>Health Portal Help</source>
-        <target>Portaalin ohje</target>
+        <source>Health Portal About</source>
+        <target>__Health Portal About</target>
       </trans-unit>
       <trans-unit id="3">
-        <source>Search</source>
-        <target>Haku</target>
+        <source>About</source>
+        <target>__About</target>
       </trans-unit>
       <trans-unit id="4">
-        <source>Nothing here yet...</source>
-        <target>Täälä ei vielä mitään...</target>
-      </trans-unit>
-      <trans-unit id="5">
-        <source>Help</source>
-        <target>Ohje</target>
-      </trans-unit>
-      <trans-unit id="6">
         <source>Health Portal Home</source>
         <target>Portaalin koti</target>
       </trans-unit>
-      <trans-unit id="7">
+      <trans-unit id="5">
         <source>Log In</source>
         <target>Kirjaudu</target>
       </trans-unit>
-      <trans-unit id="8">
+      <trans-unit id="6">
         <source>&lt;strong&gt;Welcome&lt;/strong&gt; to use personal health portal application.</source>
         <target>&lt;strong&gt;Tervetuloa&lt;/strong&gt; käyttämään henkilökohtaista terveysportaalia.</target>
       </trans-unit>
-      <trans-unit id="9">
+      <trans-unit id="7">
         <source>So, whats next?</source>
         <target>Mitä seuraavaksi?</target>
       </trans-unit>
-      <trans-unit id="10">
+      <trans-unit id="8">
         <source>&lt;strong&gt;The very next&lt;/strong&gt; thing you need to do is to get yourself an account.</source>
         <target>&lt;strong&gt;Seuraava asia&lt;/strong&gt;, jota tarvitset, on oma tunnus palveluun.</target>
       </trans-unit>
-      <trans-unit id="11">
+      <trans-unit id="9">
         <source>&lt;strong&gt;Please choose&lt;/strong&gt; one of choices bellow...</source>
         <target>&lt;strong&gt;Ole hyvä&lt;/strong&gt; ja valitse alta...</target>
       </trans-unit>
-      <trans-unit id="12">
+      <trans-unit id="10">
         <source>I am a new user</source>
         <target>Olen uusi käyttäjä</target>
       </trans-unit>
-      <trans-unit id="13">
+      <trans-unit id="11">
         <source>No personal information, like your name, or your location, is stored in this system.</source>
         <target>Järjestelmään ei tallenneta henkilökohtaisia tietojasi, kuten nimeäsi tai sijaintiasi.</target>
       </trans-unit>
-      <trans-unit id="14">
+      <trans-unit id="12">
         <source>Here is your personal code:</source>
         <target>Tässä henkilökohtainen koodisi:</target>
       </trans-unit>
-      <trans-unit id="15">
-        <source>Password:</source>
-        <target>Salasana:</target>
-      </trans-unit>
-      <trans-unit id="16">
+      <trans-unit id="13">
         <source>Password</source>
         <target>Salasana</target>
       </trans-unit>
-      <trans-unit id="17">
+      <trans-unit id="14">
+        <source>Password again</source>
+        <target>__Password again</target>
+      </trans-unit>
+      <trans-unit id="15">
         <source>Save and remember your personal code and password well!</source>
         <target>Tallenna tai muista henkilökohtainen koodisi ja salasanasi!</target>
       </trans-unit>
-      <trans-unit id="18">
+      <trans-unit id="16">
         <source>Register</source>
         <target>Rekisteröidy</target>
       </trans-unit>
-      <trans-unit id="19">
+      <trans-unit id="17">
         <source>I already have an account</source>
         <target>Minulla on jo tunnus</target>
       </trans-unit>
-      <trans-unit id="20">
+      <trans-unit id="18">
         <source>Just as well you can find the same icon at the &lt;strong&gt;top right&lt;/strong&gt; corner of this page.
           Next time, use icon at top right corner to speed up your log in process.</source>
         <target>Voit yhtä hyvin käyttää tämän sivun &lt;strong&gt;oikealla yläkulmassa&lt;/strong&gt; sijaitsevaa kirjautumispainiketta.
           Seuraavalla kerralla käytä yläkulman painiketta nopeuttaaksesi kirjautumistasi.</target>
       </trans-unit>
-      <trans-unit id="21">
+      <trans-unit id="19">
         <source>Health Portal Log In</source>
         <target>Portaalin kirjautuminen</target>
       </trans-unit>
-      <trans-unit id="22">
+      <trans-unit id="20">
         <source>OK</source>
         <target>OK</target>
       </trans-unit>
-      <trans-unit id="23">
-        <source>Personal code:</source>
-        <target>Henkilökohtainen koodi:</target>
+      <trans-unit id="21">
+        <source>&lt;strong&gt;Please click and type&lt;/strong&gt; your personal code and a password.</source>
+        <target>__&lt;strong&gt;Please click and type&lt;/strong&gt; your personal code and a password.</target>
       </trans-unit>
-      <trans-unit id="24">
+      <trans-unit id="22">
         <source>Personal code</source>
         <target>Henkilökohtainen koodi</target>
       </trans-unit>
-      <trans-unit id="25">
+      <trans-unit id="23">
         <source>Hint</source>
         <target>Vihje</target>
       </trans-unit>
-      <trans-unit id="26">
+      <trans-unit id="24">
         <source>&lt;strong&gt;Set this page&lt;/strong&gt; to your browser's &lt;strong&gt;bookmark list&lt;/strong&gt; to speed up log in process next time.</source>
         <target>&lt;strong&gt;Lisää&lt;/strong&gt; tämä sivu selaimesi &lt;strong&gt;kirjanmerkkeihin&lt;/strong&gt; nopeuttaaksesi kirjautumista seuraavalla kerralla.</target>
       </trans-unit>
-      <trans-unit id="27">
+      <trans-unit id="25">
         <source>Add bookmark</source>
         <target>Lisää kirjanmerkki</target>
       </trans-unit>
-      <trans-unit id="28">
+      <trans-unit id="26">
         <source>Send credentials by email</source>
         <target>Lähetä tunnukset sähköpostilla</target>
       </trans-unit>
-      <trans-unit id="29">
+      <trans-unit id="27">
         <source>No personal information, like your name, email, or your location, is stored in this system without your knowledge.</source>
         <target>Järjestelmään ei tallenneta henkilökohtaisia tietojasi, kuten nimeäsi tai sijaintiasi tietämättäsi.</target>
       </trans-unit>
-      <trans-unit id="30">
+      <trans-unit id="28">
         <source>Email:</source>
         <target>Sähköposti:</target>
       </trans-unit>
-      <trans-unit id="31">
+      <trans-unit id="29">
         <source>your@email.com</source>
         <target>nimi@osoite.fi</target>
       </trans-unit>
-      <trans-unit id="32">
+      <trans-unit id="30">
         <source>Send</source>
         <target>Lähetä</target>
       </trans-unit>
-      <trans-unit id="33">
+      <trans-unit id="31">
         <source>Adding bookmarks is not supported on your browser!</source>
         <target>Selaimesi ei tue kirjanmerkkien lisäämistä!</target>
       </trans-unit>
+      <trans-unit id="32">
+        <source>Health Portal Help</source>
+        <target>Portaalin ohje</target>
+      </trans-unit>
+      <trans-unit id="33">
+        <source>Search</source>
+        <target>Haku</target>
+      </trans-unit>
       <trans-unit id="34">
+        <source>Nothing here yet...</source>
+        <target>Täälä ei vielä mitään...</target>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>Help</source>
+        <target>Ohje</target>
+      </trans-unit>
+      <trans-unit id="36">
+        <source>Password:</source>
+        <target>Salasana:</target>
+      </trans-unit>
+      <trans-unit id="37">
+        <source>Personal code:</source>
+        <target>Henkilökohtainen koodi:</target>
+      </trans-unit>
+      <trans-unit id="38">
         <source>Error occured during log in process:</source>
         <target>Tapahtui virhe kirjauduttaessa sisään:</target>
       </trans-unit>
-      <trans-unit id="35">
+      <trans-unit id="39">
         <source>Requested page not found!</source>
         <target>Pyydettyä sivua ei löydy!</target>
       </trans-unit>

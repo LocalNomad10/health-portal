@@ -7,156 +7,172 @@
         <target>Back</target>
       </trans-unit>
       <trans-unit id="2">
-        <source>Health Portal Help</source>
-        <target>Health Portal Help</target>
+        <source>Health Portal About</source>
+        <target>__Health Portal About</target>
       </trans-unit>
       <trans-unit id="3">
-        <source>Search</source>
-        <target>Search</target>
+        <source>About</source>
+        <target>__About</target>
       </trans-unit>
       <trans-unit id="4">
-        <source>Nothing here yet...</source>
-        <target>Nothing here yet...</target>
-      </trans-unit>
-      <trans-unit id="5">
-        <source>Help</source>
-        <target>Help</target>
-      </trans-unit>
-      <trans-unit id="6">
         <source>Health Portal Home</source>
         <target>Health Portal Home</target>
       </trans-unit>
-      <trans-unit id="7">
+      <trans-unit id="5">
         <source>Log In</source>
         <target>Log In</target>
       </trans-unit>
-      <trans-unit id="8">
+      <trans-unit id="6">
         <source>&lt;strong&gt;Welcome&lt;/strong&gt; to use personal health portal application.</source>
         <target>&lt;strong&gt;Welcome&lt;/strong&gt; to use personal health portal application.</target>
       </trans-unit>
-      <trans-unit id="9">
+      <trans-unit id="7">
         <source>So, whats next?</source>
         <target>So, whats next?</target>
       </trans-unit>
-      <trans-unit id="10">
+      <trans-unit id="8">
         <source>&lt;strong&gt;The very next&lt;/strong&gt; thing you need to do is to get yourself an account.</source>
         <target>&lt;strong&gt;The very next&lt;/strong&gt; thing you need to do is to get yourself an account.</target>
       </trans-unit>
-      <trans-unit id="11">
+      <trans-unit id="9">
         <source>&lt;strong&gt;Please choose&lt;/strong&gt; one of choices bellow...</source>
         <target>&lt;strong&gt;Please choose&lt;/strong&gt; one of choices bellow...</target>
       </trans-unit>
-      <trans-unit id="12">
+      <trans-unit id="10">
         <source>I am a new user</source>
         <target>I am a new user</target>
       </trans-unit>
-      <trans-unit id="13">
+      <trans-unit id="11">
         <source>No personal information, like your name, or your location, is stored in this system.</source>
         <target>No personal information, like your name, or your location, is stored in this system.</target>
       </trans-unit>
-      <trans-unit id="14">
+      <trans-unit id="12">
         <source>Here is your personal code:</source>
         <target>Here is your personal code:</target>
       </trans-unit>
-      <trans-unit id="15">
-        <source>Password:</source>
-        <target>Password:</target>
-      </trans-unit>
-      <trans-unit id="16">
+      <trans-unit id="13">
         <source>Password</source>
         <target>Password</target>
       </trans-unit>
-      <trans-unit id="17">
+      <trans-unit id="14">
+        <source>Password again</source>
+        <target>__Password again</target>
+      </trans-unit>
+      <trans-unit id="15">
         <source>Save and remember your personal code and password well!</source>
         <target>Save and remember your personal code and password well!</target>
       </trans-unit>
-      <trans-unit id="18">
+      <trans-unit id="16">
         <source>Register</source>
         <target>Register</target>
       </trans-unit>
-      <trans-unit id="19">
+      <trans-unit id="17">
         <source>I already have an account</source>
         <target>I already have an account</target>
       </trans-unit>
-      <trans-unit id="20">
+      <trans-unit id="18">
         <source>Just as well you can find the same icon at the &lt;strong&gt;top right&lt;/strong&gt; corner of this page.
           Next time, use icon at top right corner to speed up your log in process.</source>
         <target>Just as well you can find the same icon at the &lt;strong&gt;top right&lt;/strong&gt; corner of this page.
           Next time, use icon at top right corner to speed up your log in process.</target>
       </trans-unit>
-      <trans-unit id="21">
+      <trans-unit id="19">
         <source>Health Portal Log In</source>
         <target>Health Portal Log In</target>
       </trans-unit>
-      <trans-unit id="22">
+      <trans-unit id="20">
         <source>OK</source>
         <target>OK</target>
       </trans-unit>
-      <trans-unit id="23">
-        <source>Personal code:</source>
-        <target>Personal code:</target>
+      <trans-unit id="21">
+        <source>&lt;strong&gt;Please click and type&lt;/strong&gt; your personal code and a password.</source>
+        <target>__&lt;strong&gt;Please click and type&lt;/strong&gt; your personal code and a password.</target>
       </trans-unit>
-      <trans-unit id="24">
+      <trans-unit id="22">
         <source>Personal code</source>
         <target>Personal code</target>
       </trans-unit>
-      <trans-unit id="25">
+      <trans-unit id="23">
         <source>Hint</source>
         <target>Hint</target>
       </trans-unit>
-      <trans-unit id="26">
+      <trans-unit id="24">
         <source>&lt;strong&gt;Set this page&lt;/strong&gt; to your browser's &lt;strong&gt;bookmark list&lt;/strong&gt; to speed up log in process next time.</source>
         <target>&lt;strong&gt;Set this page&lt;/strong&gt; to your browser's &lt;strong&gt;bookmark list&lt;/strong&gt; to speed up log in process next time.</target>
       </trans-unit>
-      <trans-unit id="27">
+      <trans-unit id="25">
         <source>Add bookmark</source>
         <target>Add bookmark</target>
       </trans-unit>
-      <trans-unit id="28">
+      <trans-unit id="26">
         <source>Send credentials by email</source>
         <target>Send credentials by email</target>
       </trans-unit>
-      <trans-unit id="29">
+      <trans-unit id="27">
         <source>No personal information, like your name, email, or your location, is stored in this system without your knowledge.</source>
         <target>No personal information, like your name, email, or your location, is stored in this system without your knowledge.</target>
       </trans-unit>
-      <trans-unit id="30">
+      <trans-unit id="28">
         <source>Email:</source>
         <target>Email:</target>
       </trans-unit>
-      <trans-unit id="31">
+      <trans-unit id="29">
         <source>your@email.com</source>
         <target>your@email.com</target>
       </trans-unit>
-      <trans-unit id="32">
+      <trans-unit id="30">
         <source>Send</source>
         <target>Send</target>
       </trans-unit>
-      <trans-unit id="33">
+      <trans-unit id="31">
         <source>Adding bookmarks is not supported on your browser!</source>
         <target>Adding bookmarks is not supported on your browser!</target>
       </trans-unit>
+      <trans-unit id="32">
+        <source>Health Portal Help</source>
+        <target>Health Portal Help</target>
+      </trans-unit>
+      <trans-unit id="33">
+        <source>Search</source>
+        <target>Search</target>
+      </trans-unit>
       <trans-unit id="34">
+        <source>Nothing here yet...</source>
+        <target>Nothing here yet...</target>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>Help</source>
+        <target>Help</target>
+      </trans-unit>
+      <trans-unit id="36">
+        <source>Password:</source>
+        <target>Password:</target>
+      </trans-unit>
+      <trans-unit id="37">
+        <source>Personal code:</source>
+        <target>Personal code:</target>
+      </trans-unit>
+      <trans-unit id="38">
         <source>No personal information, like your name or your location, is stored in this system.</source>
         <target>No personal information, like your name or your location, is stored in this system.</target>
       </trans-unit>
-      <trans-unit id="35">
+      <trans-unit id="39">
         <source>&lt;strong&gt;Welcome&lt;/strong&gt; to use &lt;strong&gt;Your&lt;/strong&gt; personal health portal application.</source>
         <target>&lt;strong&gt;Welcome&lt;/strong&gt; to use &lt;strong&gt;Your&lt;/strong&gt; personal health portal application.</target>
       </trans-unit>
-      <trans-unit id="36">
+      <trans-unit id="40">
         <source>Please click</source>
         <target>Please click</target>
       </trans-unit>
-      <trans-unit id="37">
+      <trans-unit id="41">
         <source>The very next thing you need to do is to get yourself an account.</source>
         <target>The very next thing you need to do is to get yourself an account.</target>
       </trans-unit>
-      <trans-unit id="38">
+      <trans-unit id="42">
         <source>Error occured during log in process:</source>
         <target>Error occured during log in process:</target>
       </trans-unit>
-      <trans-unit id="39">
+      <trans-unit id="43">
         <source>Requested page not found!</source>
         <target>Requested page not found!</target>
       </trans-unit>
