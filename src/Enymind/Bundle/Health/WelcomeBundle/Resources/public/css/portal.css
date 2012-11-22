@@ -105,7 +105,7 @@ form.widget_form label {
   font-weight: bold;
 }
 
-div.bbg-part {
+div.bbg-part div.ui-collapsible-content {
   background-image: url("/bundles/enymindhealthwelcome/images/bbg_part.jpg");
   background-repeat: no-repeat;
   background-position: right bottom;
