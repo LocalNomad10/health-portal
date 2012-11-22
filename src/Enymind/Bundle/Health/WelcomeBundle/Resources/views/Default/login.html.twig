@@ -10,26 +10,29 @@
 
 {% block body %}
   <p>{% trans %}<strong>Please click and type</strong> your personal code and a password.{% endtrans %}</p>
-  <form action="/secure/login" method="post" id="login-form">
-    <div class="ui-grid-c">
-      <div class="ui-block-a input-prepend">
-        <span class="add-on"><i class="ui-icon-lock"></i></span>
-      </div>
-      <div class="ui-block-b">
-        <input type="number" name="_username" id="username" value="{{ last_username }}" placeholder="{% trans %}Personal code{% endtrans %}"/>
-      </div>
-      <div class="ui-block-c input-prepend">
-        <span class="add-on"><i class="ui-icon-key"></i></span>
-      </div>
-      <div class="ui-block-d">
-        <input type="password" name="_password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}"/>
-      </div>
-    </div>
-    <button type="submit" name="login" value="submit" data-icon="check" data-theme="b">{% trans %}Log In{% endtrans %}</button>
-  </form>
-  <br />
   <div data-role="collapsible-set">
-    <div data-role="collapsible" data-theme="c" data-content-theme="d" data-collapsed="false" data-icon="info">
+    <div data-role="collapsible" data-theme="b" data-content-theme="d" data-collapsed="false" data-icon="key">
+      <h3>{% trans %}Log In{% endtrans %}</h3>
+      <form action="/secure/login" method="post" id="login-form">
+        <div class="ui-grid-c">
+          <div class="ui-block-a input-prepend">
+            <span class="add-on"><i class="ui-icon-lock"></i></span>
+          </div>
+          <div class="ui-block-b">
+            <input type="number" name="_username" id="username" value="{{ last_username }}" placeholder="{% trans %}Personal code{% endtrans %}"/>
+          </div>
+          <div class="ui-block-c input-prepend">
+            <span class="add-on"><i class="ui-icon-key"></i></span>
+          </div>
+          <div class="ui-block-d">
+            <input type="password" name="_password" id="password" value="" placeholder="{% trans %}Password{% endtrans %}"/>
+          </div>
+        </div>
+        <button type="submit" name="login" value="submit" data-icon="check" data-theme="b">{% trans %}Log In{% endtrans %}</button>
+      </form>
+    </div>
+    <br />
+    <div data-role="collapsible" data-theme="c" data-content-theme="d" data-collapsed="true" data-icon="info">
       <h3>{% trans %}Hint{% endtrans %}</h3>
       <p>{% trans %}<strong>Set this page</strong> to your browser's <strong>bookmark list</strong> to speed up log in process next time.{% endtrans %}</p>
       <p><a href="/login" data-role="button" data-inline="true" data-icon="arrow-r" data-mini="true" data-theme="b" id="add-bookmark">{% trans %}Add bookmark{% endtrans %}</a></p>
