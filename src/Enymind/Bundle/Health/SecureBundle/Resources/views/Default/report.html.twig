@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block body %}
-  <ul data-role="listview" data-theme="d" data-divider-theme="c" id="report-ul" data-filter-placeholder="{% trans %}Filter by entry type...{% endtrans %}" data-filter="true">
+  <ul data-role="listview" data-theme="d" data-divider-theme="c" id="report-ul" data-filter-placeholder="{% trans %}Filter by entry type...{% endtrans %}" data-filter-theme="c" data-filter="true">
     {% set lastDate = "2170-01-01" %}
     {% for entry in entries %}
       {% set currDate = entry.added|date('Y-m-d') %}
