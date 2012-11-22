@@ -104,3 +104,10 @@ form.multi_form div.multi_part, form.widget_form div div {
 form.widget_form label {
   font-weight: bold;
 }
+
+div.bbg-part {
+  background-image: url("/bundles/enymindhealthwelcome/images/bbg_part.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  height: 180px;
+}
