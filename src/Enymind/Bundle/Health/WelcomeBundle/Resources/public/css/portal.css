@@ -111,3 +111,7 @@ div.bbg-part div.ui-collapsible-content {
   background-position: right bottom;
   height: 180px;
 }
+
+.ui-icon {
+    line-height: 21px;
+}
