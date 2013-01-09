@@ -1,0 +1,11 @@
+
+# /app/cache/
+/app/cache/dev
+/app/cache/prod
+
+# /web/
+/web/css
+/web/js
+
+# /web/bundles/
+/web/bundles/framework
