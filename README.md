@@ -1,9 +1,18 @@
 health-portal
 =============
 
-Mobile portal application demo using Symfony2 framework, jQuery Mobile, Doctrine, etc..
+Mobile portal demo application using:
+* Symfony2 framework
+* jQuery Mobile
+* Twig template engine
+* Doctrine persisting
+* etc..
 
 #### Dependencies ####
+
+* PHP 5.3.5 or newer
+
+#### Clone ####
 
 After cloning the repository, download Symfony2 framework from http://symfony.com/download
 
@@ -35,5 +44,9 @@ With browser navigate to webserver root.
 
 This project uses `prod` environment by default. To fall back to `dev` environment update `web/.htaccess`
 RewriteRule -line to point `app_dev.php` instead of current `app.php`
+
+Inter-bundle resources are stored in `src/Enymind/Bundle/Health/WelcomeBundle/Resources/public/`
+
+Base view is located at `app/Resources/views/base.html.twig`
 
 Learn to use Symfony2 http://symfony.com/doc/current/quick_tour
