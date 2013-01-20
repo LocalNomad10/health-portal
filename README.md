@@ -19,6 +19,8 @@ Point webserver's www-root directory to `path-to-checkout/web/`
 
 #### Pre-run ####
 
+Configure `app/config/parameters.yml` to meet your setup.
+
 Run script `build.sh` on your checkout root.
 
 #### Run ####
