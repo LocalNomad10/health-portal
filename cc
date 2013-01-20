@@ -1,4 +1,3 @@
-svn update
 php app/console --env=prod cache:clear
 chown -R www-data app/cache
 chown -R www-data app/logs
