@@ -26,3 +26,10 @@ Run script `build.sh` on your checkout root.
 #### Run ####
 
 With browser navigate to webserver root.
+
+### Good to know ####
+
+This project uses `prod` environment by default. To fall back to `dev` environment update `web/.htaccess`
+RewriteRule -line to point `app_dev.php` instead of current `app.php`
+
+Learn to use Symfony2 http://symfony.com/doc/current/quick_tour
