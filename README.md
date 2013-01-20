@@ -2,10 +2,10 @@ health-portal
 =============
 
 Mobile portal demo application using:
-* Symfony2 framework
-* jQuery Mobile
-* Twig template engine
-* Doctrine persisting
+* Symfony2 framework http://symfony.com
+* jQuery Mobile http://jquerymobile.com
+* Twig template engine http://twig.sensiolabs.org
+* Doctrine persisting services http://www.doctrine-project.org
 * etc..
 
 #### Dependencies ####
