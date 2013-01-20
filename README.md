@@ -23,6 +23,8 @@ Configure `app/config/parameters.yml` to meet your setup.
 
 Run script `build.sh` on your checkout root.
 
+During build, Doctrine will create database schemas and tables.
+
 #### Run ####
 
 With browser navigate to webserver root.
