@@ -21,6 +21,8 @@ Point webserver's www-root directory to `path-to-checkout/web/`
 
 Configure `app/config/parameters.yml` to meet your setup.
 
+Edit `build.sh` file lines chmod; set correct webserver user, if not www-data.
+
 Run script `build.sh` on your checkout root.
 
 During build, Doctrine will create database schemas and tables.
