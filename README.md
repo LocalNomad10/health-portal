@@ -8,6 +8,12 @@ Mobile portal demo application using:
 * Doctrine persisting services http://www.doctrine-project.org
 * etc..
 
+#### Live demo ####
+
+http://en.health.enymind.fi
+* user: test
+* pass: test2012
+
 #### Dependencies ####
 
 * PHP 5.3.5 or newer
