@@ -14,6 +14,9 @@ http://en.health.enymind.fi
 * user: test
 * pass: test2012
 
+#### License ####
+* http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License, version 3
+
 #### Dependencies ####
 
 * PHP 5.3.5 or newer
