@@ -40,7 +40,7 @@ Edit `build.sh` file lines chmod; set correct webserver user, if not www-data.
 
 Run script `build.sh` on your checkout root.
 
-During build, Doctrine will create database schemas and tables.
+`php app/console doctrine:schema:create --force` will create database schemas and tables
 
 #### Run ####
 
