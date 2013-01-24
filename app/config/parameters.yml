@@ -4,7 +4,7 @@ parameters:
     database_port:     ~
     database_name:     health
     database_user:     health
-    database_password: health881
+    database_password: password
 
     mailer_transport:  smtp
     mailer_host:       localhost
@@ -12,4 +12,4 @@ parameters:
     mailer_password:   ~
 
     locale:            en
-    secret:            wso3ig57h8w6758h67y86g94h38
+    secret:            wso3iy57h8w6758h67g86g94h38
