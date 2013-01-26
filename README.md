@@ -54,6 +54,7 @@ With browser navigate to webserver root.
 This project uses `prod` environment by default. To fall back to `dev` environment update `web/.htaccess`
 RewriteRule -line to point `app_dev.php` instead of current `app.php`. Also edit `build.sh` to make build
 against `dev`.
+
 Inter-bundle resources are stored in `src/Enymind/Bundle/Health/WelcomeBundle/Resources/public/`
 
 Base view is located at `app/Resources/views/base.html.twig`
